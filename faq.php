@@ -31,7 +31,7 @@
                         <div class="col-sm-6">
                             <p class="text-muted"><?=$dt_kategori['deskripsi']?></p>
                             <div class="mt-4">
-                                <a href="sub_kodefikasi.php?id_kodefikasi_tiket=<?=$dt_kategori['id_kodefikasi_tiket']?>"
+                                <a href="sub-kodefikasi.php?id_kodefikasi_tiket=<?=$dt_kategori['id_kodefikasi_tiket']?>"
                                     class="btn btn-primary waves-effect waves-light btn-sm">Lihat Lebih Lanjut<i
                                         class="mdi mdi-arrow-right ms-1"></i></a>
                             </div>
