@@ -80,8 +80,7 @@ if ($id_sub_kodefikasi_tiket > 0) {
                         <div class="tab-pane fade show active">
                           <h4 class="card-title mb-5">Pertanyaan General</h4>
                           <?php
-                          // Reset pointer result untuk iterasi
-                          $stmt->data_seek(0); // Pastikan pointer kembali ke awal
+                          $stmt->data_seek(0); 
                           while ($dt_sub_sub_kategori = $result->fetch_assoc()) {
                             ?>
                             <div class="faq-box d-flex mb-4">
@@ -94,12 +93,10 @@ if ($id_sub_kodefikasi_tiket > 0) {
                                   <?= htmlspecialchars($dt_sub_sub_kategori['nama_sub_sub_kodefikasi_tiket']) ?></h5>
                                 <div class="d-flex align-items-center">
                                   <p class="text-muted mb-0 me-2">
-                                    Layanan Helpdesk untuk sivitas Universitas untuk reset
-                                    password akun sistem informasi mahasiswa. Berikut adalah form pengajuan untuk reset
-                                    password akun sistem informasi akademik mahasiswa
+                                    Layanan Helpdesk untuk sivitas Universitas untuk reset password akun sistem informasi mahasiswa. Berikut adalah form pengajuan untuk reset password akun sistem informasi akademik mahasiswa
                                   </p>
                                   <div class="event-up-icon">
-                                    <a href="tiket.php"><i class="bx bx-right-arrow-circle h3 text-primary"></i></a>
+                                    <a href="faq-satu-enam-empat.php"><i class="bx bx-right-arrow-circle h3 text-primary"></i></a>
                                   </div>
                                 </div>
                               </div>

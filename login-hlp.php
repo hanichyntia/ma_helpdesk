@@ -87,7 +87,7 @@
                                                     case "Mahasiswa":
                                                     case "Dosen":
                                                     case "Staff":
-                                                        header("Location: index.php");
+                                                        header("Location: faq.php");
                                                         break;
                                                     case "Admin":
                                                         header("Location: index-admin.php");

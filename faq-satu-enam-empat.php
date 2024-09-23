@@ -1,11 +1,10 @@
 <?php
 include "config.php";
 
-// Check if id_sub_kodefikasi_tiket is passed via GET and validate it
 $id_sub_kodefikasi_tiket = isset($_GET['id_sub_kodefikasi_tiket']) ? intval($_GET['id_sub_kodefikasi_tiket']) : 0;
 
 if ($id_sub_kodefikasi_tiket > 0) {
-    // Prepare the query to fetch data for the specific id_sub_kodefikasi_tiket
+    
     $stmt = $conn->prepare("
         SELECT master_sub_sub_kodefikasi_tiket.*, master_sub_kodefikasi_tiket.nama_sub_kodefikasi_tiket 
         FROM master_sub_sub_kodefikasi_tiket
