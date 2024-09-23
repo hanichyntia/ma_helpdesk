@@ -1,10 +1,15 @@
 <?php
 include "config.php";
-$id = isset($_GET['id_kodefikasi_tiket']) ? intval($_GET['id_kodefikasi_tiket']) :
-    (isset($_GET['id']) ? intval($_GET['id']) : 0);
 
+$id_sub_kodefikasi_tiket = isset($_GET['id_kodefikasi_tiket']) ? intval($_GET['id_kodefikasi_tiket']) : 0;
 
-$stmt = $conn->prepare("SELECT * FROM master_kodefikasi_tiket WHERE id_kodefikasi_tiket = ?");
+if ($id_sub_kodefikasi_tiket) {
+    $stmt = $conn->prepare("SELECT * FROM master_kodefikasi_tiket WHERE id_kodefikasi_tiket = ?");
+    $stmt->bind_param("i", $id_sub_kodefikasi_tiket);
+    $stmt->execute();
+    $result = $stmt->get_result();
+}
+
 $qry_sub_kategori = mysqli_query($conn, "
     SELECT 
         master_sub_kodefikasi_tiket.*, 
@@ -13,8 +18,10 @@ $qry_sub_kategori = mysqli_query($conn, "
     JOIN master_kodefikasi_tiket 
         ON master_kodefikasi_tiket.id_kodefikasi_tiket = master_sub_kodefikasi_tiket.id_kodefikasi_tiket");
 
-// Fetch the first row of the result
-$dt_sub_kategori = mysqli_fetch_array($qry_sub_kategori);
+$sub_categories = [];
+while ($row = mysqli_fetch_array($qry_sub_kategori)) {
+    $sub_categories[] = $row;
+}
 ?>
 <!doctype php>
 <php lang="en">
@@ -34,49 +41,44 @@ $dt_sub_kategori = mysqli_fetch_array($qry_sub_kategori);
 <body data-sidebar="dark">
     <?php include "header.php"; ?>
 
-    <!-- ============================================================== -->
-    <!-- Start right Content here -->
-    <!-- ============================================================== -->
     <div class="main-content">
         <div class="page-content">
             <div class="container-fluid">
 
-                <!-- start page title -->
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-18"><?= $dt_sub_kategori['name_kodefikasi_tiket'] ?></h4>
+                            <h4 class="mb-sm-0 font-size-18">
+                                <?= !empty($sub_categories) ? $sub_categories[0]['name_kodefikasi_tiket'] : "Data not found" ?>
+                            </h4>
                         </div>
                     </div>
                 </div>
-                <!-- end page title -->
 
-                <?php
-                // Loop through all sub categories
-                while ($dt_sub_kategori = mysqli_fetch_array($qry_sub_kategori)) {
-                    ?>
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title mb-4"><?= $dt_sub_kategori['nama_sub_kodefikasi_tiket'] ?></h4>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="mt-4">
-                                        <a href="sub-sub-kodefikasi.php?id_sub_kodefikasi_tiket=<?= $dt_sub_kategori['id_sub_kodefikasi_tiket'] ?>"
-                                            class="btn btn-primary waves-effect waves-light btn-sm">
-                                            Lihat Lebih Lanjut <i class="mdi mdi-arrow-right ms-1"></i>
-                                        </a>
+                <?php if (!empty($sub_categories)): ?>
+                    <?php foreach ($sub_categories as $dt_sub_kategori): ?>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title mb-4"><?= $dt_sub_kategori['nama_sub_kodefikasi_tiket'] ?></h4>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="mt-4">
+                                            <a href="sub-sub-kodefikasi.php?id_sub_kodefikasi_tiket=<?= $dt_sub_kategori['id_sub_kodefikasi_tiket'] ?>"
+                                                class="btn btn-primary waves-effect waves-light btn-sm">
+                                                Lihat Lebih Lanjut <i class="mdi mdi-arrow-right ms-1"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <?php
-                }
-                ?>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No data available for this category.</p>
+                <?php endif; ?>
             </div>
         </div>
     </div>
-    <!-- End Page-content -->
 
     <footer class="footer">
         <div class="container-fluid">
