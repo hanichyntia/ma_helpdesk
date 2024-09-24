@@ -89,7 +89,7 @@
 
                                                 <!-- Submit Button -->
                                                 <div class="mt-4">
-                                                    <button type="submit" name="submit_id_rating" class="btn btn-primary">Kirim id_rating</button>
+                                                    <button type="submit" name="submit_id_rating" class="btn btn-primary" formaction="faq.php">Kirim</button>
                                                 </div>
                                             </form>
 
@@ -115,9 +115,6 @@
                                             ?>
                                         </div>
 
-                                        <div class="mt-4">
-                                            <a href="index.php" class="btn btn-primary">Selesai</a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -22,7 +22,7 @@ if ($cek>0) {
     header("location:dosen/halaman_staff.php");
   }
   else {
-    header("location:index.php?pesan=gagal");
+    header("location:faq.php?pesan=gagal");
   }
 }else {
   echo "<script>alert('username dan password tidak benar');location.href='percob.php';</script>";

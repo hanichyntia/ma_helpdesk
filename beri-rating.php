@@ -14,9 +14,9 @@ if (isset($_POST['submit_rating']) && isset($_POST['rating'])) {
   $stmt->bind_param("ii", $rating, $id_transaksi_tiket);
 
   if ($stmt->execute()) {
-    echo "<script>alert('Terima kasih atas rating Anda!'); window.location.href = 'index.php';</script>";
+    echo "<script>alert('Terima kasih atas rating Anda!'); window.location.href = 'faq.php';</script>";
   } else {
-    echo "<script>alert('Gagal mengirim rating. Coba lagi.'); window.location.href = 'index.php';</script>";
+    echo "<script>alert('Gagal mengirim rating. Coba lagi.'); window.location.href = 'faq.php';</script>";
   }
 
   $stmt->close();
