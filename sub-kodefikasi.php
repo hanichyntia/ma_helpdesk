@@ -4,38 +4,46 @@ include "config.php";
 $id_sub_kodefikasi_tiket = isset($_GET['id_kodefikasi_tiket']) ? intval($_GET['id_kodefikasi_tiket']) : 0;
 
 if ($id_sub_kodefikasi_tiket) {
+    // Prepare a statement to fetch ticket classification details
     $stmt = $conn->prepare("SELECT * FROM master_kodefikasi_tiket WHERE id_kodefikasi_tiket = ?");
     $stmt->bind_param("i", $id_sub_kodefikasi_tiket);
     $stmt->execute();
     $result = $stmt->get_result();
+    
+    // Check if any results were returned
+    if ($result->num_rows === 0) {
+        echo "<p>No data found for the given ID.</p>";
+        exit; // Exit if no data found
+    }
 }
 
+// Fetch subcategories based on the provided ticket classification ID
 $qry_sub_kategori = mysqli_query($conn, "
     SELECT 
         master_sub_kodefikasi_tiket.*, 
         master_kodefikasi_tiket.name_kodefikasi_tiket 
     FROM master_sub_kodefikasi_tiket
     JOIN master_kodefikasi_tiket 
-        ON master_kodefikasi_tiket.id_kodefikasi_tiket = master_sub_kodefikasi_tiket.id_kodefikasi_tiket");
+        ON master_kodefikasi_tiket.id_kodefikasi_tiket = master_sub_kodefikasi_tiket.id_kodefikasi_tiket
+    WHERE master_sub_kodefikasi_tiket.id_kodefikasi_tiket = $id_sub_kodefikasi_tiket");
 
 $sub_categories = [];
 while ($row = mysqli_fetch_array($qry_sub_kategori)) {
     $sub_categories[] = $row;
 }
 ?>
-<!doctype php>
-<php lang="en">
+
+<!doctype html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>Hardware</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-    <meta content="Themesbrand" name="author" />
     <link rel="shortcut icon" href="assets/images/favicon.ico">
-    <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body data-sidebar="dark">
@@ -105,4 +113,4 @@ while ($row = mysqli_fetch_array($qry_sub_kategori)) {
     <script src="assets/js/pages/dashboard.init.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
-</php>
+</html>
