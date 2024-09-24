@@ -43,7 +43,7 @@
                                             <h4>Terkirim</h4>
                                             <p class="text-muted">Keluhan anda sudah dikirim</p>
                                             <div class="mt-4">
-                                                <a href="index.php" class="btn btn-success">Kembali ke Beranda</a>
+                                                <a href="faq.php" class="btn btn-success">Kembali ke Beranda</a>
                                             </div>
                                         </div>
                                     </div>
@@ -69,7 +69,7 @@
                                             <h4>Diproses</h4>
                                             <p class="text-muted">Keluhan anda sedang di proses</p>
                                             <div class="mt-4">
-                                                <a href="index.php" class="btn btn-success">Kembali ke Beranda</a>
+                                                <a href="faq.php" class="btn btn-success">Kembali ke Beranda</a>
                                             </div>
                                         </div>
                                     </div>

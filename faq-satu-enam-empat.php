@@ -41,7 +41,7 @@ if ($id_sub_kodefikasi_tiket > 0) {
             <div class="navbar-header">
                 <div class="d-flex">
                     <div class="navbar-brand-box">
-                    <a href="index.php" class="logo logo-ma-light">
+                    <a href="faq.php" class="logo logo-ma-light">
                             <span class="logo-sm">
                                 <img src="assets/images/logo-ma-kecil.png" alt="Logo Small Light" height="22">
                             </span>
@@ -80,7 +80,7 @@ if ($id_sub_kodefikasi_tiket > 0) {
                     <ul class="metismenu list-unstyled" id="side-menu">
                         <li class="menu-title" key="t-menu"></li>
                         <li>
-                            <a href="index.php" class="waves-effect">
+                            <a href="faq.php" class="waves-effect">
                                 <i class="bx bx-file"></i>
                                 <span key="t-dashboards">Dashboards</span>
                             </a>

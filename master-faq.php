@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Tiket</title>
+        <title>Master FAQ</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -16,14 +16,14 @@
 
     <body data-sidebar="dark">
         <div id="layout-wrapper">
-           <?php include "header.php";?>
+        <?php include "header-admin.php";?>
             <div class="main-content">
                 <div class="page-content">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0 font-size-18">Tiket</h4>
+                                    <h4 class="mb-sm-0 font-size-18">Master FAQ</h4>
 
                                 </div>
                             </div>
@@ -32,9 +32,10 @@
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title mb-4">Form Keluhan</h4>
+                                        <h4 class="card-title mb-4">Form Pengiriman</h4>
                                         <form action="simpan_tiket.php" class="needs-validation" method="post"
                                             id="formSearch" novalidate>
+
                                             <div class="mb-3">
                                                 <label for="kategori" class="form-label">Kategori Masalah</label>
                                                 <select id="kategori" name="kategori" class="form-select" required>
@@ -70,15 +71,33 @@
                                             </div>
 
                                             <div class="mb-3">
-                                                <label for="keluhan" class="form-label">Keluhan :</label>
-                                                <textarea id="keluhan" name="keluhan" class="form-control" rows="3"
-                                                    placeholder="Masukkan Keluhan Anda" required></textarea>
-                                                <div class="invalid-feedback">Tolong Masukkan Keluhan</div>
+                                                <label for="judul" class="form-label">Judul :</label>
+                                                <textarea id="judul" name="judul" class="form-control" rows="2" placeholder="Masukkan Judul FAQ" required></textarea>
+                                                <div class="invalid-feedback">Tolong Masukkan Judul FAQ</div>
                                             </div>
 
-                                            <div class="mt-4">
-                                                <button type="submit" class="btn btn-primary" formaction="faq.php">Submit</button>
+                                            <div class="mb-3">
+                                                <label for="subjudul" class="form-label">Subjudul :</label>
+                                                <textarea id="subudul" name="subjudul" class="form-control" rows="2" placeholder="Masukkan Subjudul FAQ" required></textarea>
+                                                <div class="invalid-feedback">Tolong Masukkan Subjudul FAQ</div>
                                             </div>
+                                                  
+                                            <div class="mb-3">
+                                        <label class="form-label"></label>
+                                        <div id="dokumen-container"></div>
+                                        <button type="button" id="add-document-button" class="btn btn-secondary">Add Document</button>
+                                        <div id="error-message" class="alert alert-danger mt-3" style="display: none;">
+                                            <p class="mb-0">Please add at least one document with a document name.</p>
+                                        </div>
+                                        
+                                    </div>
+
+                                            <form action="simpan_tiket.php" class="needs-validation" method="post" id="formSearch" novalidate>
+                                            <!-- Form fields -->
+                                                <div class="mt-4">
+                                                    <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+                                                </div>
+                                            </form>
                                         </form>
                                     </div>
                                 </div>
@@ -154,6 +173,58 @@
                         }
                     });
                 </script>
+
+<script>
+    // Function to add new document group
+    document.getElementById('add-document-button').addEventListener('click', function() {
+        var index = document.querySelectorAll('#dokumen-container .document-group').length;
+        var container = document.getElementById('dokumen-container');
+
+        // Create new document group HTML (including file input and description)
+        var html = `
+            <div class="document-group" id="document-group-${index}">
+
+                <label for="keterangan${index}" class="form-label">Deskripsi Dokumen ${index + 1}</label>
+<textarea name="keterangan${index}" class="form-control" rows="3" placeholder="Deskripsi Dokumen" required></textarea>
+
+                <label for="dokumen${index}" class="form-label">Upload Dokumen ${index + 1}</label>
+                <input type="file" name="dokumen${index}" class="form-control mb-2" required>
+
+                <button type="button" class="btn btn-danger delete-document-button" data-id="${index}">Hapus Dokumen</button>
+                <hr>
+            </div>
+        `;
+
+        // Add new document group to the container
+        container.insertAdjacentHTML('beforeend', html);
+
+        // Add event listener for delete button for the newly added document group
+        document.querySelector(`#document-group-${index} .delete-document-button`).addEventListener('click', function() {
+            var groupId = this.getAttribute('data-id');
+            document.getElementById(`document-group-${groupId}`).remove();
+            reindexDocumentGroups();  // Reindex after deletion
+        });
+    });
+
+    // Function to reindex document groups after deletion
+    function reindexDocumentGroups() {
+        var documentGroups = document.querySelectorAll('#dokumen-container .document-group');
+        documentGroups.forEach(function(group, index) {
+            group.id = `document-group-${index}`;
+            group.querySelector('label[for^="dokumen"]').setAttribute('for', `dokumen${index}`);
+            group.querySelector('label[for^="dokumen"]').textContent = `Upload Dokumen ${index + 1}`;
+            group.querySelector('input[type="file"]').setAttribute('name', `dokumen${index}`);
+
+            group.querySelector('label[for^="keterangan"]').setAttribute('for', `keterangan${index}`);
+            group.querySelector('label[for^="keterangan"]').textContent = `Deskripsi Dokumen ${index + 1}`;
+            group.querySelector('input[type="text"]').setAttribute('name', `keterangan${index}`);
+
+            group.querySelector('.delete-document-button').setAttribute('data-id', index);
+        });
+    }
+</script>
+
+                
     </body>
 
 </php>

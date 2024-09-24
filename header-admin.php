@@ -52,6 +52,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="master-faq.php" class="waves-effect">
+                                <i class="bx bx-file"></i>
+                                <span key="t-dashboards">Master FAQ</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="respon-tiket.php" class="waves-effect">
                                 <i class="bx bx-file"></i>
                                 <span key="t-dashboards">Respon Tiket</span>
