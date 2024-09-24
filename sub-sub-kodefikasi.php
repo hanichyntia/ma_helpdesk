@@ -96,7 +96,7 @@ if ($id_sub_kodefikasi_tiket > 0) {
                                     Layanan Helpdesk untuk sivitas Universitas untuk reset password akun sistem informasi mahasiswa. Berikut adalah form pengajuan untuk reset password akun sistem informasi akademik mahasiswa
                                   </p>
                                   <div class="event-up-icon">
-                                    <a href="faq-satu-enam-empat.php"><i class="bx bx-right-arrow-circle h3 text-primary"></i></a>
+                                    <a href="tiket.php"><i class="bx bx-right-arrow-circle h3 text-primary"></i></a>
                                   </div>
                                 </div>
                               </div>
