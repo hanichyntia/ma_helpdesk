@@ -60,61 +60,62 @@ if ($id_sub_kodefikasi_tiket > 0) {
             <div class="row">
               <?php
               // Menggunakan data dari hasil query sebelumnya
-if ($result->num_rows > 0) {
-  // Mengambil data pertama untuk judul
-  $dt_judul = $result->fetch_assoc();
-  ?>
-  <div class="col-lg-2">
-      <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
-          <a class="nav-link active" role="tab">
-              <i class="bx bx-question-mark d-block check-nav-icon mt-4 mb-2"></i>
-              <p class="fw-bold mb-4"><?= htmlspecialchars($dt_judul['nama_sub_kodefikasi_tiket']) ?></p>
-          </a>
-      </div>
-  </div>
+              if ($result->num_rows > 0) {
+                // Mengambil data pertama untuk judul
+                $dt_judul = $result->fetch_assoc();
+                ?>
+                <div class="col-lg-2">
+                  <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" role="tab">
+                      <i class="bx bx-question-mark d-block check-nav-icon mt-4 mb-2"></i>
+                      <p class="fw-bold mb-4"><?= htmlspecialchars($dt_judul['nama_sub_kodefikasi_tiket']) ?></p>
+                    </a>
+                  </div>
+                </div>
 
-  <div class="col-lg-10">
-      <div class="card">
-          <div class="card-body">
-              <div class="tab-content">
-                  <div class="tab-pane fade show active">
-                      <h4 class="card-title mb-5">Pertanyaan General</h4>
-                      <?php
-                      
-                      $result->data_seek(0);
-                      while ($dt_sub_sub_kategori = $result->fetch_assoc()) {
-                          ?>
-                          <div class="faq-box d-flex mb-4">
+                <div class="col-lg-10">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="tab-content">
+                        <div class="tab-pane fade show active">
+                          <h4 class="card-title mb-5">Pertanyaan General</h4>
+                          <?php
+
+                          $result->data_seek(0);
+                          while ($dt_sub_sub_kategori = $result->fetch_assoc()) {
+                            ?>
+                            <div class="faq-box d-flex mb-4">
                               <div class="flex-shrink-0 me-3 faq-icon">
-                                  <i class="bx bx-help-circle font-size-20 text-success"></i>
+                                <i class="bx bx-help-circle font-size-20 text-success"></i>
                               </div>
 
                               <div class="flex-grow-1">
-                                  <h5 class="font-size-15">
-                                      <?= htmlspecialchars($dt_sub_sub_kategori['nama_sub_sub_kodefikasi_tiket']) ?></h5>
-                                  <div class="d-flex align-items-center">
-                                      <p class="text-muted mb-0 me-2">
-                                          <?= htmlspecialchars($dt_sub_sub_kategori['deskripsi']) ?>
-                                      </p>
-                                      <div class="event-up-icon">
-                                          <a href="tiket.php"><i class="bx bx-right-arrow-circle h3 text-primary"></i></a>
-                                      </div>
+                                <h5 class="font-size-15">
+                                  <?= htmlspecialchars($dt_sub_sub_kategori['nama_sub_sub_kodefikasi_tiket']) ?>
+                                </h5>
+                                <div class="d-flex align-items-center">
+                                  <p class="text-muted mb-0 me-2">
+                                    <?= htmlspecialchars($dt_sub_sub_kategori['deskripsi']) ?>
+                                  </p>
+                                  <div class="event-up-icon">
+                                    <a href="tiket.php"><i class="bx bx-right-arrow-circle h3 text-primary"></i></a>
                                   </div>
+                                </div>
                               </div>
-                          </div>
-                          <?php
-                      }
-                      ?>
+                            </div>
+                            <?php
+                          }
+                          ?>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <?php
-} else {
-  echo "<div class='col-12'><p>No records found.</p></div>";
-}
-?>
+                </div>
+                <?php
+              } else {
+                echo "<div class='col-12'><p>No records found.</p></div>";
+              }
+              ?>
             </div>
           </div>
         </div>
