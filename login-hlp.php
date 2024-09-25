@@ -85,7 +85,7 @@
                                                 // Redirect sesuai dengan hak akses
                                                 switch ($data['hak_akses_user']) {
                                                     case "Mahasiswa":
-                                                    case "Dosen":
+                                                     case "Dosen":
                                                     case "Staff":
                                                         header("Location: faq.php");
                                                         break;

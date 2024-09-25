@@ -98,7 +98,7 @@ if ($id_sub_kodefikasi_tiket > 0) {
                                     <?= htmlspecialchars($dt_sub_sub_kategori['deskripsi']) ?>
                                   </p>
                                   <div class="event-up-icon">
-                                    <a href="tiket.php"><i class="bx bx-right-arrow-circle h3 text-primary"></i></a>
+                                    <a href="faq-description.php"><i class="bx bx-right-arrow-circle h3 text-primary"></i></a>
                                   </div>
                                 </div>
                               </div>
