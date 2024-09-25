@@ -4,20 +4,17 @@ include "config.php";
 $id_sub_kodefikasi_tiket = isset($_GET['id_kodefikasi_tiket']) ? intval($_GET['id_kodefikasi_tiket']) : 0;
 
 if ($id_sub_kodefikasi_tiket) {
-    // Prepare a statement to fetch ticket classification details
     $stmt = $conn->prepare("SELECT * FROM master_kodefikasi_tiket WHERE id_kodefikasi_tiket = ?");
     $stmt->bind_param("i", $id_sub_kodefikasi_tiket);
     $stmt->execute();
     $result = $stmt->get_result();
     
-    // Check if any results were returned
     if ($result->num_rows === 0) {
         echo "<p>No data found for the given ID.</p>";
-        exit; // Exit if no data found
+        exit;
     }
 }
 
-// Fetch subcategories based on the provided ticket classification ID
 $qry_sub_kategori = mysqli_query($conn, "
     SELECT 
         master_sub_kodefikasi_tiket.*, 
