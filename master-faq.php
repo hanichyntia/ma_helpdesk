@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <title>Master FAQ</title>
@@ -11,6 +12,7 @@
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 </head>
+
 <body data-sidebar="dark">
     <div id="layout-wrapper">
         <?php include "header-admin.php"; ?>
@@ -77,9 +79,6 @@
                                             <label class="form-label">Dokumen</label>
                                             <div id="dokumen-container"></div>
                                             <button type="button" id="add-document-button" class="btn btn-secondary">Add Document</button>
-                                            <div id="error-message" class="alert alert-danger mt-3" style="display: none;">
-                                                <p class="mb-0">Please add at least one document with a document name.</p>
-                                            </div>
                                         </div>
 
                                         <div class="mt-4">
@@ -95,7 +94,9 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                <script>document.write(new Date().getFullYear())</script> © Helpdesk.
+                                <script>
+                                    document.write(new Date().getFullYear())
+                                </script> © Helpdesk.
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
@@ -119,7 +120,7 @@
 
         <script>
             // Mengambil Subkategori saat Kategori dipilih
-            document.getElementById('kategori').addEventListener('change', function () {
+            document.getElementById('kategori').addEventListener('change', function() {
                 var kategori = this.value;
                 var subKategoriContainer = document.getElementById('subkategori-container');
                 var subKategoriSelect = document.getElementById('subkategori');
@@ -141,7 +142,7 @@
             });
 
             // Mengambil Detail Subkategori saat Subkategori dipilih
-            document.getElementById('subkategori').addEventListener('change', function () {
+            document.getElementById('subkategori').addEventListener('change', function() {
                 var subKategori = this.value;
                 var subSubKategoriContainer = document.getElementById('subsubkategori-container');
                 var subSubKategoriSelect = document.getElementById('subsubkategori');
@@ -174,7 +175,7 @@
                         <textarea name="keterangan${index}" class="form-control" rows="3" placeholder="Deskripsi Dokumen" required></textarea>
 
                         <label for="dokumen${index}" class="form-label">Upload Dokumen ${index + 1}</label>
-                        <input type="file" name="dokumen${index}" class="form-control mb-2" required>
+                        <input type="file" name="dokumen${index}" class="form-control mb-2">
 
                         <button type="button" class="btn btn-danger delete-document-button" data-id="${index}">Hapus Dokumen</button>
                         <hr>
@@ -194,24 +195,28 @@
                 });
             });
 
-            // Validate the form on submission
             document.getElementById('formSearch').addEventListener('submit', function(event) {
-                var valid = true;
-                var documentGroups = document.querySelectorAll('.document-group');
-                documentGroups.forEach(function(group) {
-                    var textarea = group.querySelector('textarea');
-                    var fileInput = group.querySelector('input[type="file"]');
+    var valid = true;
+    var documentGroups = document.querySelectorAll('.document-group');
+    
+    // Only validate if there are document groups
+    documentGroups.forEach(function(group) {
+        var textarea = group.querySelector('textarea');
+        var fileInput = group.querySelector('input[type="file"]');
+        
+        // Hanya gagal jika textarea kosong DAN file kosong (optional)
+        if (!textarea.value && !fileInput.files.length) {
+            valid = false;
+        }
+    });
 
-                    if (!textarea.value || !fileInput.files.length) {
-                        valid = false;
-                    }
-                });
+    if (!valid) {
+        event.preventDefault();
+        document.getElementById('error-message').style.display = 'block';
+    }
+});
 
-                if (!valid) {
-                    event.preventDefault();
-                    document.getElementById('error-message').style.display = 'block';
-                }
-            });
         </script>
-    </body>
+</body>
+
 </html>
