@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $id_status_tiket = 1;
-    $id_rating = 1;
+    $id_rating = 0;
 
     $stmt = $conn->prepare("INSERT INTO transaksi_tiket (id_user, id_kodefikasi_tiket, id_sub_kodefikasi_tiket, id_sub_sub_kodefikasi, id_status_tiket, id_rating, keluhan, tanggal_transaksi) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())");
 

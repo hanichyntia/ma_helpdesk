@@ -77,7 +77,7 @@
                                             </div>
 
                                             <div class="mt-4">
-                                                <button type="submit" class="btn btn-primary" formaction="faq.php">Submit</button>
+                                                <button type="submit" class="btn btn-primary">Submit</button>
                                             </div>
                                         </form>
                                     </div>
