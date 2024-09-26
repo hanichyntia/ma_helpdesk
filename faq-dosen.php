@@ -24,8 +24,8 @@ if ($result->num_rows === 0) {
 $user_data = $result->fetch_assoc();
 $user_role = $user_data['hak_akses_user'];?>
 
-<!doctype php>
-<php lang="en">
+<!doctype html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -45,22 +45,20 @@ $user_role = $user_data['hak_akses_user'];?>
             <div class="navbar-header">
                 <div class="d-flex">
                     <div class="navbar-brand-box">
-                    <a href="faq.php" class="logo logo-ma-light">
+                        <a href="faq.php" class="logo logo-ma-light">
                             <span class="logo-sm">
                                 <img src="assets/images/logo-ma-kecil.png" alt="Logo Small Light" height="22">
                             </span>
                             <span class="logo-lg">
                                 <img src="assets/images/logo-ma-light.png" alt="Logo Large Light" height="100">
                             </span>
-                    </a>
+                        </a>
                     </div>
                     <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
                         <i class="fa fa-fw fa-bars"></i>
                     </button>
                 </div>
                 <div class="d-flex">
-
-                    </div>
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg" alt="Header Avatar">
@@ -90,14 +88,14 @@ $user_role = $user_data['hak_akses_user'];?>
                             </a>
                         </li>
                         <li>  
-                                <a href="javascript: void(0);" class="has-arrow waves-effect">
-                                    <i class="bx bx-detail"></i>
-                                    <span key="t-tiket">Tiket</span>
-                                </a>
-                                <ul class="sub-menu" aria-expanded="false">
-                                    <li><a href="tiket.php" key="t-tiket">Kirim Tiket</a></li>
-                                    <li><a href="lihat-tiket.php" key="t-lihat">Lihat Tiket</a></li>
-                                </ul>
+                            <a href="javascript: void(0);" class="has-arrow waves-effect">
+                                <i class="bx bx-detail"></i>
+                                <span key="t-tiket">Tiket</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="tiket.php" key="t-tiket">Kirim Tiket</a></li>
+                                <li><a href="lihat-tiket.php" key="t-lihat">Lihat Tiket</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -110,7 +108,7 @@ $user_role = $user_data['hak_akses_user'];?>
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-flex align-items-center justify-content-between">
-                                <h4 class="mb-0 font-size-18">FAQs</h4>
+                                <h4 class="mb-0 font-size-18">FAQs Penggunaan sistem informasi akademik dosen</h4>
                             </div>
                         </div>
                     </div>
@@ -120,15 +118,41 @@ $user_role = $user_data['hak_akses_user'];?>
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title mb-5">Mengakses MAC IS dosen</h4>
+                                        <h4 class="card-title mb-5">Pertanyaan General</h4>
+
+                                        <?php
+                                            include "config.php";
+
+                                            $query = "SELECT id_master_faq, judul, deskripsi FROM master_faq WHERE id_sub_sub_kodefikasi_tiket = 29"; 
+                                            $result = $conn->query($query);
+
+                                            if ($result->num_rows > 0) {
+                                                while($faq = $result->fetch_assoc()) {
+                                        ?>
                                         <div class="faq-box d-flex mb-4">
+                                            <div class="flex-shrink-0 me-3 faq-icon">
+                                                <i class="bx bx-help-circle font-size-20 text-success"></i>
+                                            </div>
                                             <div class="flex-grow-1">
-                                                <div class=" d-flex flex-column align-items-start">
-                                                    <p class="mb-3 me-2">Dosen dapat mengakses MAC IS dosen atau sistem informasi akademik untuk dosen dengan link http://dosen.machung.ac.id/. MAC IS dosen hanya dapat diakses oleh dosen tetap, dosen luar biasa (DLB), dan asisten dosen.</p>
-                                                    <p class="mb-0 me-2">Berikut adalah tampilan awal ketika mengakses MAC IS dosen. Dosen dapat mengakses dengan menggunakan namadepan.namatengah sebagai username (contoh : farhan.adriansyah) dan password defaultnya adalah 123456789 (password dapat diganti oleh dosen).</p>
+                                                <h5 class="font-size-15">
+                                                    <?php echo htmlspecialchars($faq['judul']); ?>
+                                                </h5>
+                                                <div class="d-flex align-items-center">
+                                                    <p class="mb-0 me-2">
+                                                        <?php echo nl2br(htmlspecialchars($faq['deskripsi'])); ?>
+                                                    </p>
+                                                    <div class="event-up-icon">
+                                                        <a href="faq-satu-tujuh-dua.php?id_master_faq=<?php echo $faq['id_master_faq']; ?>"><i class="bx bx-right-arrow-circle h3 text-primary"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <?php
+                                                }
+                                            } else {
+                                                echo "<p>No FAQs found.</p>";
+                                            }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
@@ -164,4 +188,4 @@ $user_role = $user_data['hak_akses_user'];?>
     <script src="assets/js/app.js"></script>
 </body>
 
-</php>
+</html>
