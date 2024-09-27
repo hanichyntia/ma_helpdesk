@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan)) {
         echo "<script>alert('Semua field harus diisi.');</script>";
-        header("Location: tiket.php?status=gagal");
+        header("Location: login-hlp.php?status=gagal");
         exit();
     }
 
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("iiiiiss", $id_user, $kategori, $subkategori, $subsubkategori, $id_status_tiket, $id_rating, $keluhan);
 
     if ($stmt->execute()) {
-        header("Location: tiket.php?status=success");
+        header("Location: login-hlp.php?status=success");
         exit();
     } else {
         echo "Terjadi kesalahan: " . $stmt->error;

@@ -32,34 +32,42 @@
                                 <div class="card-body">
                                     <h4 class="card-title mb-4">Respon Keluhan</h4>
                                     <form action="update-status.php?id=<?php echo $_GET['id']; ?>" method="POST">
-                                        <div class="mb-3">
-                                            <label for="status_tiket" class="form-label">Status Tiket</label>
-                                            <select id="status_tiket" name="id_status_tiket" class="form-select" required>
-                                                
-                                                <?php
-                                                include "config.php";
-                                                $qry_status = mysqli_query($conn, "SELECT * FROM master_status_tiket");
-                                                while ($data_status = mysqli_fetch_array($qry_status)) {
-                                                    if ( $data_status['id']==1) {
-                                                        echo '<option value="" selected disabled>Pilih...</option>';
-                                                    }elseif ($data_status['id']==2||3) {
-                                                        echo '<option value="' . $data_status['id'] . '">' . $data_status['jenis_status_tiket'] . '</option>';
-                                                    }
-                                                   
+                                    <div class="mb-3">
+                                        <label for="status_tiket" class="form-label">Status Tiket</label>
+                                        <select id="status_tiket" name="id_status_tiket" class="form-select" required>
+                                            
+                                            <?php
+                                            include "config.php";
+                                            $qry_status = mysqli_query($conn, "SELECT * FROM master_status_tiket");
+                                            echo '<option value="" selected disabled>Pilih...</option>';
+                                            while ($data_status = mysqli_fetch_array($qry_status)) {
+                                                // Hapus opsi dengan ID 1 (Telah Diterima)
+                                                if ($data_status['id'] != 1) {
+                                                    echo '<option value="' . $data_status['id'] . '">' . $data_status['jenis_status_tiket'] . '</option>';
                                                 }
-                                                ?>
-                                            </select>
-                                            <div class="invalid-feedback">Tolong Pilih Status</div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="respon_admin">Respon</label>
-                                            <textarea id="respon_admin" name="respon_admin" class="form-control" rows="3"
-                                                placeholder="Enter Your Response"></textarea>
-                                        </div>
-                                        <div class="mt-4">
-                                            <button class="btn btn-primary">Submit</button>
-                                        </div>
+                                            }
+                                            ?>
+                                            
+                                        </select>
+                                        <div class="invalid-feedback">Tolong Pilih Status</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="respon_admin">Keluhan User</label>
+                                        <textarea id="formmessage" class="form-control" rows="3" readonly></textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="respon_admin">Respon</label>
+                                        <textarea id="respon_admin" name="respon_admin" class="form-control" rows="3" placeholder="Enter Your Response"></textarea>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <button class="btn btn-primary">Submit</button>
+                                    </div>
                                     </form>
+
+
                                 </div>
                             </div>
                         </div>
@@ -91,17 +99,29 @@
         <script src="assets/js/pages/dashboard.init.js"></script>
         <script src="assets/js/app.js"></script>
         <script>
-            document.getElementById('kategori').addEventListener('change', function () {
-                var kategori = this.value;
-                var formmessage = document.getElementById('formmessage');
+        document.getElementById('status_tiket').addEventListener('change', function () {
+            var statusTiket = this.value;
+            var responAdmin = document.getElementById('respon_admin');
 
-                if (kategori === 'software') {
-                    formmessage.setAttribute('readonly', 'readonly');
-                } else {
-                    formmessage.removeAttribute('readonly');
-                }
-            });
+            // Jika status tiket adalah "Menunggu Respon", ganti ID dengan yang sesuai
+            if (statusTiket == '2') {  // '1' adalah ID untuk "Menunggu Respon"
+                responAdmin.setAttribute('readonly', 'readonly');
+            } else {
+                responAdmin.removeAttribute('readonly');
+            }
+        });
+
+        // Saat halaman dimuat, cek status yang ada, dan jalankan logika yang sama
+        (function() {
+            var statusTiket = document.getElementById('status_tiket').value;
+            var responAdmin = document.getElementById('respon_admin');
+
+            if (statusTiket == '1') {
+                responAdmin.setAttribute('readonly', 'readonly');
+            }
+        })();
         </script>
+
     </body>
 
 </php>

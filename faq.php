@@ -29,7 +29,7 @@
                     <h4 class="card-title mb-4"><?=$dt_kategori['name_kodefikasi_tiket']?></h4>
                     <div class="row">
                         <div class="col-sm-6">
-                            <p class="text-muted"><?=$dt_kategori['deskripsi']?></p>
+                            <p class=""><?=$dt_kategori['deskripsi']?></p>
                             <div class="mt-4">
                                 <a href="sub-kodefikasi.php?id_kodefikasi_tiket=<?=$dt_kategori['id_kodefikasi_tiket']?>"
                                     class="btn btn-primary waves-effect waves-light btn-sm">Lihat Lebih Lanjut<i
