@@ -1,26 +1,5 @@
 <?php 
-session_start();
-    if($_SESSION['status_login']!=true){
-        header('location: login-hlp.php');
-    }
-    $id_user = $_SESSION['id_user'];
-
-include "config.php"; 
-
-$stmt = $conn->prepare("SELECT hak_akses_user FROM master_user WHERE id_user = ?");
-if (!$stmt) {
-    die("Prepare failed: (" . $conn->errno . ") " . $conn->error);
-}
-$stmt->bind_param("i", $id_user);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows === 0) {
-    die("User not found.");
-}
-
-$user_data = $result->fetch_assoc();
-$user_role = $user_data['hak_akses_user'];
+include "config.php";
 ?>
 <!doctype php>
 <php lang="en">

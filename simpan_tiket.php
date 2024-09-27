@@ -3,13 +3,13 @@
 include 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'] ?? 'email';
+    $email = $_POST['email'] ?? '';
     $kategori = $_POST['kategori'] ?? '';
     $subkategori = $_POST['subkategori'] ?? '';
     $subsubkategori = $_POST['subsubkategori'] ?? '';
     $keluhan = $_POST['keluhan'] ?? '';
 
-    if (empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan)) {
+    if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan)) {
         echo "<script>alert('Semua field harus diisi.');</script>";
         header("Location: tiket.php?status=gagal");
         exit();
@@ -32,11 +32,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Bind parameters
-    $stmt->bind_param("iiiiiss", $email, $kategori, $subkategori, $subsubkategori, $id_status_tiket, $id_rating, $keluhan);
+    $stmt->bind_param("siiiiss", $email, $kategori, $subkategori, $subsubkategori, $id_status_tiket, $id_rating, $keluhan);
 
     // Execute and check for success
     if ($stmt->execute()) {
-        header("Location: tiket.php?status=success");
+        header("Location: login-hlp.php?status=success");
         exit();
     } else {
         echo "Terjadi kesalahan: " . $stmt->error;
