@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2024 at 05:14 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Waktu pembuatan: 27 Sep 2024 pada 09.26
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,20 +24,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_detail_faq`
+-- Struktur dari tabel `master_detail_faq`
 --
 
 CREATE TABLE `master_detail_faq` (
   `id_detail_faq` int(255) NOT NULL,
   `id_master_faq` int(255) NOT NULL,
   `text` varchar(255) NOT NULL,
-  `file` varchar(255) NOT NULL
+  `file` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_faq`
+-- Struktur dari tabel `master_faq`
 --
 
 CREATE TABLE `master_faq` (
@@ -52,7 +52,7 @@ CREATE TABLE `master_faq` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_kodefikasi_tiket`
+-- Struktur dari tabel `master_kodefikasi_tiket`
 --
 
 CREATE TABLE `master_kodefikasi_tiket` (
@@ -62,7 +62,7 @@ CREATE TABLE `master_kodefikasi_tiket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `master_kodefikasi_tiket`
+-- Dumping data untuk tabel `master_kodefikasi_tiket`
 --
 
 INSERT INTO `master_kodefikasi_tiket` (`id_kodefikasi_tiket`, `name_kodefikasi_tiket`, `deskripsi`) VALUES
@@ -73,7 +73,7 @@ INSERT INTO `master_kodefikasi_tiket` (`id_kodefikasi_tiket`, `name_kodefikasi_t
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_rating`
+-- Struktur dari tabel `master_rating`
 --
 
 CREATE TABLE `master_rating` (
@@ -82,7 +82,7 @@ CREATE TABLE `master_rating` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `master_rating`
+-- Dumping data untuk tabel `master_rating`
 --
 
 INSERT INTO `master_rating` (`id`, `rating`) VALUES
@@ -95,7 +95,7 @@ INSERT INTO `master_rating` (`id`, `rating`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_status_tiket`
+-- Struktur dari tabel `master_status_tiket`
 --
 
 CREATE TABLE `master_status_tiket` (
@@ -104,7 +104,7 @@ CREATE TABLE `master_status_tiket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `master_status_tiket`
+-- Dumping data untuk tabel `master_status_tiket`
 --
 
 INSERT INTO `master_status_tiket` (`id`, `jenis_status_tiket`) VALUES
@@ -115,7 +115,7 @@ INSERT INTO `master_status_tiket` (`id`, `jenis_status_tiket`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_sub_kodefikasi_tiket`
+-- Struktur dari tabel `master_sub_kodefikasi_tiket`
 --
 
 CREATE TABLE `master_sub_kodefikasi_tiket` (
@@ -125,7 +125,7 @@ CREATE TABLE `master_sub_kodefikasi_tiket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `master_sub_kodefikasi_tiket`
+-- Dumping data untuk tabel `master_sub_kodefikasi_tiket`
 --
 
 INSERT INTO `master_sub_kodefikasi_tiket` (`id_sub_kodefikasi_tiket`, `id_kodefikasi_tiket`, `nama_sub_kodefikasi_tiket`) VALUES
@@ -154,7 +154,7 @@ INSERT INTO `master_sub_kodefikasi_tiket` (`id_sub_kodefikasi_tiket`, `id_kodefi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_sub_sub_kodefikasi_tiket`
+-- Struktur dari tabel `master_sub_sub_kodefikasi_tiket`
 --
 
 CREATE TABLE `master_sub_sub_kodefikasi_tiket` (
@@ -166,7 +166,7 @@ CREATE TABLE `master_sub_sub_kodefikasi_tiket` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `master_sub_sub_kodefikasi_tiket`
+-- Dumping data untuk tabel `master_sub_sub_kodefikasi_tiket`
 --
 
 INSERT INTO `master_sub_sub_kodefikasi_tiket` (`id_sub_sub_kodefikasi_tiket`, `id_kodefikasi_tiket`, `id_sub_kodefikasi_tiket`, `nama_sub_sub_kodefikasi_tiket`, `deskripsi`) VALUES
@@ -244,7 +244,7 @@ INSERT INTO `master_sub_sub_kodefikasi_tiket` (`id_sub_sub_kodefikasi_tiket`, `i
 -- --------------------------------------------------------
 
 --
--- Table structure for table `master_user`
+-- Struktur dari tabel `master_user`
 --
 
 CREATE TABLE `master_user` (
@@ -256,21 +256,22 @@ CREATE TABLE `master_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `master_user`
+-- Dumping data untuk tabel `master_user`
 --
 
 INSERT INTO `master_user` (`id_user`, `nama_user`, `username`, `password`, `hak_akses_user`) VALUES
-(1, 'qwert', 'qwert@gmail.com', '$2y$10$oyjWDqStxwGUvwRILzYAfuLyAglsWTLdyZmaP.yRtX3YUKSrgZjyK', 'Mahasiswa');
+(1, 'qwert', 'qwert@gmail.com', '$2y$10$oyjWDqStxwGUvwRILzYAfuLyAglsWTLdyZmaP.yRtX3YUKSrgZjyK', 'Mahasiswa'),
+(3, 'dosen', 'dosen@gmail.com', '$2y$10$oyjWDqStxwGUvwRILzYAfuLyAglsWTLdyZmaP.yRtX3YUKSrgZjyK', 'Dosen');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaksi_tiket`
+-- Struktur dari tabel `transaksi_tiket`
 --
 
 CREATE TABLE `transaksi_tiket` (
   `id_transaksi_tiket` int(255) NOT NULL,
-  `id_user` int(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `id_kodefikasi_tiket` int(255) NOT NULL,
   `id_sub_kodefikasi_tiket` int(255) NOT NULL,
   `id_sub_sub_kodefikasi` int(255) NOT NULL,
@@ -286,14 +287,14 @@ CREATE TABLE `transaksi_tiket` (
 --
 
 --
--- Indexes for table `master_detail_faq`
+-- Indeks untuk tabel `master_detail_faq`
 --
 ALTER TABLE `master_detail_faq`
   ADD PRIMARY KEY (`id_detail_faq`),
   ADD KEY `id_master_faq` (`id_master_faq`);
 
 --
--- Indexes for table `master_faq`
+-- Indeks untuk tabel `master_faq`
 --
 ALTER TABLE `master_faq`
   ADD PRIMARY KEY (`id_master_faq`),
@@ -302,32 +303,32 @@ ALTER TABLE `master_faq`
   ADD KEY `id_sub_sub_kodefikasi_tiket` (`id_sub_sub_kodefikasi_tiket`);
 
 --
--- Indexes for table `master_kodefikasi_tiket`
+-- Indeks untuk tabel `master_kodefikasi_tiket`
 --
 ALTER TABLE `master_kodefikasi_tiket`
   ADD PRIMARY KEY (`id_kodefikasi_tiket`);
 
 --
--- Indexes for table `master_rating`
+-- Indeks untuk tabel `master_rating`
 --
 ALTER TABLE `master_rating`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `master_status_tiket`
+-- Indeks untuk tabel `master_status_tiket`
 --
 ALTER TABLE `master_status_tiket`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `master_sub_kodefikasi_tiket`
+-- Indeks untuk tabel `master_sub_kodefikasi_tiket`
 --
 ALTER TABLE `master_sub_kodefikasi_tiket`
   ADD PRIMARY KEY (`id_sub_kodefikasi_tiket`),
   ADD KEY `id_kodefikasi_tiket` (`id_kodefikasi_tiket`);
 
 --
--- Indexes for table `master_sub_sub_kodefikasi_tiket`
+-- Indeks untuk tabel `master_sub_sub_kodefikasi_tiket`
 --
 ALTER TABLE `master_sub_sub_kodefikasi_tiket`
   ADD PRIMARY KEY (`id_sub_sub_kodefikasi_tiket`),
@@ -335,92 +336,91 @@ ALTER TABLE `master_sub_sub_kodefikasi_tiket`
   ADD KEY `id_sub_kodefikasi_tiket` (`id_sub_kodefikasi_tiket`);
 
 --
--- Indexes for table `master_user`
+-- Indeks untuk tabel `master_user`
 --
 ALTER TABLE `master_user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- Indexes for table `transaksi_tiket`
+-- Indeks untuk tabel `transaksi_tiket`
 --
 ALTER TABLE `transaksi_tiket`
   ADD PRIMARY KEY (`id_transaksi_tiket`),
-  ADD KEY `id_user` (`id_user`,`id_kodefikasi_tiket`,`id_sub_kodefikasi_tiket`,`id_sub_sub_kodefikasi`,`id_status_tiket`,`id_rating`),
   ADD KEY `id_status_tiket` (`id_status_tiket`),
   ADD KEY `id_kodefikasi_tiket` (`id_kodefikasi_tiket`),
   ADD KEY `id_sub_kodefikasi_tiket` (`id_sub_kodefikasi_tiket`),
   ADD KEY `id_sub_sub_kodefikasi` (`id_sub_sub_kodefikasi`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `master_detail_faq`
+-- AUTO_INCREMENT untuk tabel `master_detail_faq`
 --
 ALTER TABLE `master_detail_faq`
   MODIFY `id_detail_faq` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `master_faq`
+-- AUTO_INCREMENT untuk tabel `master_faq`
 --
 ALTER TABLE `master_faq`
   MODIFY `id_master_faq` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `master_kodefikasi_tiket`
+-- AUTO_INCREMENT untuk tabel `master_kodefikasi_tiket`
 --
 ALTER TABLE `master_kodefikasi_tiket`
   MODIFY `id_kodefikasi_tiket` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `master_rating`
+-- AUTO_INCREMENT untuk tabel `master_rating`
 --
 ALTER TABLE `master_rating`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `master_status_tiket`
+-- AUTO_INCREMENT untuk tabel `master_status_tiket`
 --
 ALTER TABLE `master_status_tiket`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `master_sub_kodefikasi_tiket`
+-- AUTO_INCREMENT untuk tabel `master_sub_kodefikasi_tiket`
 --
 ALTER TABLE `master_sub_kodefikasi_tiket`
   MODIFY `id_sub_kodefikasi_tiket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `master_sub_sub_kodefikasi_tiket`
+-- AUTO_INCREMENT untuk tabel `master_sub_sub_kodefikasi_tiket`
 --
 ALTER TABLE `master_sub_sub_kodefikasi_tiket`
   MODIFY `id_sub_sub_kodefikasi_tiket` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
--- AUTO_INCREMENT for table `master_user`
+-- AUTO_INCREMENT untuk tabel `master_user`
 --
 ALTER TABLE `master_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `transaksi_tiket`
+-- AUTO_INCREMENT untuk tabel `transaksi_tiket`
 --
 ALTER TABLE `transaksi_tiket`
   MODIFY `id_transaksi_tiket` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `master_detail_faq`
+-- Ketidakleluasaan untuk tabel `master_detail_faq`
 --
 ALTER TABLE `master_detail_faq`
   ADD CONSTRAINT `master_detail_faq_ibfk_1` FOREIGN KEY (`id_master_faq`) REFERENCES `master_faq` (`id_master_faq`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `master_faq`
+-- Ketidakleluasaan untuk tabel `master_faq`
 --
 ALTER TABLE `master_faq`
   ADD CONSTRAINT `master_faq_ibfk_1` FOREIGN KEY (`id_kodefikasi_tiket`) REFERENCES `master_kodefikasi_tiket` (`id_kodefikasi_tiket`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -428,23 +428,22 @@ ALTER TABLE `master_faq`
   ADD CONSTRAINT `master_faq_ibfk_3` FOREIGN KEY (`id_sub_sub_kodefikasi_tiket`) REFERENCES `master_sub_sub_kodefikasi_tiket` (`id_sub_sub_kodefikasi_tiket`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `master_sub_kodefikasi_tiket`
+-- Ketidakleluasaan untuk tabel `master_sub_kodefikasi_tiket`
 --
 ALTER TABLE `master_sub_kodefikasi_tiket`
   ADD CONSTRAINT `master_sub_kodefikasi_tiket_ibfk_1` FOREIGN KEY (`id_kodefikasi_tiket`) REFERENCES `master_kodefikasi_tiket` (`id_kodefikasi_tiket`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `master_sub_sub_kodefikasi_tiket`
+-- Ketidakleluasaan untuk tabel `master_sub_sub_kodefikasi_tiket`
 --
 ALTER TABLE `master_sub_sub_kodefikasi_tiket`
   ADD CONSTRAINT `master_sub_sub_kodefikasi_tiket_ibfk_1` FOREIGN KEY (`id_sub_kodefikasi_tiket`) REFERENCES `master_sub_kodefikasi_tiket` (`id_sub_kodefikasi_tiket`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `master_sub_sub_kodefikasi_tiket_ibfk_2` FOREIGN KEY (`id_kodefikasi_tiket`) REFERENCES `master_kodefikasi_tiket` (`id_kodefikasi_tiket`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `transaksi_tiket`
+-- Ketidakleluasaan untuk tabel `transaksi_tiket`
 --
 ALTER TABLE `transaksi_tiket`
-  ADD CONSTRAINT `transaksi_tiket_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `master_user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `transaksi_tiket_ibfk_2` FOREIGN KEY (`id_status_tiket`) REFERENCES `master_status_tiket` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `transaksi_tiket_ibfk_3` FOREIGN KEY (`id_kodefikasi_tiket`) REFERENCES `master_kodefikasi_tiket` (`id_kodefikasi_tiket`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `transaksi_tiket_ibfk_4` FOREIGN KEY (`id_sub_kodefikasi_tiket`) REFERENCES `master_sub_kodefikasi_tiket` (`id_sub_kodefikasi_tiket`) ON DELETE CASCADE ON UPDATE CASCADE,
