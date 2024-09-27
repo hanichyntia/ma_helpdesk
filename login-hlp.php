@@ -53,48 +53,40 @@
                             <div class="p-2">
                                 <!-- PHP Login -->
                                 <?php
-                                session_start();
-                                include "config.php";
+                                    session_start();
+                                    include "config.php";
 
-                                $error_message = '';
+                                    $error_message = '';
 
-                                if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
-                                    $username = $_POST['username'];
-                                    $password = $_POST['password'];
+                                    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
+                                        // Ambil email dari input
+                                        $email = $_POST['username']; 
 
-                                    $login = mysqli_query($conn, "SELECT * FROM master_user WHERE username='$username'");
-                                    $cek = mysqli_num_rows($login);
+                                        // Cek apakah email ada di database
+                                        $login = mysqli_query($conn, "SELECT * FROM master_user WHERE email='$email'");
+                                        $cek = mysqli_num_rows($login);
 
-                                    if ($cek > 0) {
-                                        $data = mysqli_fetch_assoc($login);
-                                        if (password_verify($password, $data['password'])) {
+                                        if ($cek > 0) {
+                                            // Ambil data user berdasarkan email
+                                            $data = mysqli_fetch_assoc($login);
+
+                                            // Set session dengan data pengguna
                                             $_SESSION['id_user'] = $data['id_user'];
-                                            $_SESSION['username'] = $username;
+                                            $_SESSION['username'] = $data['email']; // Simpan email ke session
                                             $_SESSION['hak_akses_user'] = $data['hak_akses_user'];
                                             $_SESSION['status_login'] = true;
 
-                                            switch ($data['hak_akses_user']) {
-                                                case "Mahasiswa":
-                                                case "Dosen":
-                                                case "Staff":
-                                                    header("Location: faq.php");
-                                                    break;
-                                                case "Admin":
-                                                    header("Location: index-admin.php");
-                                                    break;
-                                                default:
-                                                    header("Location: login-hlp.php?pesan=gagal");
-                                                    break;
-                                            }
+                                            // Arahkan ke halaman faq.php
+                                            header("Location: faq.php");
                                             exit;
                                         } else {
-                                            $error_message = 'Password tidak benar.';
+                                            // Tampilkan pesan error jika email tidak ditemukan
+                                            $error_message = 'Email tidak ditemukan.';
                                         }
-                                    } else {
-                                        $error_message = 'Username tidak ditemukan.';
                                     }
-                                }
-                                ?>
+                                    ?>
+
+
 
                                 <!-- Pesan error login -->
                                 <?php if ($error_message != ''): ?>
@@ -103,23 +95,31 @@
                                     </div>
                                 <?php endif; ?>
 
-                                <?php if (isset($_GET['status']) && $_GET['status'] == 'success') { ?>
-                                    <div class="alert alert-success mt-4" role="alert">
-                                        Tiket berhasil disimpan!
-                                    </div>
-                                <?php } elseif (isset($_GET['status']) && $_GET['status'] == 'error') { ?>
-                                    <div class="alert alert-danger mt-4" role="alert">
-                                        Terjadi kesalahan, silakan coba lagi.
-                                    </div>
-                                <?php } ?>
+                                <!-- Penanganan notifikasi tiket dan login -->
+                                <?php if (isset($_GET['status'])): ?>
+                                    <?php if ($_GET['status'] == 'success'): ?>
+                                        <div class="alert alert-success mt-4" role="alert">
+                                            Tiket berhasil disimpan
+                                        </div>
+                                    <?php elseif ($_GET['status'] == 'error'): ?>
+                                        <div class="alert alert-danger mt-4" role="alert">
+                                            Terjadi kesalahan, silakan coba lagi.
+                                        </div>
+                                    <?php elseif ($_GET['status'] == 'gagal'): ?>
+                                        <div class="alert alert-danger mt-4" role="alert">
+                                            Mohon is dengan benar
+                                        </div>
+                                    <?php endif; ?>
+                                <?php endif; ?>
 
                                 <!-- Form Login -->
                                 <form class="form-horizontal" method="POST" action="">
                                     <div class="mb-3">
                                         <label for="username" class="form-label">Email</label>
-                                        <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan email" required>
+                                        <input type="email" class="form-control" id="username" name="username" placeholder="Masukkan email" required>
                                     </div>
                                 </form>
+
 
                                 <!-- Form Tiket -->
                                 <form action="simpan_tiket.php" class="needs-validation mt-4" method="post" id="formSearch" novalidate>
@@ -197,66 +197,100 @@
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
-        document.getElementById('kategori').addEventListener('change', function () {
-            var kategori = this.value;
-            var subKategoriContainer = document.getElementById('subkategori-container');
-            var subKategoriSelect = document.getElementById('subkategori');
+    document.getElementById('kategori').addEventListener('change', function () {
+        var kategori = this.value;
+        var subKategoriContainer = document.getElementById('subkategori-container');
+        var subKategoriSelect = document.getElementById('subkategori');
 
-            if (kategori) {
-                subKategoriContainer.style.display = 'block';
+        if (kategori) {
+            subKategoriContainer.style.display = 'block';
 
-                fetch('get_subkategori.php?kategori=' + kategori)
-                    .then(response => response.json())
-                    .then(data => {
-                        subKategoriSelect.innerHTML = '<option value="">Pilih Subkategori</option>';
-                        data.forEach(subkategori => {
-                            subKategoriSelect.innerHTML += `<option value="${subkategori.id}">${subkategori.nama}</option>`;
-                        });
+            fetch('get_subkategori.php?kategori=' + kategori)
+                .then(response => response.json())
+                .then(data => {
+                    subKategoriSelect.innerHTML = '<option value="">Pilih Subkategori</option>';
+                    data.forEach(subkategori => {
+                        subKategoriSelect.innerHTML += `<option value="${subkategori.id}">${subkategori.nama}</option>`;
                     });
-            } else {
-                subKategoriContainer.style.display = 'none';
-            }
-        });
+                });
+        } else {
+            subKategoriContainer.style.display = 'none';
+        }
+    });
 
-        document.getElementById('subkategori').addEventListener('change', function () {
-            var subKategori = this.value;
-            var subSubKategoriContainer = document.getElementById('subsubkategori-container');
-            var subSubKategoriSelect = document.getElementById('subsubkategori');
+    document.getElementById('subkategori').addEventListener('change', function () {
+        var subKategori = this.value;
+        var subSubKategoriContainer = document.getElementById('subsubkategori-container');
+        var subSubKategoriSelect = document.getElementById('subsubkategori');
 
-            if (subKategori) {
-                subSubKategoriContainer.style.display = 'block';
+        if (subKategori) {
+            subSubKategoriContainer.style.display = 'block';
 
-                fetch('get_subsubkategori.php?subkategori=' + subKategori)
-                    .then(response => response.json())
-                    .then(data => {
-                        subSubKategoriSelect.innerHTML = '<option value="">Pilih Detail Subkategori</option>';
-                        data.forEach(subsubkategori => {
-                            subSubKategoriSelect.innerHTML += `<option value="${subsubkategori.id}">${subsubkategori.nama}</option>`;
-                        });
+            fetch('get_subsubkategori.php?subkategori=' + subKategori)
+                .then(response => response.json())
+                .then(data => {
+                    subSubKategoriSelect.innerHTML = '<option value="">Pilih Detail Subkategori</option>';
+                    data.forEach(subsubkategori => {
+                        subSubKategoriSelect.innerHTML += `<option value="${subsubkategori.id}">${subsubkategori.nama}</option>`;
                     });
-            } else {
-                subSubKategoriContainer.style.display = 'none';
-            }
-        });
+                });
+        } else {
+            subSubKategoriContainer.style.display = 'none';
+        }
+    });
 
-        document.getElementById('subsubkategori').addEventListener('change', function () {
-            var subSubKategori = this.value;
-            var emailContainer = document.getElementById('email-container');
-            var keluhanContainer = document.getElementById('keluhan-container');
-            var submitButtonContainer = document.getElementById('submit-button-container');
+    document.getElementById('subsubkategori').addEventListener('change', function () {
+        var subSubKategori = this.value;
+        var emailContainer = document.getElementById('email-container');
+        var keluhanContainer = document.getElementById('keluhan-container');
+        var submitButtonContainer = document.getElementById('submit-button-container');
 
-            // Check if the selected subsubcategory corresponds to "Reset password email"
-            if (subSubKategori === '2') { // Adjust this value according to the actual ID or value for "Reset password email"
-                emailContainer.style.display = 'block'; // Show email input
-                keluhanContainer.style.display = 'none'; // Hide keluhan textarea
-                submitButtonContainer.style.display = 'block'; // Show submit button
-            } else {
-                emailContainer.style.display = 'none'; // Hide email input
-                keluhanContainer.style.display = 'block'; // Show keluhan textarea
-                submitButtonContainer.style.display = 'block'; // Show submit button
-            }
-        });
-    </script>
+        // Check if the selected subsubcategory corresponds to "Reset password email"
+        if (subSubKategori === '2') { // Adjust this value according to the actual ID or value for "Reset password email"
+            emailContainer.style.display = 'block'; // Show email input
+            keluhanContainer.style.display = 'block'; // Hide keluhan textarea
+            submitButtonContainer.style.display = 'block'; // Show submit button
+        } else {
+            emailContainer.style.display = 'none'; // Hide email input
+            keluhanContainer.style.display = 'block'; // Show keluhan textarea
+            submitButtonContainer.style.display = 'block'; // Show submit button
+        }
+    });
+
+    // Validasi saat submit
+    document.getElementById('formSearch').addEventListener('submit', function (event) {
+        var kategori = document.getElementById('kategori').value;
+        var subkategori = document.getElementById('subkategori').value;
+        var subsubkategori = document.getElementById('subsubkategori').value;
+        var email = document.getElementById('reset-email') ? document.getElementById('reset-email').value : '';
+
+        if (!kategori) {
+            alert("Silakan pilih kategori masalah.");
+            event.preventDefault();
+            return;
+        }
+
+        if (!subkategori) {
+            alert("Silakan pilih subkategori.");
+            event.preventDefault();
+            return;
+        }
+
+        if (!subsubkategori) {
+            alert("Silakan pilih detail subkategori.");
+            event.preventDefault();
+            return;
+        }
+
+        // Validasi email khusus
+        if (email !== '' && !email.endsWith('@gmail.com')) {
+            alert("Email harus menggunakan domain @gmail.com.");
+            event.preventDefault();
+            return;
+        }
+    });
+</script>
+
 </body>
 
 </html>
