@@ -117,14 +117,8 @@
                                 <form class="form-horizontal" method="POST" action="">
                                     <div class="mb-3">
                                         <label for="username" class="form-label">Email</label>
-                                        <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username" required>
+                                        <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan email" required>
                                     </div>
-
-                                    <div class="mb-3">
-                                        <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password" required>
-                                    </div>
-
                                 </form>
 
                                 <!-- Form Tiket -->
@@ -172,7 +166,7 @@
                                         <div class="invalid-feedback">Tolong Masukkan Keluhan</div>
                                     </div>
 
-                                    <div class="mt-4">
+                                    <div class="mt-4" id="submit-button-container" style="display: none;">
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </div>
 
@@ -248,15 +242,18 @@
         document.getElementById('subsubkategori').addEventListener('change', function () {
             var subSubKategori = this.value;
             var emailContainer = document.getElementById('email-container');
-            var keluhanContainer = document.getElementById('keluhan-container'); // Reference to the keluhan container
+            var keluhanContainer = document.getElementById('keluhan-container');
+            var submitButtonContainer = document.getElementById('submit-button-container');
 
             // Check if the selected subsubcategory corresponds to "Reset password email"
             if (subSubKategori === '2') { // Adjust this value according to the actual ID or value for "Reset password email"
                 emailContainer.style.display = 'block'; // Show email input
                 keluhanContainer.style.display = 'none'; // Hide keluhan textarea
+                submitButtonContainer.style.display = 'block'; // Show submit button
             } else {
                 emailContainer.style.display = 'none'; // Hide email input
                 keluhanContainer.style.display = 'block'; // Show keluhan textarea
+                submitButtonContainer.style.display = 'block'; // Show submit button
             }
         });
     </script>
