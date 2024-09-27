@@ -113,7 +113,7 @@
                                 <?php endif; ?>
 
                                 <!-- Form Login -->
-                                <form class="form-horizontal" method="POST" action="">
+                                <form class="form-horizontal" method="POST" action="" oninput="checkSpecialChars(event)">
                                     <div class="mb-3">
                                         <label for="username" class="form-label">Email</label>
                                         <input type="email" class="form-control" id="username" name="username" placeholder="Masukkan email" required>
@@ -122,7 +122,7 @@
 
 
                                 <!-- Form Tiket -->
-                                <form action="simpan_tiket.php" class="needs-validation mt-4" method="post" id="formSearch" novalidate>
+                                <form action="simpan_tiket.php" class="needs-validation mt-4" method="post" id="formSearch" novalidate onsubmit="checkSpecialCharsOnSubmit(event)">
                                     <div class="mb-3">
                                         <label for="kategori" class="form-label">Kategori Masalah</label>
                                         <select id="kategori" name="kategori" class="form-select" required>
@@ -182,7 +182,9 @@
 
                     <div class="mt-5 text-center">
                         <p>Tidak punya akun? <a href="register-hlp.php" class="fw-medium text-primary">Daftar sekarang</a></p>
-                        <p>© <script>document.write(new Date().getFullYear())</script> Helpdesk. Crafted with <i class="mdi mdi-heart text-danger"></i> by Ma Chung</p>
+                        <p>© <script>
+                                document.write(new Date().getFullYear())
+                            </script> Helpdesk. Crafted with <i class="mdi mdi-heart text-danger"></i> by Ma Chung</p>
                     </div>
                 </div>
             </div>
@@ -197,10 +199,21 @@
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
-    document.getElementById('kategori').addEventListener('change', function () {
-        var kategori = this.value;
-        var subKategoriContainer = document.getElementById('subkategori-container');
-        var subKategoriSelect = document.getElementById('subkategori');
+        function checkSpecialCharsOnSubmit(event) {
+            var input = document.getElementById("keluhan", "reset-email").value;
+            // Regular expression for special characters
+            var specialChars = /[!@#$%^&*(),.?":{}|<>]/g;
+
+            if (specialChars.test(input)) {
+                alert("Form tidak dapat disubmit karena ada karakter spesial yang tidak diizinkan!");
+                event.preventDefault(); // Mencegah form disubmit
+            }
+        }
+
+        document.getElementById('kategori').addEventListener('change', function() {
+            var kategori = this.value;
+            var subKategoriContainer = document.getElementById('subkategori-container');
+            var subKategoriSelect = document.getElementById('subkategori');
 
         if (kategori) {
             subKategoriContainer.style.display = 'block';
@@ -218,10 +231,10 @@
         }
     });
 
-    document.getElementById('subkategori').addEventListener('change', function () {
-        var subKategori = this.value;
-        var subSubKategoriContainer = document.getElementById('subsubkategori-container');
-        var subSubKategoriSelect = document.getElementById('subsubkategori');
+        document.getElementById('subkategori').addEventListener('change', function() {
+            var subKategori = this.value;
+            var subSubKategoriContainer = document.getElementById('subsubkategori-container');
+            var subSubKategoriSelect = document.getElementById('subsubkategori');
 
         if (subKategori) {
             subSubKategoriContainer.style.display = 'block';
@@ -239,11 +252,11 @@
         }
     });
 
-    document.getElementById('subsubkategori').addEventListener('change', function () {
-        var subSubKategori = this.value;
-        var emailContainer = document.getElementById('email-container');
-        var keluhanContainer = document.getElementById('keluhan-container');
-        var submitButtonContainer = document.getElementById('submit-button-container');
+        document.getElementById('subsubkategori').addEventListener('change', function() {
+            var subSubKategori = this.value;
+            var emailContainer = document.getElementById('email-container');
+            var keluhanContainer = document.getElementById('keluhan-container');
+            var submitButtonContainer = document.getElementById('submit-button-container');
 
         // Check if the selected subsubcategory corresponds to "Reset password email"
         if (subSubKategori === '2') { // Adjust this value according to the actual ID or value for "Reset password email"
