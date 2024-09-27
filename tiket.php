@@ -32,6 +32,17 @@
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
+
+                                    <?php if (isset($_GET['status']) && $_GET['status'] == 'success') { ?>
+                                    <div class="alert alert-success" role="alert">
+                                        Tiket berhasil disimpan!
+                                    </div>
+                                <?php } elseif (isset($_GET['status']) && $_GET['status'] == 'error') { ?>
+                                    <div class="alert alert-danger" role="alert">
+                                        Terjadi kesalahan, silakan coba lagi.
+                                    </div>
+                                <?php } ?>
+
                                         <h4 class="card-title mb-4">Form Keluhan</h4>
                                         <form action="simpan_tiket.php" class="needs-validation" method="post"
                                             id="formSearch" novalidate>
@@ -77,7 +88,7 @@
                                             </div>
 
                                             <div class="mt-4">
-                                                <button type="submit" class="btn btn-primary" formaction="faq.php">Submit</button>
+                                                <button type="submit" class="btn btn-primary">Submit</button>
                                             </div>
                                         </form>
                                     </div>

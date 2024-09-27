@@ -48,7 +48,7 @@
                                         <h4>Selesai</h4>
                                         <p class="text-muted">Keluhan sudah teratasi</p>
                                         <div class="center-content">
-                                            <h5 class="font-size-15 mb-3">Mohon beri id_rating</h5>
+                                            <h5 class="font-size-15 mb-3">Mohon beri rating</h5>
                                             
                                             <!-- id_rating Form -->
                                             <form action="" method="POST">
@@ -89,7 +89,7 @@
 
                                                 <!-- Submit Button -->
                                                 <div class="mt-4">
-                                                    <button type="submit" name="submit_id_rating" class="btn btn-primary" formaction="faq.php">Kirim</button>
+                                                    <button type="submit" name="submit_id_rating" class="btn btn-primary">Kirim</button>
                                                 </div>
                                             </form>
 
@@ -105,7 +105,7 @@
                                                 $stmt->bind_param("ii", $id_rating, $id_transaksi_tiket);
 
                                                 if ($stmt->execute()) {
-                                                    echo "<p class='text-success mt-3'>Terima kasih atas id_rating Anda!</p>";
+                                                    echo "<p class='text-success mt-3'>Terima kasih atas rating Anda!</p>";
                                                 } else {
                                                     echo "<p class='text-danger mt-3'>Gagal mengirim id_rating.</p>";
                                                 }

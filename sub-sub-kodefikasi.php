@@ -1,11 +1,12 @@
-<?php
-include "config.php";
 
-// Mendapatkan id_sub_kodefikasi_tiket dari URL
+<?php
+include "header.php";
+
+
 $id_sub_kodefikasi_tiket = isset($_GET['id_sub_kodefikasi_tiket']) ? intval($_GET['id_sub_kodefikasi_tiket']) : 0;
 
 if ($id_sub_kodefikasi_tiket > 0) {
-  // Prepared statement untuk mengambil data sub_sub_kodefikasi_tiket
+
   $stmt = $conn->prepare("
         SELECT master_sub_sub_kodefikasi_tiket.*, master_sub_kodefikasi_tiket.nama_sub_kodefikasi_tiket 
         FROM master_sub_sub_kodefikasi_tiket
@@ -41,7 +42,7 @@ if ($id_sub_kodefikasi_tiket > 0) {
 
 <body data-sidebar="dark">
   <div id="layout-wrapper">
-    <?php include "header.php"; ?>
+    
 
     <div class="main-content">
       <div class="page-content">
@@ -98,7 +99,7 @@ if ($id_sub_kodefikasi_tiket > 0) {
                                     <?= htmlspecialchars($dt_sub_sub_kategori['deskripsi']) ?>
                                   </p>
                                   <div class="event-up-icon">
-                                    <a href="tiket.php"><i class="bx bx-right-arrow-circle h3 text-primary"></i></a>
+                                    <a href="pindah-halaman.php?id_sub_sub_kodefikasi_tiket=<?= $dt_sub_sub_kategori['id_sub_sub_kodefikasi_tiket'] ?>"><i class="bx bx-right-arrow-circle h3 text-primary"></i></a>
                                   </div>
                                 </div>
                               </div>

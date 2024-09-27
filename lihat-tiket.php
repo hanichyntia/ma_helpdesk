@@ -25,8 +25,6 @@ include "config.php";
 
     <div id="layout-wrapper">
         <?php include "header.php"; ?>
-
-
         <div class="main-content">
             <div class="page-content">
                 <div class="container-fluid">
@@ -96,7 +94,8 @@ include "config.php";
                                         <td>
                                             <!-- Button trigger modal -->
                                             <a href="lihat-respon.php?id_transaksi_tiket=<?= $data_tiket['id_transaksi_tiket'] ?>"><button
-                                                    class="btn btn-primary btn-sm btn-rounded">Lihat Respon</button></a>
+                                                    class="btn btn-primary btn-sm btn-rounded">Lihat Respon</button>
+                                            </a>
                                     </tr>
                                     <?php
                                 }
