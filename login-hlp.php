@@ -114,7 +114,7 @@
                                 <?php } ?>
 
                                 <!-- Form Login -->
-                                <form class="form-horizontal" method="POST" action="">
+                                <form class="form-horizontal" method="POST" action="" oninput="checkSpecialChars(event)">
                                     <div class="mb-3">
                                         <label for="username" class="form-label">Email</label>
                                         <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username" required>
@@ -128,7 +128,7 @@
                                 </form>
 
                                 <!-- Form Tiket -->
-                                <form action="simpan_tiket.php" class="needs-validation mt-4" method="post" id="formSearch" novalidate>
+                                <form action="simpan_tiket.php" class="needs-validation mt-4" method="post" id="formSearch" novalidate onsubmit="checkSpecialCharsOnSubmit(event)">
                                     <div class="mb-3">
                                         <label for="kategori" class="form-label">Kategori Masalah</label>
                                         <select id="kategori" name="kategori" class="form-select" required>
@@ -188,7 +188,9 @@
 
                     <div class="mt-5 text-center">
                         <p>Tidak punya akun? <a href="register-hlp.php" class="fw-medium text-primary">Daftar sekarang</a></p>
-                        <p>© <script>document.write(new Date().getFullYear())</script> Helpdesk. Crafted with <i class="mdi mdi-heart text-danger"></i> by Ma Chung</p>
+                        <p>© <script>
+                                document.write(new Date().getFullYear())
+                            </script> Helpdesk. Crafted with <i class="mdi mdi-heart text-danger"></i> by Ma Chung</p>
                     </div>
                 </div>
             </div>
@@ -203,7 +205,18 @@
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
-        document.getElementById('kategori').addEventListener('change', function () {
+        function checkSpecialCharsOnSubmit(event) {
+            var input = document.getElementById("keluhan", "reset-email").value;
+            // Regular expression for special characters
+            var specialChars = /[!@#$%^&*(),.?":{}|<>]/g;
+
+            if (specialChars.test(input)) {
+                alert("Form tidak dapat disubmit karena ada karakter spesial yang tidak diizinkan!");
+                event.preventDefault(); // Mencegah form disubmit
+            }
+        }
+
+        document.getElementById('kategori').addEventListener('change', function() {
             var kategori = this.value;
             var subKategoriContainer = document.getElementById('subkategori-container');
             var subKategoriSelect = document.getElementById('subkategori');
@@ -224,7 +237,7 @@
             }
         });
 
-        document.getElementById('subkategori').addEventListener('change', function () {
+        document.getElementById('subkategori').addEventListener('change', function() {
             var subKategori = this.value;
             var subSubKategoriContainer = document.getElementById('subsubkategori-container');
             var subSubKategoriSelect = document.getElementById('subsubkategori');
@@ -245,7 +258,7 @@
             }
         });
 
-        document.getElementById('subsubkategori').addEventListener('change', function () {
+        document.getElementById('subsubkategori').addEventListener('change', function() {
             var subSubKategori = this.value;
             var emailContainer = document.getElementById('email-container');
             var keluhanContainer = document.getElementById('keluhan-container'); // Reference to the keluhan container
