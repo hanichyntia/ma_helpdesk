@@ -10,14 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $keluhan = $_POST['keluhan'] ?? '';
 
     if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan)) {
-        echo "<script>alert('Semua field harus diisi.');</script>";
-        header("Location: login-hlp.php?status=gagal");
+        echo "<script>alert('Gagal Menambahkan');location.href='lihat-tiket.php';</script>";
         exit();
     }
 
      if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match("/@machung.ac.id$/", $email)) {
-        echo "<script>alert('Email harus menggunakan domain perusahaan (@machung.ac.id).');</script>";
-        header("Location: login-hlp.php?status=email_invalid");
+        echo "<script>alert('Email harus menggunakan domain perusahaan (@machung.ac.id).');location.href=tiket.php;</script>";
         exit();
     }
 
@@ -36,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute and check for success
     if ($stmt->execute()) {
-        header("Location: login-hlp.php?status=success");
+        echo "<script>alert('Sukses Menambahkan Tiket');location.href='lihat-tiket.php';</script>";
         exit();
     } else {
         echo "Terjadi kesalahan: " . $stmt->error;
