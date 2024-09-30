@@ -53,18 +53,19 @@ include "config.php";
                             </thead>
                             <tbody>
                               <?php 
-                                $qry_tiket = mysqli_query($conn, 
-                                    "SELECT transaksi_tiket.*, master_user.username AS nama_user, 
-                                    master_kodefikasi_tiket.name_kodefikasi_tiket, 
-                                    master_sub_kodefikasi_tiket.nama_sub_kodefikasi_tiket, 
-                                    master_sub_sub_kodefikasi_tiket.nama_sub_sub_kodefikasi_tiket,
-                                    master_status_tiket.jenis_status_tiket
-                                    FROM transaksi_tiket
-                                    JOIN master_user ON master_user.id_user = transaksi_tiket.id_user
-                                    JOIN master_kodefikasi_tiket ON master_kodefikasi_tiket.id_kodefikasi_tiket = transaksi_tiket.id_kodefikasi_tiket
-                                    JOIN master_sub_kodefikasi_tiket ON master_sub_kodefikasi_tiket.id_sub_kodefikasi_tiket = transaksi_tiket.id_sub_kodefikasi_tiket
-                                    JOIN master_sub_sub_kodefikasi_tiket ON master_sub_sub_kodefikasi_tiket.id_sub_sub_kodefikasi_tiket = transaksi_tiket.id_sub_sub_kodefikasi
-                                    JOIN master_status_tiket ON master_status_tiket.id = transaksi_tiket.id_status_tiket order by id asc"
+                                $qry_tiket = mysqli_query(
+                                    $conn,
+                                    "SELECT transaksi_tiket.*, 
+                                            master_kodefikasi_tiket.name_kodefikasi_tiket, 
+                                            master_sub_kodefikasi_tiket.nama_sub_kodefikasi_tiket, 
+                                            master_sub_sub_kodefikasi_tiket.nama_sub_sub_kodefikasi_tiket, 
+                                            master_status_tiket.jenis_status_tiket 
+                                     FROM transaksi_tiket
+                                     JOIN master_kodefikasi_tiket ON master_kodefikasi_tiket.id_kodefikasi_tiket = transaksi_tiket.id_kodefikasi_tiket
+                                     JOIN master_sub_kodefikasi_tiket ON master_sub_kodefikasi_tiket.id_sub_kodefikasi_tiket = transaksi_tiket.id_sub_kodefikasi_tiket
+                                     JOIN master_sub_sub_kodefikasi_tiket ON master_sub_sub_kodefikasi_tiket.id_sub_sub_kodefikasi_tiket = transaksi_tiket.id_sub_sub_kodefikasi
+                                     JOIN master_status_tiket ON master_status_tiket.id = transaksi_tiket.id_status_tiket 
+                                     ORDER BY transaksi_tiket.id_transaksi_tiket ASC"
                                 );
 
                                 $no = 0;
@@ -73,7 +74,7 @@ include "config.php";
                                 ?>
                                     <tr>
                                         <td><?= $no ?></td>
-                                        <td><?= $data_tiket['nama_user'] ?></td>
+                                        <td><?= $data_tiket['email'] ?></td>
                                         <td><?= $data_tiket['name_kodefikasi_tiket'] ?></td>
                                         <td><?= $data_tiket['nama_sub_kodefikasi_tiket'] ?></td>
                                         <td><?= $data_tiket['nama_sub_sub_kodefikasi_tiket'] ?></td>
