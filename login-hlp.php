@@ -53,40 +53,48 @@
                             <div class="p-2">
                                 <!-- PHP Login -->
                                 <?php
-                                    session_start();
-                                    include "config.php";
+                                session_start();
+                                include "config.php";
 
-                                    $error_message = '';
+                                $error_message = '';
 
-                                    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
-                                        // Ambil email dari input
-                                        $email = $_POST['username']; 
+                                if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
+                                    $username = $_POST['username'];
+                                    $password = $_POST['password'];
 
-                                        // Cek apakah email ada di database
-                                        $login = mysqli_query($conn, "SELECT * FROM master_user WHERE email='$email'");
-                                        $cek = mysqli_num_rows($login);
+                                    $login = mysqli_query($conn, "SELECT * FROM master_user WHERE username='$username'");
+                                    $cek = mysqli_num_rows($login);
 
-                                        if ($cek > 0) {
-                                            // Ambil data user berdasarkan email
-                                            $data = mysqli_fetch_assoc($login);
-
-                                            // Set session dengan data pengguna
+                                    if ($cek > 0) {
+                                        $data = mysqli_fetch_assoc($login);
+                                        if (password_verify($password, $data['password'])) {
                                             $_SESSION['id_user'] = $data['id_user'];
-                                            $_SESSION['username'] = $data['email']; // Simpan email ke session
+                                            $_SESSION['username'] = $username;
                                             $_SESSION['hak_akses_user'] = $data['hak_akses_user'];
                                             $_SESSION['status_login'] = true;
 
-                                            // Arahkan ke halaman faq.php
-                                            header("Location: faq.php");
+                                            switch ($data['hak_akses_user']) {
+                                                case "Mahasiswa":
+                                                case "Dosen":
+                                                case "Staff":
+                                                    header("Location: faq.php");
+                                                    break;
+                                                case "Admin":
+                                                    header("Location: index-admin.php");
+                                                    break;
+                                                default:
+                                                    header("Location: login-hlp.php?pesan=gagal");
+                                                    break;
+                                            }
                                             exit;
                                         } else {
-                                            // Tampilkan pesan error jika email tidak ditemukan
-                                            $error_message = 'Email tidak ditemukan.';
+                                            $error_message = 'Password tidak benar.';
                                         }
+                                    } else {
+                                        $error_message = 'Username tidak ditemukan.';
                                     }
-                                    ?>
-
-
+                                }
+                                ?>
 
                                 <!-- Pesan error login -->
                                 <?php if ($error_message != ''): ?>
@@ -95,34 +103,22 @@
                                     </div>
                                 <?php endif; ?>
 
-                                <!-- Penanganan notifikasi tiket dan login -->
-                                <?php if (isset($_GET['status'])): ?>
-                                    <?php if ($_GET['status'] == 'success'): ?>
-                                        <div class="alert alert-success mt-4" role="alert">
-                                            Tiket berhasil disimpan
-                                        </div>
-                                    <?php elseif ($_GET['status'] == 'error'): ?>
-                                        <div class="alert alert-danger mt-4" role="alert">
-                                            Terjadi kesalahan, silakan coba lagi.
-                                        </div>
-                                    <?php elseif ($_GET['status'] == 'gagal'): ?>
-                                        <div class="alert alert-danger mt-4" role="alert">
-                                            Mohon is dengan benar
-                                        </div>
-                                    <?php endif; ?>
-                                <?php endif; ?>
-
-                                <!-- Form Login -->
-                                <form class="form-horizontal" method="POST" action="" oninput="checkSpecialChars(event)">
-                                    <div class="mb-3">
-                                        <label for="username" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="username" name="username" placeholder="Masukkan email" required>
+                                <?php if (isset($_GET['status']) && $_GET['status'] == 'success') { ?>
+                                    <div class="alert alert-success mt-4" role="alert">
+                                        Tiket berhasil disimpan!
                                     </div>
-                                </form>
-
+                                <?php } elseif (isset($_GET['status']) && $_GET['status'] == 'error') { ?>
+                                    <div class="alert alert-danger mt-4" role="alert">
+                                        Terjadi kesalahan, silakan coba lagi.
+                                    </div>
+                                <?php } ?>
 
                                 <!-- Form Tiket -->
                                 <form action="simpan_tiket.php" class="needs-validation mt-4" method="post" id="formSearch" novalidate onsubmit="checkSpecialCharsOnSubmit(event)">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email" required>
+                                    </div>
                                     <div class="mb-3">
                                         <label for="kategori" class="form-label">Kategori Masalah</label>
                                         <select id="kategori" name="kategori" class="form-select" required>
@@ -166,12 +162,8 @@
                                         <div class="invalid-feedback">Tolong Masukkan Keluhan</div>
                                     </div>
 
-                                    <div class="mt-4" id="submit-button-container" style="display: none;">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </div>
-
                                     <div class="mt-3 d-grid">
-                                        <button class="btn btn-primary waves-effect waves-light" type="submit" name="login">Log In</button>
+                                        <button class="btn btn-primary waves-effect waves-light" type="submit" name="login">Submit</button>
                                     </div>
 
                                 </form>
@@ -200,13 +192,12 @@
     <script src="assets/js/app.js"></script>
     <script>
         function checkSpecialCharsOnSubmit(event) {
-            var input = document.getElementById("keluhan", "reset-email").value;
-            // Regular expression for special characters
+            var input = document.getElementById("keluhan").value;
             var specialChars = /[!@#$%^&*(),.?":{}|<>]/g;
 
             if (specialChars.test(input)) {
-                alert("Form tidak dapat disubmit karena ada karakter spesial yang tidak diizinkan!");
-                event.preventDefault(); // Mencegah form disubmit
+                alert("Harap tidak menggunakan karakter spesial pada kalimat.");
+                event.preventDefault();
             }
         }
 
@@ -278,31 +269,24 @@
         var email = document.getElementById('reset-email') ? document.getElementById('reset-email').value : '';
 
         if (!kategori) {
-            alert("Silakan pilih kategori masalah.");
-            event.preventDefault();
-            return;
-        }
+                alert("Silakan pilih kategori masalah.");
+                event.preventDefault();
+                return;
+            }
 
-        if (!subkategori) {
-            alert("Silakan pilih subkategori.");
-            event.preventDefault();
-            return;
-        }
+            if (!subkategori) {
+                alert("Silakan pilih subkategori.");
+                event.preventDefault();
+                return;
+            }
 
-        if (!subsubkategori) {
-            alert("Silakan pilih detail subkategori.");
-            event.preventDefault();
-            return;
-        }
-
-        // Validasi email khusus
-        if (email !== '' && !email.endsWith('@gmail.com')) {
-            alert("Email harus menggunakan domain @gmail.com.");
-            event.preventDefault();
-            return;
-        }
-    });
-</script>
+            if (!subsubkategori) {
+                alert("Silakan pilih detail subkategori.");
+                event.preventDefault();
+                return;
+            }
+        });
+    </script>
 
 </body>
 
