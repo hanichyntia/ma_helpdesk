@@ -24,7 +24,7 @@ include "config.php";
 <body data-sidebar="dark">
 
     <div id="layout-wrapper">
-    <?php include "header-admin.php";?>
+        <?php include "header-admin.php"; ?>
         <div class="main-content">
             <div class="page-content">
                 <div class="container-fluid">
@@ -52,20 +52,23 @@ include "config.php";
                                 </tr>
                             </thead>
                             <tbody>
-                              <?php 
-                                $qry_tiket = mysqli_query($conn, 
-                                    "SELECT transaksi_tiket.*, master_user.username AS nama_user, 
-                                    master_kodefikasi_tiket.name_kodefikasi_tiket, 
-                                    master_sub_kodefikasi_tiket.nama_sub_kodefikasi_tiket, 
-                                    master_sub_sub_kodefikasi_tiket.nama_sub_sub_kodefikasi_tiket,
-                                    master_status_tiket.jenis_status_tiket
-                                    FROM transaksi_tiket
-                                    JOIN master_user ON master_user.id_user = transaksi_tiket.id_user
-                                    JOIN master_kodefikasi_tiket ON master_kodefikasi_tiket.id_kodefikasi_tiket = transaksi_tiket.id_kodefikasi_tiket
-                                    JOIN master_sub_kodefikasi_tiket ON master_sub_kodefikasi_tiket.id_sub_kodefikasi_tiket = transaksi_tiket.id_sub_kodefikasi_tiket
-                                    JOIN master_sub_sub_kodefikasi_tiket ON master_sub_sub_kodefikasi_tiket.id_sub_sub_kodefikasi_tiket = transaksi_tiket.id_sub_sub_kodefikasi
-                                    JOIN master_status_tiket ON master_status_tiket.id = transaksi_tiket.id_status_tiket order by id asc"
-                                );
+                                <?php
+                                $qry_tiket = mysqli_query($conn, "SELECT transaksi_tiket.*, 
+                                master_kodefikasi_tiket.name_kodefikasi_tiket, 
+                                master_sub_kodefikasi_tiket.nama_sub_kodefikasi_tiket, 
+                                master_sub_sub_kodefikasi_tiket.nama_sub_sub_kodefikasi_tiket, 
+                                master_status_tiket.jenis_status_tiket 
+                            FROM transaksi_tiket
+                            JOIN master_kodefikasi_tiket ON master_kodefikasi_tiket.id_kodefikasi_tiket = transaksi_tiket.id_kodefikasi_tiket
+                            JOIN master_sub_kodefikasi_tiket ON master_sub_kodefikasi_tiket.id_sub_kodefikasi_tiket = transaksi_tiket.id_sub_kodefikasi_tiket
+                            JOIN master_sub_sub_kodefikasi_tiket ON master_sub_sub_kodefikasi_tiket.id_sub_sub_kodefikasi_tiket = transaksi_tiket.id_sub_sub_kodefikasi
+                            JOIN master_status_tiket ON master_status_tiket.id = transaksi_tiket.id_status_tiket 
+                            ORDER BY transaksi_tiket.id_transaksi_tiket ASC");
+
+                                if (!$qry_tiket) {
+                                    echo "Error pada query: " . mysqli_error($conn);
+                                }
+
 
                                 $no = 0;
                                 while ($data_tiket = mysqli_fetch_array($qry_tiket)) {
@@ -73,24 +76,23 @@ include "config.php";
                                 ?>
                                     <tr>
                                         <td><?= $no ?></td>
-                                        <td><?= $data_tiket['nama_user'] ?></td>
+                                        <td><?= $data_tiket['email'] ?></td>
                                         <td><?= $data_tiket['name_kodefikasi_tiket'] ?></td>
                                         <td><?= $data_tiket['nama_sub_kodefikasi_tiket'] ?></td>
                                         <td><?= $data_tiket['nama_sub_sub_kodefikasi_tiket'] ?></td>
-                                        
+
                                         <?php
                                         if ($data_tiket['id_status_tiket'] == 1) {
                                             echo "<td style='background-color:rgba(220, 53, 69, 0.3);'>{$data_tiket['jenis_status_tiket']}</td>";
-                                        }
-                                        elseif ($data_tiket['id_status_tiket'] == 2) {
+                                        } elseif ($data_tiket['id_status_tiket'] == 2) {
                                             echo "<td style='background-color:rgba(255, 193, 7, 0.3)'>{$data_tiket['jenis_status_tiket']}</td>";
-                                        }else {
+                                        } else {
                                             echo "<td style='background-color:rgba(25, 135, 84, 0.3)'>{$data_tiket['jenis_status_tiket']}</td>";
-                                        }                                 
+                                        }
                                         ?>
                                         <td>
-                                        <!-- Button trigger modal -->
-                                        <a href="respon-admin.php?id=<?=$data_tiket['id_transaksi_tiket']?>"><button class="btn btn-primary btn-sm btn-rounded">Beri Respon</button></a>
+                                            <!-- Button trigger modal -->
+                                            <a href="respon-admin.php?id=<?= $data_tiket['id_transaksi_tiket'] ?>"><button class="btn btn-primary btn-sm btn-rounded">Beri Respon</button></a>
                                     </tr>
                                 <?php
                                 }
@@ -105,7 +107,9 @@ include "config.php";
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Helpdesk.
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script> © Helpdesk.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
@@ -113,9 +117,9 @@ include "config.php";
                             </div>
                         </div>
                     </div>
-                </footer>
-            </div>
+            </footer>
         </div>
+    </div>
     </div>
 
     <div class="rightbar-overlay"></div>
