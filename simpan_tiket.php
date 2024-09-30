@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 
-     if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match("/@machung.ac.id$/", $email)) {
-        echo "<script>alert('Email harus menggunakan domain perusahaan (@machung.ac.id).');location.href=tiket.php;</script>";
-        exit();
-    }
+    //  if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match("/@machung.ac.id$/", $email)) {
+    //     echo "<script>alert('Email harus menggunakan domain perusahaan (@machung.ac.id).');location.href=tiket.php;</script>";
+    //     exit();
+    // }
 
     $id_status_tiket = 1;
     $id_rating = 0;
