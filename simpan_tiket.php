@@ -11,13 +11,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan)) {
         echo "<script>alert('Semua field harus diisi.');</script>";
-        header("Location: tiket.php?status=gagal");
+        header("Location: login-hlp.php?status=gagal");
         exit();
     }
 
-     if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match("/@machung.ac.id$/", $email)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match("/@machung.ac.id$/", $email)) {
         echo "<script>alert('Email harus menggunakan domain perusahaan (@machung.ac.id).');</script>";
-        header("Location: tiket.php?status=email_invalid");
+        header("Location: login-hlp.php?status=email_invalid");
         exit();
     }
 

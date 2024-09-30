@@ -37,7 +37,8 @@
                                 <a class="auth-logo-light">
                                     <div class="avatar-md profile-user-wid mb-4">
                                         <span class="avatar-title rounded-circle bg-light">
-                                            <img src="assets/images/logo-light.svg" alt="" class="rounded-circle" height="34">
+                                            <img src="assets/images/logo-light.svg" alt="" class="rounded-circle"
+                                                height="34">
                                         </span>
                                     </div>
                                 </a>
@@ -53,38 +54,38 @@
                             <div class="p-2">
                                 <!-- PHP Login -->
                                 <?php
-                                    session_start();
-                                    include "config.php";
+                                session_start();
+                                include "config.php";
 
-                                    $error_message = '';
+                                $error_message = '';
 
-                                    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
-                                        // Ambil email dari input
-                                        $email = $_POST['username']; 
+                                if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
+                                    // Ambil email dari input
+                                    $email = $_POST['email'];
 
-                                        // Cek apakah email ada di database
-                                        $login = mysqli_query($conn, "SELECT * FROM master_user WHERE email='$email'");
-                                        $cek = mysqli_num_rows($login);
+                                    // Cek apakah email ada di database
+                                    $login = mysqli_query($conn, "SELECT * FROM master_user WHERE email='$email'");
+                                    $cek = mysqli_num_rows($login);
 
-                                        if ($cek > 0) {
-                                            // Ambil data user berdasarkan email
-                                            $data = mysqli_fetch_assoc($login);
+                                    if ($cek > 0) {
+                                        // Ambil data user berdasarkan email
+                                        $data = mysqli_fetch_assoc($login);
 
-                                            // Set session dengan data pengguna
-                                            $_SESSION['id_user'] = $data['id_user'];
-                                            $_SESSION['username'] = $data['email']; // Simpan email ke session
-                                            $_SESSION['hak_akses_user'] = $data['hak_akses_user'];
-                                            $_SESSION['status_login'] = true;
+                                        // Set session dengan data pengguna
+                                        $_SESSION['id_user'] = $data['id_user'];
+                                        $_SESSION['email'] = $data['email']; // Simpan email ke session
+                                        $_SESSION['hak_akses_user'] = $data['hak_akses_user'];
+                                        $_SESSION['status_login'] = true;
 
-                                            // Arahkan ke halaman faq.php
-                                            header("Location: faq.php");
-                                            exit;
-                                        } else {
-                                            // Tampilkan pesan error jika email tidak ditemukan
-                                            $error_message = 'Email tidak ditemukan.';
-                                        }
+                                        // Arahkan ke halaman faq.php
+                                        header("Location: faq.php");
+                                        exit;
+                                    } else {
+                                        // Tampilkan pesan error jika email tidak ditemukan
+                                        $error_message = 'Email tidak ditemukan.';
                                     }
-                                    ?>
+                                }
+                                ?>
 
 
 
@@ -112,18 +113,16 @@
                                     <?php endif; ?>
                                 <?php endif; ?>
 
-                                <!-- Form Login -->
-                                <form class="form-horizontal" method="POST" action="" oninput="checkSpecialChars(event)">
-                                    <div class="mb-3">
-                                        <label for="username" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="username" name="username" placeholder="Masukkan email" required>
-                                    </div>
-                                </form>
-
-
                                 <!-- Form Tiket -->
-                                <form action="simpan_tiket.php" class="needs-validation mt-4" method="post" id="formSearch" novalidate onsubmit="checkSpecialCharsOnSubmit(event)">
+                                <form action="simpan_tiket.php" class="needs-validation mt-4" method="post"
+                                    id="formSearch" novalidate onsubmit="checkSpecialCharsOnSubmit(event)">
                                     <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="Masukkan email" required>
+                                    </div>
+                                    <div class="mb-3">
+
                                         <label for="kategori" class="form-label">Kategori Masalah</label>
                                         <select id="kategori" name="kategori" class="form-select" required>
                                             <option value="">Pilih...</option>
@@ -156,13 +155,15 @@
 
                                     <div class="mb-3" id="email-container" style="display:none;">
                                         <label for="reset-email" class="form-label">Email untuk Reset Password:</label>
-                                        <input type="email" class="form-control" id="reset-email" name="reset-email" placeholder="Masukkan email untuk reset password" required>
+                                        <input type="email" class="form-control" id="reset-email" name="reset-email"
+                                            placeholder="Masukkan email untuk reset password" required>
                                         <div class="invalid-feedback">Tolong Masukkan Email</div>
                                     </div>
 
                                     <div class="mb-3" id="keluhan-container">
                                         <label for="keluhan" class="form-label">Keluhan :</label>
-                                        <textarea id="keluhan" name="keluhan" class="form-control" rows="3" placeholder="Masukkan Keluhan Anda" required></textarea>
+                                        <textarea id="keluhan" name="keluhan" class="form-control" rows="3"
+                                            placeholder="Masukkan Keluhan Anda" required></textarea>
                                         <div class="invalid-feedback">Tolong Masukkan Keluhan</div>
                                     </div>
 
@@ -171,7 +172,8 @@
                                     </div>
 
                                     <div class="mt-3 d-grid">
-                                        <button class="btn btn-primary waves-effect waves-light" type="submit" name="login">Log In</button>
+                                        <button class="btn btn-primary waves-effect waves-light" type="submit"
+                                            name="login">Log In</button>
                                     </div>
 
                                 </form>
@@ -181,10 +183,13 @@
                     <!-- Akhir Card Gabungan -->
 
                     <div class="mt-5 text-center">
-                        <p>Tidak punya akun? <a href="register-hlp.php" class="fw-medium text-primary">Daftar sekarang</a></p>
-                        <p>© <script>
+                        <p>Tidak punya akun? <a href="register-hlp.php" class="fw-medium text-primary">Daftar
+                                sekarang</a></p>
+                        <p>©
+                            <script>
                                 document.write(new Date().getFullYear())
-                            </script> Helpdesk. Crafted with <i class="mdi mdi-heart text-danger"></i> by Ma Chung</p>
+                            </script> Helpdesk. Crafted with <i class="mdi mdi-heart text-danger"></i> by Ma Chung
+                        </p>
                     </div>
                 </div>
             </div>
@@ -210,99 +215,99 @@
             }
         }
 
-        document.getElementById('kategori').addEventListener('change', function() {
+        document.getElementById('kategori').addEventListener('change', function () {
             var kategori = this.value;
             var subKategoriContainer = document.getElementById('subkategori-container');
             var subKategoriSelect = document.getElementById('subkategori');
 
-        if (kategori) {
-            subKategoriContainer.style.display = 'block';
+            if (kategori) {
+                subKategoriContainer.style.display = 'block';
 
-            fetch('get_subkategori.php?kategori=' + kategori)
-                .then(response => response.json())
-                .then(data => {
-                    subKategoriSelect.innerHTML = '<option value="">Pilih Subkategori</option>';
-                    data.forEach(subkategori => {
-                        subKategoriSelect.innerHTML += `<option value="${subkategori.id}">${subkategori.nama}</option>`;
+                fetch('get_subkategori.php?kategori=' + kategori)
+                    .then(response => response.json())
+                    .then(data => {
+                        subKategoriSelect.innerHTML = '<option value="">Pilih Subkategori</option>';
+                        data.forEach(subkategori => {
+                            subKategoriSelect.innerHTML += `<option value="${subkategori.id}">${subkategori.nama}</option>`;
+                        });
                     });
-                });
-        } else {
-            subKategoriContainer.style.display = 'none';
-        }
-    });
+            } else {
+                subKategoriContainer.style.display = 'none';
+            }
+        });
 
-        document.getElementById('subkategori').addEventListener('change', function() {
+        document.getElementById('subkategori').addEventListener('change', function () {
             var subKategori = this.value;
             var subSubKategoriContainer = document.getElementById('subsubkategori-container');
             var subSubKategoriSelect = document.getElementById('subsubkategori');
 
-        if (subKategori) {
-            subSubKategoriContainer.style.display = 'block';
+            if (subKategori) {
+                subSubKategoriContainer.style.display = 'block';
 
-            fetch('get_subsubkategori.php?subkategori=' + subKategori)
-                .then(response => response.json())
-                .then(data => {
-                    subSubKategoriSelect.innerHTML = '<option value="">Pilih Detail Subkategori</option>';
-                    data.forEach(subsubkategori => {
-                        subSubKategoriSelect.innerHTML += `<option value="${subsubkategori.id}">${subsubkategori.nama}</option>`;
+                fetch('get_subsubkategori.php?subkategori=' + subKategori)
+                    .then(response => response.json())
+                    .then(data => {
+                        subSubKategoriSelect.innerHTML = '<option value="">Pilih Detail Subkategori</option>';
+                        data.forEach(subsubkategori => {
+                            subSubKategoriSelect.innerHTML += `<option value="${subsubkategori.id}">${subsubkategori.nama}</option>`;
+                        });
                     });
-                });
-        } else {
-            subSubKategoriContainer.style.display = 'none';
-        }
-    });
+            } else {
+                subSubKategoriContainer.style.display = 'none';
+            }
+        });
 
-        document.getElementById('subsubkategori').addEventListener('change', function() {
+        document.getElementById('subsubkategori').addEventListener('change', function () {
             var subSubKategori = this.value;
             var emailContainer = document.getElementById('email-container');
             var keluhanContainer = document.getElementById('keluhan-container');
             var submitButtonContainer = document.getElementById('submit-button-container');
 
-        // Check if the selected subsubcategory corresponds to "Reset password email"
-        if (subSubKategori === '2') { // Adjust this value according to the actual ID or value for "Reset password email"
-            emailContainer.style.display = 'block'; // Show email input
-            keluhanContainer.style.display = 'block'; // Hide keluhan textarea
-            submitButtonContainer.style.display = 'block'; // Show submit button
-        } else {
-            emailContainer.style.display = 'none'; // Hide email input
-            keluhanContainer.style.display = 'block'; // Show keluhan textarea
-            submitButtonContainer.style.display = 'block'; // Show submit button
-        }
-    });
+            // Check if the selected subsubcategory corresponds to "Reset password email"
+            if (subSubKategori === '2') { // Adjust this value according to the actual ID or value for "Reset password email"
+                emailContainer.style.display = 'block'; // Show email input
+                keluhanContainer.style.display = 'block'; // Hide keluhan textarea
+                submitButtonContainer.style.display = 'block'; // Show submit button
+            } else {
+                emailContainer.style.display = 'none'; // Hide email input
+                keluhanContainer.style.display = 'block'; // Show keluhan textarea
+                submitButtonContainer.style.display = 'block'; // Show submit button
+            }
+        });
 
-    // Validasi saat submit
-    document.getElementById('formSearch').addEventListener('submit', function (event) {
-        var kategori = document.getElementById('kategori').value;
-        var subkategori = document.getElementById('subkategori').value;
-        var subsubkategori = document.getElementById('subsubkategori').value;
-        var email = document.getElementById('reset-email') ? document.getElementById('reset-email').value : '';
+        // Validasi saat submit
+        document.getElementById('formSearch').addEventListener('submit', function (event) {
+            var kategori = document.getElementById('kategori').value;
+            var subkategori = document.getElementById('subkategori').value;
+            var subsubkategori = document.getElementById('subsubkategori').value;
+            var email = document.getElementById('reset-email') ? document.getElementById('reset-email').value : '';
 
-        if (!kategori) {
-            alert("Silakan pilih kategori masalah.");
-            event.preventDefault();
-            return;
-        }
+            if (!kategori) {
+                alert("Silakan pilih kategori masalah.");
+                event.preventDefault();
+                return;
+            }
 
-        if (!subkategori) {
-            alert("Silakan pilih subkategori.");
-            event.preventDefault();
-            return;
-        }
+            if (!subkategori) {
+                alert("Silakan pilih subkategori.");
+                event.preventDefault();
+                return;
+            }
 
-        if (!subsubkategori) {
-            alert("Silakan pilih detail subkategori.");
-            event.preventDefault();
-            return;
-        }
+            if (!subsubkategori) {
+                alert("Silakan pilih detail subkategori.");
+                event.preventDefault();
+                return;
+            }
 
-        // Validasi email khusus
-        if (email !== '' && !email.endsWith('@gmail.com')) {
-            alert("Email harus menggunakan domain @gmail.com.");
-            event.preventDefault();
-            return;
-        }
-    });
-</script>
+            // Validasi email khusus
+            if (email !== '' && !email.endsWith('@gmail.com')) {
+                alert("Email harus menggunakan domain @gmail.com.");
+                event.preventDefault();
+                return;
+            }
+        });
+    </script>
 
 </body>
 
