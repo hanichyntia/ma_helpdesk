@@ -1,20 +1,13 @@
 <?php
-session_start();
-include 'config.php';
-
-// Ensure user is logged in
-if (!isset($_SESSION['status_login']) || !$_SESSION['status_login']) {
-    echo "Anda harus login terlebih dahulu.";
-    exit();
-}
+include "config.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    $id_tiket = $_GET['id'] ?? '';
+    // Use $_POST instead of $_GET for security
+    $id_tiket = $_POST['id'] ?? ''; // Assuming the ID is being sent via a POST form field
     $status_tiket = $_POST['id_status_tiket'] ?? '';
     $respon_admin = $_POST['respon_admin'] ?? '';
 
-
+    // Prepare the SQL statement
     $stmt = $conn->prepare("UPDATE transaksi_tiket SET id_status_tiket = ?, respon_admin = ? WHERE id_transaksi_tiket = ?");
     
     if (!$stmt) {
@@ -22,21 +15,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
+    // Bind parameters: 'i' for integer, 's' for string
     $stmt->bind_param("isi", $status_tiket, $respon_admin, $id_tiket);
 
+    // Execute the statement and check for success
     if ($stmt->execute()) {
-        echo "<script>alert('Status tiket berhasil diperbarui.');</script>";
-        header("Location: respon-tiket.php?status=success");
+        echo "<script>alert('Status tiket berhasil diperbarui.');location.href='respon-tiket.php';</script>";
         exit();
     } else {
         echo "Terjadi kesalahan: " . $stmt->error;
     }
 
+    // Close statement and connection
     $stmt->close();
-    $conn->close();
 } else {
-    echo "<script>alert('Invalid request.');</script>";
-    header("Location: respon-tiket.php");
+    echo "<script>alert('Invalid request.');location.href='respon-tiket.php';</script>";
     exit();
 }
+
+// Close the database connection
+$conn->close();
 ?>

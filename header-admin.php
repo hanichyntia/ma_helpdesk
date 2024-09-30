@@ -1,3 +1,7 @@
+<?php 
+include "config.php";
+
+?>
 <header id="page-topbar">
             <div class="navbar-header">
                 <div class="d-flex">
