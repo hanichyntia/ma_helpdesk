@@ -278,6 +278,7 @@ CREATE TABLE `transaksi_tiket` (
   `id_status_tiket` int(255) NOT NULL,
   `id_rating` int(255) NOT NULL,
   `keluhan` varchar(255) NOT NULL,
+  `reset_email` varchar(255) NOT NULL,
   `respon_admin` varchar(255) NOT NULL,
   `tanggal_transaksi` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

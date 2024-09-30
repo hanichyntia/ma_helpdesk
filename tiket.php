@@ -90,8 +90,8 @@
                                     </div>
 
                                     <div class="mb-3" id="email-container" style="display:none;">
-                                        <label for="reset-email" class="form-label">Email untuk Reset Password:</label>
-                                        <input type="email" class="form-control" id="reset-email" name="reset-email" placeholder="Masukkan email untuk reset password" required>
+                                        <label for="reset_email" class="form-label">Email untuk Reset Password:</label>
+                                        <input type="email" class="form-control" id="reset_email" name="reset_email" placeholder="Masukkan email untuk reset password" required>
                                         <div class="invalid-feedback">Tolong Masukkan Email</div>
                                     </div>
 
@@ -205,7 +205,7 @@
         var kategori = document.getElementById('kategori').value;
         var subkategori = document.getElementById('subkategori').value;
         var subsubkategori = document.getElementById('subsubkategori').value;
-        var email = document.getElementById('reset-email') ? document.getElementById('reset-email').value : '';
+        var email = document.getElementById('reset_email') ? document.getElementById('reset_email').value : '';
 
         if (!kategori) {
                 alert("Silakan pilih kategori masalah.");

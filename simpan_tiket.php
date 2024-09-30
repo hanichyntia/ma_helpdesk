@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subkategori = $_POST['subkategori'] ?? '';
     $subsubkategori = $_POST['subsubkategori'] ?? '';
     $keluhan = $_POST['keluhan'] ?? '';
+    $reset_email = $_POST['reset_email'];
 
     if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan)) {
         echo "<script>alert('Gagal Menambahkan');location.href='lihat-tiket.php';</script>";
@@ -22,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_status_tiket = 1;
     $id_rating = 0;
 
-    $stmt = $conn->prepare("INSERT INTO transaksi_tiket (email, id_kodefikasi_tiket, id_sub_kodefikasi_tiket, id_sub_sub_kodefikasi, id_status_tiket, id_rating, keluhan, tanggal_transaksi) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())");
+    $stmt = $conn->prepare("INSERT INTO transaksi_tiket (email, id_kodefikasi_tiket, id_sub_kodefikasi_tiket, id_sub_sub_kodefikasi, id_status_tiket, id_rating, keluhan, reset_email, tanggal_transaksi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");
 
     if (!$stmt) {
         echo "Error preparing statement: " . $conn->error;
@@ -30,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Bind parameters
-    $stmt->bind_param("siiiiss", $email, $kategori, $subkategori, $subsubkategori, $id_status_tiket, $id_rating, $keluhan);
+    $stmt->bind_param("siiiisss", $email, $kategori, $subkategori, $subsubkategori, $id_status_tiket, $id_rating, $keluhan, $reset_email);
 
     // Execute and check for success
     if ($stmt->execute()) {
