@@ -166,12 +166,8 @@
                                         <div class="invalid-feedback">Tolong Masukkan Keluhan</div>
                                     </div>
 
-                                    <div class="mt-4" id="submit-button-container" style="display: none;">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </div>
-
-                                    <div class="mt-3 d-grid">
-                                        <button class="btn btn-primary waves-effect waves-light" type="submit" name="login">Log In</button>
+                                    <div class="mt-3 d-grid" id="submit-button-container" style="display: none;">
+                                        <button class="btn btn-primary waves-effect waves-light" type="submit">Submit</button>
                                     </div>
 
                                 </form>

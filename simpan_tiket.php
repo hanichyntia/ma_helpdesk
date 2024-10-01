@@ -3,13 +3,6 @@ session_start();
 
 include 'config.php';
 
-if (!isset($_SESSION['status_login']) || !$_SESSION['status_login']) {
-    echo "Anda harus login terlebih dahulu.";
-    exit();
-}
-
-$id_user = $_SESSION['id_user'];
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $kategori = $_POST['kategori'] ?? '';
     $subkategori = $_POST['subkategori'] ?? '';
@@ -34,12 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt->bind_param("iiiiiss", $id_user, $kategori, $subkategori, $subsubkategori, $id_status_tiket, $id_rating, $keluhan);
 
-    if ($stmt->execute()) {
-        header("Location: login-hlp.php?status=success");
-        exit();
-    } else {
-        echo "Terjadi kesalahan: " . $stmt->error;
-    }
+  
 
     $stmt->close();
 }
