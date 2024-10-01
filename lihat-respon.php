@@ -3,6 +3,7 @@ include "config.php";
 $id = isset($_GET['id_transaksi_tiket']) ? intval($_GET['id_transaksi_tiket']) :
     (isset($_GET['id']) ? intval($_GET['id']) : 0);
 
+// Query untuk mendapatkan keluhan dan respons admin
 $stmt = $conn->prepare("
     SELECT transaksi_tiket.*, master_status_tiket.jenis_status_tiket 
     FROM transaksi_tiket 
@@ -12,8 +13,10 @@ $stmt->bind_param("i", $id);
 $stmt->execute();
 $respon = $stmt->get_result()->fetch_assoc();
 
+// Ambil data keluhan dan respons admin
+$keluhanUser = $respon['keluhan']; // Misalkan kolom keluhan bernama 'keluhan'
 $adminResponse = $respon['respon_admin'];
-$statusTiket = $respon['jenis_status_tiket']; // Menyimpan status tiket
+$statusTiket = $respon['jenis_status_tiket'];
 $stmt->close();
 ?>
 
@@ -34,7 +37,7 @@ $stmt->close();
 
 <body data-sidebar="dark">
     <div id="layout-wrapper">
-    <?php include "header.php";?>
+        <?php include "header.php";?>
         <div class="main-content">
             <div class="page-content">
                 <div class="container-fluid">
@@ -50,30 +53,30 @@ $stmt->close();
                             <div class="card">
                                 <div class="card-body">
 
-                                    <!-- Menambahkan Status Tiket -->
+                                    <!-- Menampilkan Status Tiket -->
                                     <h4 class="card-title mb-4">Status Tiket</h4>
                                     <div class="mb-3">
                                         <input type="text" class="form-control" value="<?php echo htmlspecialchars($statusTiket); ?>" readonly />
                                     </div>
 
-                                    <h4 class="card-title mb-4">Keluhan</h4>
-                                    <form>
-                                        <div class="mb-3">
-                                            <textarea id="formmessage" class="form-control" rows="4" readonly><?php echo htmlspecialchars($adminResponse); ?></textarea>
-                                        </div>
-                                    </form>
+                                    <!-- Menampilkan Keluhan -->
+                                    <h4 class="card-title mb-4">Keluhan User</h4>
+                                    <div class="mb-3">
+                                        <textarea id="formmessage" class="form-control" rows="4" readonly><?php echo htmlspecialchars($keluhanUser); ?></textarea>
+                                    </div>
 
+                                    <!-- Menampilkan Respon Admin -->
                                     <h4 class="card-title mb-4">Respon Admin</h4>
-                                    <form>
-                                        <div class="mb-3">
-                                            <textarea id="formmessage" class="form-control" rows="4" readonly><?php echo htmlspecialchars($adminResponse); ?></textarea>
-                                        </div>
-                                        <div class="mt-4 d-flex">
-                                            <a href="lihat-tiket.php" class="btn btn-primary me-2">Kembali</a>
-                                            <a href="tiket.php" class="btn btn-primary me-2">Ajukan lagi</a>
-                                            <a href="tiket-selesai.php?id_transaksi_tiket=<?php echo $id; ?>" class="btn btn-primary">Selesai</a>
-                                        </div>
-                                    </form>
+                                    <div class="mb-3">
+                                        <textarea id="formmessage" class="form-control" rows="4" readonly><?php echo htmlspecialchars($adminResponse); ?></textarea>
+                                    </div>
+
+                                    <!-- Tombol Aksi -->
+                                    <div class="mt-4 d-flex">
+                                        <a href="lihat-tiket.php" class="btn btn-primary me-2">Kembali</a>
+                                        <a href="tiket.php" class="btn btn-primary me-2">Ajukan lagi</a>
+                                        <a href="tiket-selesai.php?id_transaksi_tiket=<?php echo $id; ?>" class="btn btn-primary">Selesai</a>
+                                    </div>
 
                                 </div>
                             </div>
@@ -82,6 +85,8 @@ $stmt->close();
                 </div>
             </div>
         </div>
+
+        <!-- Footer -->
         <footer class="footer">
             <div class="container-fluid">
                 <div class="row">
@@ -97,6 +102,8 @@ $stmt->close();
             </div>
         </footer>
     </div>
+
+    <!-- Scripts -->
     <div class="rightbar-overlay"></div>
     <script src="assets/libs/jquery/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -106,6 +113,7 @@ $stmt->close();
     <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
     <script src="assets/js/pages/dashboard.init.js"></script>
     <script src="assets/js/app.js"></script>
+
 </body>
 
 </html>

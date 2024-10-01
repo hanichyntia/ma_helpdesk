@@ -1,13 +1,5 @@
 <?php
-session_start();
-include 'config.php';
-
-// Ensure user is logged in
-if (!isset($_SESSION['status_login']) || !$_SESSION['status_login']) {
-    echo "Anda harus login terlebih dahulu.";
-    exit();
-}
-
+include "config.php";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $id_tiket = $_GET['id'] ?? '';
