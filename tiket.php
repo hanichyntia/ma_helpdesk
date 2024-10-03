@@ -59,6 +59,14 @@
                                         <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email" required>
                                     </div>
                                     <div class="mb-3">
+                                        <label for="nama" class="form-label">Nama</label>
+                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="nim" class="form-label">NIM</label>
+                                        <input type="text" class="form-control" id="nim" name="nim" placeholder="Masukkan NIM" required>
+                                    </div>
+                                    <div class="mb-3">
                                         <label for="kategori" class="form-label">Kategori Masalah</label>
                                         <select id="kategori" name="kategori" class="form-select" required>
                                             <option value="">Pilih...</option>
