@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Sep 2024 pada 09.26
+-- Waktu pembuatan: 04 Okt 2024 pada 03.17
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -272,6 +272,8 @@ INSERT INTO `master_user` (`id_user`, `nama_user`, `username`, `password`, `hak_
 CREATE TABLE `transaksi_tiket` (
   `id_transaksi_tiket` int(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `nama` varchar(225) NOT NULL,
+  `nim` int(225) NOT NULL,
   `id_kodefikasi_tiket` int(255) NOT NULL,
   `id_sub_kodefikasi_tiket` int(255) NOT NULL,
   `id_sub_sub_kodefikasi` int(255) NOT NULL,
@@ -282,6 +284,125 @@ CREATE TABLE `transaksi_tiket` (
   `respon_admin` varchar(255) NOT NULL,
   `tanggal_transaksi` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `transaksi_tiket`
+--
+
+INSERT INTO `transaksi_tiket` (`id_transaksi_tiket`, `email`, `nama`, `nim`, `id_kodefikasi_tiket`, `id_sub_kodefikasi_tiket`, `id_sub_sub_kodefikasi`, `id_status_tiket`, `id_rating`, `keluhan`, `reset_email`, `respon_admin`, `tanggal_transaksi`) VALUES
+(1, 'qwert@machung.ac.id', '', 0, 1, 1, 5, 1, 0, 'ha', '', '', '2024-09-30 06:39:37'),
+(2, 'kazushi0890@gmail.com', '', 0, 1, 14, 48, 3, 0, 'pp', '', 'sss', '2024-09-30 07:14:14'),
+(3, 'kazushi0890@gmail.com', '', 0, 1, 16, 52, 3, 0, 'keluh kesah', '', 'ok', '2024-09-30 07:15:10'),
+(4, 'kazushi0890@gmail.com', '', 0, 1, 19, 59, 3, 0, 'a', '', 'a', '2024-09-30 07:12:44'),
+(5, 'kazushi0890@gmail.com', '', 0, 1, 1, 2, 3, 0, 'lupa', 'calista_ardijatmono_31rpl@student.smktelkom-mlg.sch.id', 'ok', '2024-09-30 08:13:59'),
+(6, 'kazushi0890@gmail.com', '', 0, 1, 18, 56, 1, 0, 'a', '', '', '2024-10-01 01:25:06'),
+(7, 'kazushi0890@gmail.com', '', 0, 1, 1, 2, 1, 0, 'aa', 'calista_ardijatmono_31rpl@student.smktelkom-mlg.sch.id', '', '2024-10-01 01:29:33'),
+(8, 'kazushi0890@gmail.com', '', 0, 1, 1, 2, 1, 0, 'a', 'calista_ardijatmono_31rpl@student.smktelkom-mlg.sch.id', '', '2024-10-01 01:39:25'),
+(9, 'kazushi0890@gmail.com', '', 0, 1, 2, 14, 1, 0, 'p', '', '', '2024-10-01 01:48:27'),
+(10, 'kazushi0890@gmail.com', '', 0, 1, 9, 38, 1, 0, 'aa', '', '', '2024-10-01 02:07:49'),
+(11, 'kazushi0890@gmail.com', '', 0, 1, 17, 54, 1, 0, 'a', '', '', '2024-10-01 02:09:12'),
+(12, 'kazushi0890@gmail.com', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 02:10:35'),
+(13, 'kazushi0890@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-01 02:12:54'),
+(14, 'kazushi0890@gmail.com', '', 0, 1, 13, 47, 1, 0, 'a', '', '', '2024-10-01 02:20:26'),
+(15, 'kazushi0890@gmail.com', '', 0, 1, 1, 2, 1, 0, 'a', 'calista_ardijatmono_31rpl@student.smktelkom-mlg.sch.id', '', '2024-10-01 02:22:58'),
+(16, 'kazushi0890@gmail.com', '', 0, 1, 15, 50, 1, 0, 'a', '', '', '2024-10-01 02:23:42'),
+(17, 'kazushi0890@gmail.com', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 02:44:55'),
+(18, 'kazushi0890@gmail.com', '', 0, 1, 17, 54, 1, 0, 'a', '', '', '2024-10-01 02:47:30'),
+(19, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 02:49:27'),
+(20, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 03:02:10'),
+(21, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 1, 15, 50, 1, 0, 'a', '', '', '2024-10-01 03:06:11'),
+(22, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 03:07:05'),
+(23, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 15, 50, 1, 0, 'a', '', '', '2024-10-01 03:08:32'),
+(24, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 18, 56, 1, 0, 'a', '', '', '2024-10-01 03:09:36'),
+(25, 'has', '', 0, 1, 12, 44, 1, 0, 'pp', '', '', '2024-10-01 06:13:02'),
+(26, 'hasbeenpeanut@outlook.com', '', 0, 1, 12, 44, 1, 0, 'pp', '', '', '2024-10-01 06:13:09'),
+(27, 'hasbeenpeanut@outlook.com', '', 0, 1, 17, 54, 1, 0, 'a', '', '', '2024-10-01 06:14:09'),
+(28, 'hasbeenpeanut@outlook.com', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 06:17:01'),
+(29, 'kazushi0890@gmail.com', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 06:38:41'),
+(30, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 15, 50, 1, 0, 'a', '', '', '2024-10-01 06:45:00'),
+(31, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 17, 54, 1, 0, 'a', '', '', '2024-10-01 07:10:53'),
+(32, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 07:11:32'),
+(33, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 15, 50, 1, 0, 'a', '', '', '2024-10-01 07:29:07'),
+(34, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 08:22:46'),
+(35, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 18, 57, 1, 0, 'a', '', '', '2024-10-01 08:49:16'),
+(36, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 17, 54, 1, 0, 'a', '', '', '2024-10-01 09:09:25'),
+(37, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 15, 50, 1, 0, 'p', '', '', '2024-10-01 09:23:57'),
+(38, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 17, 54, 1, 0, 'p', '', '', '2024-10-01 09:29:11'),
+(39, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 09:30:36'),
+(40, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 09:32:05'),
+(41, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 17, 54, 1, 0, 'a', '', '', '2024-10-01 09:33:43'),
+(42, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 09:35:20'),
+(43, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 18, 57, 1, 0, 'p', '', '', '2024-10-01 09:37:48'),
+(44, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 18, 57, 1, 0, 'p', '', '', '2024-10-01 09:38:02'),
+(45, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 19, 59, 1, 0, 'a', '', '', '2024-10-01 09:40:31'),
+(46, 'kazushi0890@gmail.com', '', 0, 1, 19, 59, 1, 0, 'a', '', '', '2024-10-01 12:48:17'),
+(47, 'kazushi0890@gmail.com', '', 0, 1, 13, 46, 1, 0, 'a', '', '', '2024-10-01 13:01:31'),
+(48, 'kazushi0890@gmail.com', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 13:40:08'),
+(49, 'kazushi0890@gmail.com', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-01 14:00:26'),
+(50, 'kazushi0890@gmail.com', '', 0, 1, 17, 54, 1, 0, 'a', '', '', '2024-10-01 14:13:43'),
+(51, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 1, 18, 56, 1, 0, 'a', '', '', '2024-10-02 03:05:51'),
+(52, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 1, 17, 54, 1, 0, 'a', '', '', '2024-10-02 03:06:32'),
+(53, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 1, 16, 52, 1, 0, 'a', '', '', '2024-10-02 03:08:33'),
+(54, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 1, 17, 54, 1, 0, 'p', '', '', '2024-10-02 03:11:13'),
+(55, 'hasbeenpeanut@outlook.com', '', 0, 1, 17, 54, 1, 0, 'z', '', '', '2024-10-02 03:12:20'),
+(56, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 1, 17, 54, 1, 0, 'a', '', '', '2024-10-02 03:17:07'),
+(57, 'kazushi0890@gmail.com', '', 0, 2, 20, 60, 1, 0, 'm', '', '', '2024-10-02 03:18:56'),
+(58, 'hasbeenpeanut@outlook.com', '', 0, 1, 17, 54, 1, 0, 'm', '', '', '2024-10-02 03:19:32'),
+(59, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 2, 20, 60, 1, 0, 'a', '', '', '2024-10-02 03:25:03'),
+(60, 'hasbeenpeanut@outlook.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-02 03:25:32'),
+(61, 'hasbeenpeanut@outlook.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-02 03:28:41'),
+(62, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 2, 20, 61, 1, 0, 'p', '', '', '2024-10-02 03:29:17'),
+(63, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 2, 20, 61, 1, 0, 'p', '', '', '2024-10-02 03:31:22'),
+(64, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 2, 20, 61, 1, 0, 'p', '', '', '2024-10-02 03:46:27'),
+(65, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 1, 15, 50, 1, 0, 'p', '', '', '2024-10-02 03:47:49'),
+(66, 'testmahasiswaumc7@student.machung.ac.id', '', 0, 1, 18, 56, 1, 0, 'a', '', '', '2024-10-02 03:54:24'),
+(67, 'hasbeenpeanut@outlook.com', '', 0, 1, 17, 55, 1, 0, 'a', '', '', '2024-10-02 03:55:25'),
+(68, 'testmahasiswaumc6@student.machung.ac.id', '', 0, 1, 16, 53, 1, 0, 'v', '', '', '2024-10-02 06:04:27'),
+(69, 'kazushi0890@gmail.com', '', 0, 1, 17, 54, 1, 0, 'ppp', '', '', '2024-10-02 06:18:57'),
+(70, 'kazushi0890@gmail.com', '', 0, 1, 18, 56, 1, 0, 'aaa', '', '', '2024-10-02 06:21:47'),
+(71, 'radjagenta3@gmail.com', '', 0, 1, 18, 56, 1, 0, 'aaa', '', '', '2024-10-02 06:25:06'),
+(72, 'atminbaik111@gmail.com', '', 0, 1, 16, 52, 1, 0, 'aa', '', '', '2024-10-02 06:30:18'),
+(73, 'atminbaik111@gmail.com', '', 0, 1, 10, 40, 1, 0, 'aaa', '', '', '2024-10-02 06:31:18'),
+(74, 'atminbaik111@gmail.com', '', 0, 1, 17, 54, 1, 0, 'aaa', '', '', '2024-10-02 06:39:11'),
+(75, 'atminbaik111@gmail.com', '', 0, 1, 18, 56, 1, 0, 'aaa', '', '', '2024-10-02 06:45:14'),
+(76, 'atminbaik111@gmail.com', '', 0, 1, 17, 54, 1, 0, 'aa', '', '', '2024-10-02 06:51:49'),
+(77, 'atminbaik111@gmail.com', '', 0, 1, 17, 54, 1, 0, 'aa', '', '', '2024-10-02 06:52:51'),
+(78, 'atminbaik111@gmail.com', '', 0, 1, 17, 54, 1, 0, 'aa', '', '', '2024-10-02 06:58:55'),
+(79, 'hanichyntia.a@gmail.com', '', 0, 1, 17, 54, 1, 0, 'aa', '', '', '2024-10-02 07:00:04'),
+(80, 'atminbaik111@gmail.com', '', 0, 1, 17, 54, 1, 0, 'a', '', '', '2024-10-02 07:01:24'),
+(81, 'atminbaik111@gmail.com', '', 0, 1, 17, 54, 1, 0, 'a', '', '', '2024-10-02 07:02:54'),
+(82, 'atminbaik111@gmail.com', '', 0, 1, 17, 55, 1, 0, 'a', '', '', '2024-10-03 01:20:42'),
+(83, 'atminbaik111@gmail.com', '', 0, 1, 17, 55, 1, 0, 'a', '', '', '2024-10-03 01:21:29'),
+(84, 'atminbaik111@gmail.com', '', 0, 1, 17, 55, 1, 0, 'a', '', '', '2024-10-03 01:24:19'),
+(85, 'atminbaik111@gmail.com', '', 0, 1, 17, 55, 1, 0, 'a', '', '', '2024-10-03 01:29:26'),
+(86, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:32:29'),
+(87, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:34:10'),
+(88, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:35:13'),
+(89, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:41:51'),
+(90, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:45:05'),
+(91, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:46:13'),
+(92, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:48:36'),
+(93, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:50:02'),
+(94, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:51:19'),
+(95, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:52:46'),
+(96, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:54:18'),
+(97, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:54:57'),
+(98, 'atminbaik111@gmail.com', '', 0, 1, 14, 48, 1, 0, 'a', '', '', '2024-10-03 01:57:37'),
+(99, 'atminbaik111@gmail.com', 'aaa', 12121212, 1, 17, 55, 1, 0, 'a', '', '', '2024-10-03 02:07:00'),
+(100, 'atminbaik111@gmail.com', 'aaa', 12121212, 1, 17, 55, 1, 0, 'a', '', '', '2024-10-03 02:12:22'),
+(101, 'atminbaik111@gmail.com', 'aaa', 12121212, 1, 17, 55, 1, 0, 'a', '', '', '2024-10-03 02:13:51'),
+(102, 'atminbaik111@gmail.com', 'aaa', 12121212, 1, 17, 55, 1, 0, 'a', '', '', '2024-10-03 02:15:37'),
+(103, 'atminbaik111@gmail.com', 'aaa', 12121212, 1, 17, 54, 1, 0, 'aaa', '', '', '2024-10-03 03:10:47'),
+(104, 'atminbaik111@gmail.com', 'aaa', 12121212, 1, 17, 54, 1, 0, 'aaa', '', '', '2024-10-03 03:15:53'),
+(105, 'atminbaik111@gmail.com', 'aaa', 12121212, 1, 17, 54, 1, 0, 'aaa', '', '', '2024-10-03 03:24:16'),
+(106, 'atminbaik111@gmail.com', 'aaa', 12121212, 1, 17, 54, 1, 0, 'aaa', '', '', '2024-10-03 03:25:03'),
+(107, 'atminbaik111@gmail.com', 'aaa', 12121212, 1, 17, 54, 1, 0, 'aaa', '', '', '2024-10-03 03:25:35'),
+(108, 'atminbaik111@gmail.com', 'aaa', 12121212, 1, 17, 54, 1, 0, 'aaa', '', '', '2024-10-03 03:27:55'),
+(109, 'atminbaik111@gmail.com', 'aaa', 12121212, 2, 20, 60, 1, 0, 'aaa', '', '', '2024-10-03 06:23:22'),
+(110, 'atminbaik111@gmail.com', 'aaa', 12121212, 2, 20, 60, 1, 0, 'aaa', '', '', '2024-10-03 06:24:22'),
+(111, 'atminbaik111@gmail.com', 'aaa', 12121212, 2, 20, 60, 1, 0, 'aaa', '', '', '2024-10-03 06:24:39'),
+(112, 'atminbaik111@gmail.com', 'aaa', 12121212, 2, 20, 60, 1, 0, 'aaa', '', '', '2024-10-03 06:25:06'),
+(113, 'atminbaik111@gmail.com', 'aaa', 12121212, 2, 20, 60, 1, 0, 'aaa', '', '', '2024-10-03 06:25:35');
 
 --
 -- Indexes for dumped tables
@@ -408,7 +529,7 @@ ALTER TABLE `master_user`
 -- AUTO_INCREMENT untuk tabel `transaksi_tiket`
 --
 ALTER TABLE `transaksi_tiket`
-  MODIFY `id_transaksi_tiket` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_transaksi_tiket` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
