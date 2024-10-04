@@ -32,12 +32,38 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!-- Modal untuk karakter spesial -->
+                        <div class="modal fade" id="specialCharAlertModal" tabindex="-1"
+                            aria-labelledby="specialCharAlertLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="specialCharAlertLabel">Peringatan</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Harap tidak menggunakan karakter spesial pada kalimat.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Tutup</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="p-2">
+                            <?php
+                            $status = $_GET['status'] ?? null;
+                            $message = $_GET['message'] ?? null;
 
+                            if ($status && $message) {
+                                $alertType = $status == 'success' ? 'alert-success' : 'alert-danger';
+                                echo "<div class='alert $alertType' role='alert'>" . urldecode($message) . "</div>";
+                            }
+                            ?>
                             <!-- Form Tiket -->
-
                             <form action="simpan_tiket.php" class="needs-validation mt-4" method="post" id="formSearch"
                                 novalidate onsubmit="checkSpecialCharsOnSubmit(event)">
                                 <div class="mb-3">
@@ -55,6 +81,7 @@
                                     <input type="email" class="form-control" id="email" name="email"
                                         placeholder="Masukkan email" required>
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="kategori" class="form-label">Kategori Masalah</label>
                                     <select id="kategori" name="kategori" class="form-select" required>
@@ -100,16 +127,16 @@
                                     <div class="invalid-feedback">Tolong Masukkan Keluhan</div>
                                 </div>
 
-                                <div class="mt-3 d-grid">
+                                <div class="mt-3 d-grid" id="submit-button-container">
                                     <button class="btn btn-primary waves-effect waves-light" type="submit"
                                         name="login">Submit</button>
                                 </div>
-
                             </form>
                         </div>
                     </div>
                 </div>
-                <!-- Akhir Card Gabungan -->
+
+
 
                 <div class="mt-5 text-center">
                     <p>©
@@ -120,7 +147,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <!-- JAVASCRIPT -->
@@ -139,8 +165,9 @@
             var specialChars = /[!@#$%^&*(),.?":{}|<>]/g;
 
             if (specialChars.test(keluhan) || specialChars.test(nama) || specialChars.test(nim)) {
-                alert("Harap tidak menggunakan karakter spesial pada kalimat.");
                 event.preventDefault();
+                var specialCharAlertModal = new bootstrap.Modal(document.getElementById('specialCharAlertModal'));
+                specialCharAlertModal.show(); // Tampilkan modal
             }
         }
 
@@ -185,53 +212,7 @@
                 subSubKategoriContainer.style.display = 'none';
             }
         });
-
-        document.getElementById('subsubkategori').addEventListener('change', function () {
-            var subSubKategori = this.value;
-            var emailContainer = document.getElementById('email-container');
-            var keluhanContainer = document.getElementById('keluhan-container');
-            var submitButtonContainer = document.getElementById('submit-button-container');
-
-            // Check if the selected subsubcategory corresponds to "Reset password email"
-            if (subSubKategori === '2') { // Adjust this value according to the actual ID or value for "Reset password email"
-                emailContainer.style.display = 'block'; // Show email input
-                keluhanContainer.style.display = 'block'; // Hide keluhan textarea
-                submitButtonContainer.style.display = 'block'; // Show submit button
-            } else {
-                emailContainer.style.display = 'none'; // Hide email input
-                keluhanContainer.style.display = 'block'; // Show keluhan textarea
-                submitButtonContainer.style.display = 'block'; // Show submit button
-            }
-        });
-
-        // Validasi saat submit
-        document.getElementById('formSearch').addEventListener('submit', function (event) {
-            var kategori = document.getElementById('kategori').value;
-            var subkategori = document.getElementById('subkategori').value;
-            var subsubkategori = document.getElementById('subsubkategori').value;
-            var email = document.getElementById('reset_email') ? document.getElementById('reset_email').value : '';
-
-            if (!kategori) {
-                alert("Silakan pilih kategori masalah.");
-                event.preventDefault();
-                return;
-            }
-
-            if (!subkategori) {
-                alert("Silakan pilih subkategori.");
-                event.preventDefault();
-                return;
-            }
-
-            if (!subsubkategori) {
-                alert("Silakan pilih detail subkategori.");
-                event.preventDefault();
-                return;
-            }
-        });
-
     </script>
-
 </body>
 
 </html>
