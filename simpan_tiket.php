@@ -16,10 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $reset_email = $_POST['reset_email'] ?? '';
     $nim = $_POST['nim'] ?? '';
     $nama = $_POST['nama'] ?? '';
-    
+
 
     // Validasi input
-    if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan)|| empty($nim)|| empty($nama)) {
+    if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan) || empty($nim) || empty($nama)) {
         echo "<script>alert('Gagal Menambahkan');location.href='lihat-tiket.php';</script>";
         exit();
     }
@@ -107,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->addEmbeddedImage('uploads/checklist.png', 'checklist_image'); // Sesuaikan path gambar
 
             $mail->isHTML(true);
-            $mail->Subject = 'Status Tiket';
+            $mail->Subject = 'Tiket Berhasil Terkirim';
 
             // Body email dengan gambar disematkan menggunakan cid
             $mail->Body = '
@@ -115,19 +115,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <img src="cid:checklist_image" alt="logo" style="width:200px; height:auto;">
     </div>
     <div style="text-align: center; width: 400px; margin: 0 auto;">
-        <b style="font-size: 18px;">Tiket Anda Telah Terkirim!</b>
-        <p>
-            Terimakasih telah mengirimkan tiket.
-        Kode tiket anda <strong>'.$kode_tiket.'</strong>
-            Tiket anda sedang diproses. Harap menunggu balasan dari Unit Sistem Informasi dan Pusat Data.
-            Jika belum ada respon balasan dari Unit Sistem Informasi dan Pusat Data silahkan kunjungi ruangan Unit Sistem Informasi dan Pusat Data.
-        </p>
-    </div>
+    <b style="font-size: 18px;">Tiket Anda Telah Terkirim!</b>
+    <p style="text-align: justify;">
+        Terima kasih telah mengirimkan tiket. Kode tiket Anda adalah <strong><?php echo $kode_tiket; ?></strong>.
+        Tiket Anda sedang diproses. Harap menunggu balasan dari Unit Sistem Informasi dan Pusat Data.<br><br>
+        Jika belum ada respon balasan dari Unit Sistem Informasi dan Pusat Data, silakan kunjungi ruangan Unit Sistem Informasi dan Pusat Data di Gedung Rektorat lantai 1.
+    </p>
+</div>
+
     <div style= "margin-top: 2rem; width: 300px;">
         <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
 <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
-E-mail	: uptsisteminformasi@machung.ac.id
-Address	: Villa Puncak Tidar Blok N No. 01 Malang
+E-mail   : uptsisteminformasi@machung.ac.id
+Address  : Villa Puncak Tidar Blok N No. 01 Malang
 </div>
 ';
 
@@ -140,8 +140,9 @@ Address	: Villa Puncak Tidar Blok N No. 01 Malang
 
             // Kirim email ke SI dengan detail tiket
             $mail->addAddress('kazushi0890@gmail.com');
-            $mail->Subject = 'Ada email masuk';
-            $mail->Body    = "<p>Kode tiket: <strong>$kode_tiket</strong></p>
+            $mail->Subject = 'Terdapat Tiket Keluhan Terbaru - [' . $kode_tiket . ']';
+            $mail->Body    = "<p>Hi Unit Sistem Informasi dan Pusat Data, berikut kami sampaikan detail dari data pengirim tiket:</p>
+<p>Kode tiket: <strong>$kode_tiket</strong></p>
 <p>Kategori: <strong>$kategori</strong></p>
 <p>Subkategori: <strong>$subkategori</strong></p>
 <p>Sub-subkategori: <strong>$subsubkategori</strong></p>
