@@ -32,40 +32,21 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Modal untuk karakter spesial -->
-                        <div class="modal fade" id="specialCharAlertModal" tabindex="-1"
-                            aria-labelledby="specialCharAlertLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="specialCharAlertLabel">Peringatan</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Harap tidak menggunakan karakter spesial pada kalimat.
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Tutup</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="p-2">
-                            <?php
-                            $status = $_GET['status'] ?? null;
-                            $message = $_GET['message'] ?? null;
-
-                            if ($status && $message) {
-                                $alertType = $status == 'success' ? 'alert-success' : 'alert-danger';
-                                echo "<div class='alert $alertType' role='alert'>" . urldecode($message) . "</div>";
-                            }
-                            ?>
                             <!-- Form Tiket -->
                             <form action="simpan_tiket.php" class="needs-validation mt-4" method="post" id="formSearch"
                                 novalidate onsubmit="checkSpecialCharsOnSubmit(event)">
+                                <?php
+                                // Cek apakah ada status dan message di URL
+                                $status = $_GET['status'] ?? null;
+                                $message = $_GET['message'] ?? null;
+
+                                if ($status && $message) {
+                                    $alertType = $status == 'success' ? 'alert-success' : 'alert-danger';
+                                    echo "<div class='alert $alertType' role='alert'>" . urldecode($message) . "</div>";
+                                }
+                                ?>
                                 <div class="mb-3">
                                     <label for="nama" class="form-label">Nama</label>
                                     <input type="text" class="form-control" id="nama" name="nama"
@@ -136,7 +117,25 @@
                     </div>
                 </div>
 
-
+                <!-- Modal untuk karakter spesial -->
+                <div class="modal fade" id="specialCharAlertModal" tabindex="-1" aria-labelledby="specialCharAlertLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="specialCharAlertLabel">Peringatan</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Harap tidak menggunakan karakter spesial pada kalimat.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="mt-5 text-center">
                     <p>©
