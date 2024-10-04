@@ -1,11 +1,13 @@
 <?php
-require 'vendor/autoload.php'; // Jika menggunakan Composer
+require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
 include 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ambil data dari form
+    $kode_tiket = $stmt->insert_id;
     $email = $_POST['email'] ?? '';
     $kategori = $_POST['kategori'] ?? '';
     $subkategori = $_POST['subkategori'] ?? '';
@@ -14,10 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $reset_email = $_POST['reset_email'] ?? '';
     $nim = $_POST['nim'] ?? '';
     $nama = $_POST['nama'] ?? '';
+    $tanggal_transaksi = $_POST['tanggal_transaksi'] ?? date('Y-m-d H:i:s');
 
-    // Validasi input
     if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan) || empty($nim) || empty($nama)) {
-        // Redirect dengan pesan error
         header('Location: tiket.php?status=error&message=Harap%20isi%20semua%20data%20yang%20diperlukan');
         exit();
     }
@@ -25,29 +26,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_status_tiket = 1;
     $id_rating = 0;
 
-    // Tentukan alamat email berdasarkan id_sub_sub_kodefikasi
     if ($subsubkategori == 2) {
-        $recipient_email = $reset_email; // Kirim ke reset_email jika id_sub_sub_kodefikasi == 2
+        $recipient_email = $reset_email; 
     } else {
-        $recipient_email = $email; // Jika tidak, kirim ke email biasa
+        $recipient_email = $email; 
     }
 
-    // Prepare query untuk menambahkan tiket
     $stmt = $conn->prepare("INSERT INTO transaksi_tiket (email, id_kodefikasi_tiket, id_sub_kodefikasi_tiket, id_sub_sub_kodefikasi, id_status_tiket, id_rating, keluhan, reset_email, nim, nama, tanggal_transaksi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())");
 
     if (!$stmt) {
-        // Redirect dengan pesan error jika query gagal
         header('Location: tiket.php?status=error&message=Gagal%20menambahkan%20tiket:%20' . urlencode($conn->error));
         exit();
     }
 
-    // Bind parameters dan eksekusi query
     $stmt->bind_param("siiiisssss", $email, $kategori, $subkategori, $subsubkategori, $id_status_tiket, $id_rating, $keluhan, $reset_email, $nim, $nama);
 
     if ($stmt->execute()) {
         $id_transaksi_tiket = $stmt->insert_id;
 
-        // Jika berhasil, kirim email
+        $sql = "SELECT transaksi_tiket.*, 
+        master_kodefikasi_tiket.name_kodefikasi_tiket, 
+        master_sub_kodefikasi_tiket.nama_sub_kodefikasi_tiket, 
+        master_sub_sub_kodefikasi_tiket.nama_sub_sub_kodefikasi_tiket, 
+        master_status_tiket.jenis_status_tiket 
+        FROM transaksi_tiket
+        JOIN master_kodefikasi_tiket ON master_kodefikasi_tiket.id_kodefikasi_tiket = transaksi_tiket.id_kodefikasi_tiket
+        JOIN master_sub_kodefikasi_tiket ON master_sub_kodefikasi_tiket.id_sub_kodefikasi_tiket = transaksi_tiket.id_sub_kodefikasi_tiket
+        JOIN master_sub_sub_kodefikasi_tiket ON master_sub_sub_kodefikasi_tiket.id_sub_sub_kodefikasi_tiket = transaksi_tiket.id_sub_sub_kodefikasi
+        JOIN master_status_tiket ON master_status_tiket.id = transaksi_tiket.id_status_tiket 
+        WHERE id_transaksi_tiket = ?";
+
+        $stmtGet = $conn->prepare($sql);
+        $stmtGet->bind_param("i", $id_transaksi_tiket);
+        $stmtGet->execute();
+        $result = $stmtGet->get_result();
+
+        if ($result->num_rows > 0) {
+            $data = $result->fetch_assoc();
+            $kode_tiket = $id_transaksi_tiket; 
+            $kategori = $data['name_kodefikasi_tiket'];
+            $subkategori = $data['nama_sub_kodefikasi_tiket'];
+            $subsubkategori = $data['nama_sub_sub_kodefikasi_tiket'];
+            $nama = $data['nama'];
+            $nim = $data['nim'];
+            $keluhan = $data['keluhan'];
+            $email = $data['email'];
+            $reset_email = $data['reset_email'];
+            $tanggal_transaksi = $data['tanggal_transaksi'];
+        } else {
+            die("Data tidak ditemukan.");
+        }
+
+        $stmtGet->close();
+
         $mail = new PHPMailer(true);
 
         try {
@@ -66,25 +97,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->addEmbeddedImage('uploads/checklist.png', 'checklist_image');
 
             $mail->isHTML(true);
-            $mail->Subject = 'Status Tiket';
-            $mail->Body = '<div style="text-align:center; margin-top:20px;">
-            <img src="cid:checklist_image" alt="logo" style="width:200px; height:auto;"></div>
-            <div style="text-align: center; width: 400px; margin: 0 auto;">
-            <b style="font-size: 18px;">Tiket Anda Telah Terkirim!</b>
-            <p>Kode tiket anda <strong>' . $id_transaksi_tiket . '</strong>.</p>
-            </div>
-            <div><img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"></div>';
+            $mail->Subject = 'Tiket Berhasil Terkirim';
+            $mail->Body = '
+<div style="text-align:center; margin-top:20px;">
+    <img src="cid:checklist_image" alt="logo" style="width:200px; height:auto;">
+</div>
+<div style="text-align: center; width: 400px; margin: 0 auto;">
+    <b style="font-size: 18px;">Tiket Anda Telah Terkirim!</b>
+    <p style="text-align: justify;">
+        Terima kasih telah mengirimkan tiket. Kode tiket Anda adalah <strong>' . $kode_tiket . '</strong>.<br>
+        Tiket Anda sedang diproses. Harap menunggu balasan dari Unit Sistem Informasi dan Pusat Data.<br><br>
+        Jika belum ada respon balasan dari Unit Sistem Informasi dan Pusat Data, silakan kunjungi ruangan Unit Sistem Informasi dan Pusat Data di Gedung Rektorat lantai 1.
+    </p>
+</div>
+<div style="margin-top: 2rem; width: 300px;">
+    <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
+    <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
+    E-mail   : uptsisteminformasi@machung.ac.id<br>
+    Address  : Villa Puncak Tidar Blok N No. 01 Malang
+</div>
+';
 
             $mail->send();
 
-            // Redirect dengan pesan sukses
+            $mail->clearAddresses();
+            $mail->clearAttachments();
+
+            $mail->addAddress('kazushi0890@gmail.com');
+            $mail->Subject = 'Tiket Baru Telah Masuk - [' . $kode_tiket . ']';
+            $mail->Body = "<p>Hi Unit Sistem Informasi dan Pusat Data, berikut kami sampaikan detail dari data pengirim tiket:</p>
+<p>Kode tiket: <strong>$kode_tiket</strong></p>
+<p>Kategori: <strong>$kategori</strong></p>
+<p>Subkategori: <strong>$subkategori</strong></p>
+<p>Sub-subkategori: <strong>$subsubkategori</strong></p>
+<p>Nama: <strong>$nama</strong></p>
+<p>NIM/NIP: <strong>$nim</strong></p>
+<p>Keluhan: <strong>$keluhan</strong></p>
+<p>Email Machung: <strong>$email</strong></p>
+<p>Email Alternatif: <strong>$reset_email</strong></p>
+<p>Tanggal Transaksi: <strong>$tanggal_transaksi</strong></p>";
+
+            $mail->send();
+
             header('Location: tiket.php?status=success&message=Sukses%20menambahkan%20tiket%20dan%20mengirim%20email');
         } catch (Exception $e) {
-            // Redirect dengan pesan error jika gagal mengirim email
             header('Location: tiket.php?status=error&message=Error%20mengirim%20email:%20' . urlencode($mail->ErrorInfo));
         }
     } else {
-        // Redirect dengan pesan error jika gagal mengeksekusi query
         header('Location: tiket.php?status=error&message=Gagal%20menambahkan%20tiket:%20' . urlencode($stmt->error));
     }
 
@@ -92,4 +151,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
     exit();
 }
-?>
