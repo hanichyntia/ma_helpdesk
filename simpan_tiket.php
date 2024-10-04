@@ -14,11 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $reset_email = $_POST['reset_email'] ?? '';
     $nim = $_POST['nim'] ?? '';
     $nama = $_POST['nama'] ?? '';
+    
 
     // Validasi input
-    if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan) || empty($nim) || empty($nama)) {
-        // Redirect dengan pesan error
-        header('Location: tiket.php?status=error&message=Harap%20isi%20semua%20data%20yang%20diperlukan');
+    if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan)|| empty($nim)|| empty($nama)) {
+        echo "<script>alert('Gagal Menambahkan');location.href='lihat-tiket.php';</script>";
         exit();
     }
 
@@ -67,18 +67,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $mail->isHTML(true);
             $mail->Subject = 'Status Tiket';
-            $mail->Body = '<div style="text-align:center; margin-top:20px;">
-            <img src="cid:checklist_image" alt="logo" style="width:200px; height:auto;"></div>
-            <div style="text-align: center; width: 400px; margin: 0 auto;">
-            <b style="font-size: 18px;">Tiket Anda Telah Terkirim!</b>
-            <p>Kode tiket anda <strong>' . $id_transaksi_tiket . '</strong>.</p>
-            </div>
-            <div><img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"></div>';
+
+            // Body email dengan gambar disematkan menggunakan cid
+            $mail->Body = '
+            <div style="text-align:center; margin-top:20px;">
+        <img src="cid:checklist_image" alt="logo" style="width:200px; height:auto;">
+    </div>
+    <div style="text-align: center; width: 400px; margin: 0 auto;">
+        <b style="font-size: 18px;">Tiket Anda Telah Terkirim!</b>
+        <p>
+            Terimakasih telah mengirimkan tiket.
+        Kode tiket anda <strong>'.$kode_tiket.'</strong>
+            Tiket anda sedang diproses. Harap menunggu balasan dari Unit Sistem Informasi dan Pusat Data.
+            Jika belum ada respon balasan dari Unit Sistem Informasi dan Pusat Data silahkan kunjungi ruangan Unit Sistem Informasi dan Pusat Data.
+        </p>
+    </div>
+    <div style= "margin-top: 2rem; width: 300px;">
+        <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
+<b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
+E-mail	: uptsisteminformasi@machung.ac.id
+Address	: Villa Puncak Tidar Blok N No. 01 Malang
+</div>
+';
+
 
             $mail->send();
 
-            // Redirect dengan pesan sukses
-            header('Location: tiket.php?status=success&message=Sukses%20menambahkan%20tiket%20dan%20mengirim%20email');
+            // Reset semua pengaturan untuk email kedua
+            $mail->clearAddresses();
+            $mail->clearAttachments();
+
+            // Kirim email ke SI dengan detail tiket
+            $mail->addAddress('kazushi0890@gmail.com');
+            $mail->Subject = 'Ada email masuk';
+            $mail->Body    = "<p>Kode tiket: <strong>$kode_tiket</strong></p>
+<p>Kategori: <strong>$kategori</strong></p>
+<p>Subkategori: <strong>$subkategori</strong></p>
+<p>Sub-subkategori: <strong>$subsubkategori</strong></p>
+<p>Nama: <strong>$nama</strong></p>
+<p>NIM: <strong>$nim</strong></p>
+<p>Keluhan: <strong>$keluhan</strong></p>
+<p>Email Machung: <strong>$email</strong></p>
+<p>Email Alternatif: <strong>$reset_email</strong></p>
+<p>Tanggal Transaksi: <strong>$tanggal_transaksi</strong></p>";
+
+            $mail->send();
+
+            echo "<script>alert('Sukses Menambahkan Tiket dan Mengirim Email');location.href='lihat-tiket.php';</script>";
         } catch (Exception $e) {
             // Redirect dengan pesan error jika gagal mengirim email
             header('Location: tiket.php?status=error&message=Error%20mengirim%20email:%20' . urlencode($mail->ErrorInfo));
