@@ -34,6 +34,28 @@
                         </div>
 
                         <div class="p-2">
+
+                            <!-- Modal untuk karakter spesial -->
+                            <div class="modal fade" id="specialCharAlertModal" tabindex="-1"
+                                aria-labelledby="specialCharAlertLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="specialCharAlertLabel">Peringatan</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Harap tidak menggunakan karakter spesial pada kalimat.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Tutup</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Form Tiket -->
                             <form action="simpan_tiket.php" class="needs-validation mt-4" method="post" id="formSearch"
                                 novalidate onsubmit="checkSpecialCharsOnSubmit(event)">
@@ -117,26 +139,6 @@
                     </div>
                 </div>
 
-                <!-- Modal untuk karakter spesial -->
-                <div class="modal fade" id="specialCharAlertModal" tabindex="-1" aria-labelledby="specialCharAlertLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="specialCharAlertLabel">Peringatan</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                Harap tidak menggunakan karakter spesial pada kalimat.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="mt-5 text-center">
                     <p>©
                         <script>
@@ -156,62 +158,74 @@
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
-        function checkSpecialCharsOnSubmit(event) {
-            var keluhan = document.getElementById("keluhan").value;
-            var nama = document.getElementById("nama").value;
-            var nim = document.getElementById("nim").value;
+    function checkSpecialCharsOnSubmit(event) {
+        var keluhan = document.getElementById("keluhan").value;
+        var nama = document.getElementById("nama").value;
+        var nim = document.getElementById("nim").value;
 
-            var specialChars = /[!@#$%^&*(),.?":{}|<>]/g;
+        var specialChars = /[!@#$%^&*(),.?'":{}|<>]/g;
 
-            if (specialChars.test(keluhan) || specialChars.test(nama) || specialChars.test(nim)) {
-                event.preventDefault();
-                var specialCharAlertModal = new bootstrap.Modal(document.getElementById('specialCharAlertModal'));
-                specialCharAlertModal.show(); // Tampilkan modal
-            }
+        if (specialChars.test(keluhan) || specialChars.test(nama) || specialChars.test(nim)) {
+            event.preventDefault();
+            var specialCharAlertModal = new bootstrap.Modal(document.getElementById('specialCharAlertModal'));
+            specialCharAlertModal.show();
         }
+    }
 
-        document.getElementById('kategori').addEventListener('change', function () {
-            var kategori = this.value;
-            var subKategoriContainer = document.getElementById('subkategori-container');
-            var subKategoriSelect = document.getElementById('subkategori');
+    document.getElementById('kategori').addEventListener('change', function () {
+        var kategori = this.value;
+        var subKategoriContainer = document.getElementById('subkategori-container');
+        var subKategoriSelect = document.getElementById('subkategori');
 
-            if (kategori) {
-                subKategoriContainer.style.display = 'block';
+        if (kategori) {
+            subKategoriContainer.style.display = 'block';
 
-                fetch('get_subkategori.php?kategori=' + kategori)
-                    .then(response => response.json())
-                    .then(data => {
-                        subKategoriSelect.innerHTML = '<option value="">Pilih Subkategori</option>';
-                        data.forEach(subkategori => {
-                            subKategoriSelect.innerHTML += `<option value="${subkategori.id}">${subkategori.nama}</option>`;
-                        });
+            fetch('get_subkategori.php?kategori=' + kategori)
+                .then(response => response.json())
+                .then(data => {
+                    subKategoriSelect.innerHTML = '<option value="">Pilih Subkategori</option>';
+                    data.forEach(subkategori => {
+                        subKategoriSelect.innerHTML += `<option value="${subkategori.id}">${subkategori.nama}</option>`;
                     });
-            } else {
-                subKategoriContainer.style.display = 'none';
-            }
-        });
+                });
+        } else {
+            subKategoriContainer.style.display = 'none';
+        }
+    });
 
-        document.getElementById('subkategori').addEventListener('change', function () {
-            var subKategori = this.value;
-            var subSubKategoriContainer = document.getElementById('subsubkategori-container');
-            var subSubKategoriSelect = document.getElementById('subsubkategori');
+    document.getElementById('subkategori').addEventListener('change', function () {
+        var subKategori = this.value;
+        var subSubKategoriContainer = document.getElementById('subsubkategori-container');
+        var subSubKategoriSelect = document.getElementById('subsubkategori');
 
-            if (subKategori) {
-                subSubKategoriContainer.style.display = 'block';
+        if (subKategori) {
+            subSubKategoriContainer.style.display = 'block';
 
-                fetch('get_subsubkategori.php?subkategori=' + subKategori)
-                    .then(response => response.json())
-                    .then(data => {
-                        subSubKategoriSelect.innerHTML = '<option value="">Pilih Detail Subkategori</option>';
-                        data.forEach(subsubkategori => {
-                            subSubKategoriSelect.innerHTML += `<option value="${subsubkategori.id}">${subsubkategori.nama}</option>`;
-                        });
+            fetch('get_subsubkategori.php?subkategori=' + subKategori)
+                .then(response => response.json())
+                .then(data => {
+                    subSubKategoriSelect.innerHTML = '<option value="">Pilih Detail Subkategori</option>';
+                    data.forEach(subsubkategori => {
+                        subSubKategoriSelect.innerHTML += `<option value="${subsubkategori.id}">${subsubkategori.nama}</option>`;
                     });
-            } else {
-                subSubKategoriContainer.style.display = 'none';
-            }
-        });
-    </script>
+                });
+        } else {
+            subSubKategoriContainer.style.display = 'none';
+        }
+    });
+
+    // Menambahkan event listener untuk subsubkategori dan menampilkan email container jika nilai == 2
+    document.getElementById('subsubkategori').addEventListener('change', function () {
+        var subSubKategori = this.value;
+        var emailContainer = document.getElementById('email-container');
+
+        if (subSubKategori == '2') {
+            emailContainer.style.display = 'block';
+        } else {
+            emailContainer.style.display = 'none';
+        }
+    });
+</script>
 </body>
 
 </html>
