@@ -61,8 +61,9 @@
                                 novalidate onsubmit="checkSpecialCharsOnSubmit(event)">
                                 <?php
                                 // Cek apakah ada status dan message di URL
-                                $status = $_GET['status'] ?? null;
-                                $message = $_GET['message'] ?? null;
+                                $status = isset($_GET['status']) ? $_GET['status'] : null;
+                                $message = isset($_GET['message']) ? $_GET['message'] : null;
+
 
                                 if ($status && $message) {
                                     $alertType = $status == 'success' ? 'alert-success' : 'alert-danger';
@@ -158,74 +159,74 @@
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
-    function checkSpecialCharsOnSubmit(event) {
-        var keluhan = document.getElementById("keluhan").value;
-        var nama = document.getElementById("nama").value;
-        var nim = document.getElementById("nim").value;
+        function checkSpecialCharsOnSubmit(event) {
+            var keluhan = document.getElementById("keluhan").value;
+            var nama = document.getElementById("nama").value;
+            var nim = document.getElementById("nim").value;
 
-        var specialChars = /[!@#$%^&*(),.?'":{}|<>]/g;
+            var specialChars = /[!@#$%^&*(),.?'":{}|<>]/g;
 
-        if (specialChars.test(keluhan) || specialChars.test(nama) || specialChars.test(nim)) {
-            event.preventDefault();
-            var specialCharAlertModal = new bootstrap.Modal(document.getElementById('specialCharAlertModal'));
-            specialCharAlertModal.show();
+            if (specialChars.test(keluhan) || specialChars.test(nama) || specialChars.test(nim)) {
+                event.preventDefault();
+                var specialCharAlertModal = new bootstrap.Modal(document.getElementById('specialCharAlertModal'));
+                specialCharAlertModal.show();
+            }
         }
-    }
 
-    document.getElementById('kategori').addEventListener('change', function () {
-        var kategori = this.value;
-        var subKategoriContainer = document.getElementById('subkategori-container');
-        var subKategoriSelect = document.getElementById('subkategori');
+        document.getElementById('kategori').addEventListener('change', function () {
+            var kategori = this.value;
+            var subKategoriContainer = document.getElementById('subkategori-container');
+            var subKategoriSelect = document.getElementById('subkategori');
 
-        if (kategori) {
-            subKategoriContainer.style.display = 'block';
+            if (kategori) {
+                subKategoriContainer.style.display = 'block';
 
-            fetch('get_subkategori.php?kategori=' + kategori)
-                .then(response => response.json())
-                .then(data => {
-                    subKategoriSelect.innerHTML = '<option value="">Pilih Subkategori</option>';
-                    data.forEach(subkategori => {
-                        subKategoriSelect.innerHTML += `<option value="${subkategori.id}">${subkategori.nama}</option>`;
+                fetch('get_subkategori.php?kategori=' + kategori)
+                    .then(response => response.json())
+                    .then(data => {
+                        subKategoriSelect.innerHTML = '<option value="">Pilih Subkategori</option>';
+                        data.forEach(subkategori => {
+                            subKategoriSelect.innerHTML += `<option value="${subkategori.id}">${subkategori.nama}</option>`;
+                        });
                     });
-                });
-        } else {
-            subKategoriContainer.style.display = 'none';
-        }
-    });
+            } else {
+                subKategoriContainer.style.display = 'none';
+            }
+        });
 
-    document.getElementById('subkategori').addEventListener('change', function () {
-        var subKategori = this.value;
-        var subSubKategoriContainer = document.getElementById('subsubkategori-container');
-        var subSubKategoriSelect = document.getElementById('subsubkategori');
+        document.getElementById('subkategori').addEventListener('change', function () {
+            var subKategori = this.value;
+            var subSubKategoriContainer = document.getElementById('subsubkategori-container');
+            var subSubKategoriSelect = document.getElementById('subsubkategori');
 
-        if (subKategori) {
-            subSubKategoriContainer.style.display = 'block';
+            if (subKategori) {
+                subSubKategoriContainer.style.display = 'block';
 
-            fetch('get_subsubkategori.php?subkategori=' + subKategori)
-                .then(response => response.json())
-                .then(data => {
-                    subSubKategoriSelect.innerHTML = '<option value="">Pilih Detail Subkategori</option>';
-                    data.forEach(subsubkategori => {
-                        subSubKategoriSelect.innerHTML += `<option value="${subsubkategori.id}">${subsubkategori.nama}</option>`;
+                fetch('get_subsubkategori.php?subkategori=' + subKategori)
+                    .then(response => response.json())
+                    .then(data => {
+                        subSubKategoriSelect.innerHTML = '<option value="">Pilih Detail Subkategori</option>';
+                        data.forEach(subsubkategori => {
+                            subSubKategoriSelect.innerHTML += `<option value="${subsubkategori.id}">${subsubkategori.nama}</option>`;
+                        });
                     });
-                });
-        } else {
-            subSubKategoriContainer.style.display = 'none';
-        }
-    });
+            } else {
+                subSubKategoriContainer.style.display = 'none';
+            }
+        });
 
-    // Menambahkan event listener untuk subsubkategori dan menampilkan email container jika nilai == 2
-    document.getElementById('subsubkategori').addEventListener('change', function () {
-        var subSubKategori = this.value;
-        var emailContainer = document.getElementById('email-container');
+        // Menambahkan event listener untuk subsubkategori dan menampilkan email container jika nilai == 2
+        document.getElementById('subsubkategori').addEventListener('change', function () {
+            var subSubKategori = this.value;
+            var emailContainer = document.getElementById('email-container');
 
-        if (subSubKategori == '2') {
-            emailContainer.style.display = 'block';
-        } else {
-            emailContainer.style.display = 'none';
-        }
-    });
-</script>
+            if (subSubKategori == '2') {
+                emailContainer.style.display = 'block';
+            } else {
+                emailContainer.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -6,17 +6,18 @@ use PHPMailer\PHPMailer\Exception;
 include 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Ambil data dari form
+
     $kode_tiket = $stmt->insert_id;
-    $email = $_POST['email'] ?? '';
-    $kategori = $_POST['kategori'] ?? '';
-    $subkategori = $_POST['subkategori'] ?? '';
-    $subsubkategori = $_POST['subsubkategori'] ?? '';
-    $keluhan = $_POST['keluhan'] ?? '';
-    $reset_email = $_POST['reset_email'] ?? '';
-    $nim = $_POST['nim'] ?? '';
-    $nama = $_POST['nama'] ?? '';
-    $tanggal_transaksi = $_POST['tanggal_transaksi'] ?? date('Y-m-d H:i:s');
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $kategori = isset($_POST['kategori']) ? $_POST['kategori'] : '';
+    $subkategori = isset($_POST['subkategori']) ? $_POST['subkategori'] : '';
+    $subsubkategori = isset($_POST['subsubkategori']) ? $_POST['subsubkategori'] : '';
+    $keluhan = isset($_POST['keluhan']) ? $_POST['keluhan'] : '';
+    $reset_email = isset($_POST['reset_email']) ? $_POST['reset_email'] : '';
+    $nim = isset($_POST['nim']) ? $_POST['nim'] : '';
+    $nama = isset($_POST['nama']) ? $_POST['nama'] : '';
+    $tanggal_transaksi = isset($_POST['tanggal_transaksi']) ? $_POST['tanggal_transaksi'] : date('Y-m-d H:i:s');
+
 
     if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan) || empty($nim) || empty($nama)) {
         header('Location: tiket.php?status=error&message=Harap%20isi%20semua%20data%20yang%20diperlukan');
@@ -27,9 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id_rating = 0;
 
     if ($subsubkategori == 2) {
-        $recipient_email = $reset_email; 
+        $recipient_email = $reset_email;
     } else {
-        $recipient_email = $email; 
+        $recipient_email = $email;
     }
 
     $stmt = $conn->prepare("INSERT INTO transaksi_tiket (email, id_kodefikasi_tiket, id_sub_kodefikasi_tiket, id_sub_sub_kodefikasi, id_status_tiket, id_rating, keluhan, reset_email, nim, nama, tanggal_transaksi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())");
@@ -63,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($result->num_rows > 0) {
             $data = $result->fetch_assoc();
-            $kode_tiket = $id_transaksi_tiket; 
+            $kode_tiket = $id_transaksi_tiket;
             $kategori = $data['name_kodefikasi_tiket'];
             $subkategori = $data['nama_sub_kodefikasi_tiket'];
             $subsubkategori = $data['nama_sub_sub_kodefikasi_tiket'];

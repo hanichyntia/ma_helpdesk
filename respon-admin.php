@@ -2,20 +2,18 @@
 include "config.php";
 
 // Initialize the keluhan variable
-$keluhan = ''; 
+$keluhan = '';
 
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 
 if ($id) {
     // Query to get user complaints
-    $stmt = $conn->prepare("SELECT keluhan FROM transaksi_tiket WHERE id_transaksi_tiket = ?");
-    $stmt->bind_param("i", $id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    // Fetch the keluhan, default to empty string if no result
-    $keluhan = $result->fetch_assoc()['keluhan'] ?? '';
-    $stmt->close();
+    $stmt = mysqli_prepare($conn, "SELECT keluhan FROM transaksi_tiket WHERE id_transaksi_tiket = ?");
+    mysqli_stmt_bind_param($stmt, "i", $id);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_bind_result($stmt, $keluhan);
+    mysqli_stmt_fetch($stmt);
+    mysqli_stmt_close($stmt);
 }
 ?>
 
@@ -52,10 +50,20 @@ if ($id) {
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title mb-4">Respon Keluhan</h4>
-                                    <form action="update-status.php?id=<?php echo htmlspecialchars($id); ?>" method="POST">
+                                    <?php if (isset($_GET['status'])): ?>
+                                        <div class="alert alert-<?php echo ($_GET['status'] == 'success') ? 'success' : 'danger'; ?> alert-dismissible fade show"
+                                            role="alert">
+                                            <?php echo htmlspecialchars($_GET['message']); ?>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                aria-label="Close"></button>
+                                        </div>
+                                    <?php endif; ?>
+                                    <form action="update-status.php?id=<?php echo htmlspecialchars($id); ?>"
+                                        method="POST">
                                         <div class="mb-3">
                                             <label for="status_tiket" class="form-label">Status Tiket</label>
-                                            <select id="status_tiket" name="id_status_tiket" class="form-select" required>
+                                            <select id="status_tiket" name="id_status_tiket" class="form-select"
+                                                required>
                                                 <?php
                                                 $qry_status = mysqli_query($conn, "SELECT * FROM master_status_tiket");
                                                 echo '<option value="" selected disabled>Pilih...</option>';
@@ -72,12 +80,14 @@ if ($id) {
 
                                         <div class="mb-3">
                                             <label for="formmessage">Keluhan User</label>
-                                            <textarea id="formmessage" class="form-control" rows="3" readonly><?php echo htmlspecialchars($keluhan); ?></textarea>
+                                            <textarea id="formmessage" class="form-control" rows="3"
+                                                readonly><?php echo htmlspecialchars($keluhan); ?></textarea>
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="respon_admin">Respon</label>
-                                            <textarea id="respon_admin" name="respon_admin" class="form-control" rows="3" placeholder="Enter Your Response"></textarea>
+                                            <textarea id="respon_admin" name="respon_admin" class="form-control"
+                                                rows="3" placeholder="Enter Your Response"></textarea>
                                         </div>
 
                                         <div class="mt-4">
@@ -139,5 +149,6 @@ if ($id) {
                 }
             })();
         </script>
-    </body>
+</body>
+
 </html>

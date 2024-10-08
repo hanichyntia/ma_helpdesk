@@ -8,9 +8,9 @@ require 'vendor/autoload.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $id_tiket = $_GET['id'] ?? '';
-    $status_tiket = $_POST['id_status_tiket'] ?? '';
-    $respon_admin = $_POST['respon_admin'] ?? '';
+    $id_tiket = isset($_GET['id']) ? $_GET['id'] : '';
+    $status_tiket = isset($_POST['id_status_tiket']) ? $_POST['id_status_tiket'] : '';
+    $respon_admin = isset($_POST['respon_admin']) ? $_POST['respon_admin'] : '';
 
     $stmt = $conn->prepare("UPDATE transaksi_tiket SET id_status_tiket = ?, respon_admin = ? WHERE id_transaksi_tiket = ?");
 
@@ -27,10 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $email_query->execute();
         $email_result = $email_query->get_result();
         $data = $email_result->fetch_assoc();
-        $user_email = $data['email'] ?? '';
-        $keluhan = $data['keluhan'] ?? '';
-        $nama = $data['nama'] ?? '';
-        $nim = $data['nim'] ?? '';
+        $user_email = isset($data['email']) ? $data['email'] : '';
+        $keluhan = isset($data['keluhan']) ? $data['keluhan'] : '';
+        $nama = isset($data['nama']) ? $data['nama'] : '';
+        $nim = isset($data['nim']) ? $data['nim'] : '';
 
         if ($user_email) {
             $mail = new PHPMailer(true);
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $mail->isHTML(true);
                 $mail->Subject = 'Respon Tiket';
-                $mail->Body    = '<div>
+                $mail->Body = '<div>
                                   <p>Halo ' . htmlspecialchars($nama) . ',</p>
                                   <p>Kami ingin memberi tahukan bahwa kami telah menerima dan memproses keluhan Anda. Berikut kami lampirkan detailnya:</p>
                                   <p><strong>Nama:</strong> ' . nl2br(htmlspecialchars($nama)) . '</p>
@@ -69,21 +69,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $mail->send();
 
-                // Notifikasi sukses email
-                header('Location: respon-tiket.php?status=success&message=Sukses%20menambahkan%20tiket%20dan%20mengirim%20email');
-                exit(); // Tambahkan exit setelah redirect
+                header('Location: respon-admin.php?id=' . $id_tiket . '&status=success&message=Sukses%20mengupdate%20status%20dan%20mengirim%20email');
+    exit();
             } catch (Exception $e) {
-                // Notifikasi error saat mengirim email
-                header('Location: respon-tiket.php?status=error&message=Error%20mengirim%20email:%20' . urlencode($mail->ErrorInfo));
-                exit(); // Tambahkan exit setelah redirect
+                header('Location: respon-admin.php?status=error&message=Error%20mengirim%20tiket');
+    exit();
             }
         } else {
-            // Notifikasi jika email tidak ditemukan
-            header('Location: respon-tiket.php?status=error&message=Email%20tidak%20ditemukan.');
+            header('Location: respon-admin.php?status=error&message=Email%20tidak%20ditemukan.');
             exit();
         }
     } else {
-        echo "Terjadi kesalahan: " . $stmt->error;
+        header('Location: respon-admin.php?id=' . $id_tiket . '&status=error&message=Terjadi%20kesalahan%20saat%20mengupdate%20status.');
+        exit();
     }
 
     $stmt->close();
