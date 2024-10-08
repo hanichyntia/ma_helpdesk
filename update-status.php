@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("isi", $status_tiket, $respon_admin, $id_tiket);
 
     if ($stmt->execute()) {
-        $email_query = $conn->prepare("SELECT email, keluhan, nama, nim FROM transaksi_tiket WHERE id_transaksi_tiket = ?");
+        $email_query = $conn->prepare("SELECT email, keluhan, nama, nim, master_status_tiket.jenis_status_tiket FROM transaksi_tiket JOIN master_status_tiket ON master_status_tiket.id = transaksi_tiket.id_status_tiket WHERE id_transaksi_tiket = ?");
         $email_query->bind_param("i", $id_tiket);
         $email_query->execute();
         $email_result = $email_query->get_result();
@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $keluhan = isset($data['keluhan']) ? $data['keluhan'] : '';
         $nama = isset($data['nama']) ? $data['nama'] : '';
         $nim = isset($data['nim']) ? $data['nim'] : '';
+        $status = isset($data['jenis_status_tiket'])? $data['jenis_status_tiket'] : '';
 
         if ($user_email) {
             $mail = new PHPMailer(true);
@@ -44,21 +45,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $mail->SMTPSecure = 'tls';
                 $mail->Port = 587;
 
-                $mail->setFrom('admin@gmail.com', 'Admin');
+                $mail->setFrom('donotreply.uptsi@gmail.com', 'UPTSI');
                 $mail->addAddress($user_email);
 
                 $mail->addEmbeddedImage('uploads/logo.png', 'logo_image');
 
                 $mail->isHTML(true);
                 $mail->Subject = 'Respon Tiket';
-                $mail->Body = '<div>
-                                  <p>Halo ' . htmlspecialchars($nama) . ',</p>
-                                  <p>Kami ingin memberi tahukan bahwa kami telah menerima dan memproses keluhan Anda. Berikut kami lampirkan detailnya:</p>
-                                  <p><strong>Nama:</strong> ' . nl2br(htmlspecialchars($nama)) . '</p>
-                                  <p><strong>NIM/NIP:</strong> ' . nl2br(htmlspecialchars($nim)) . '</p>
-                                  <p><strong>Keluhan:</strong> ' . nl2br(htmlspecialchars($keluhan)) . '</p>
-                                  <p><strong>Respon dari Admin:</strong> ' . nl2br(htmlspecialchars($respon_admin)) . '</p>
-                                  <p>Jika Anda masih memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk mengajukan tiket lain atau dapat dengan menghubungi Unit Sistem Informasi dan Pusat Data.</p>
+                if ($status_tiket == 2) {
+                    $mail->Body = '<div>
+                                    <p>Halo ' . htmlspecialchars($nama) . ',</p>
+                                    <p>Kami ingin memberi tahukan bahwa kami telah menerima dan memproses keluhan Anda. Berikut kami lampirkan detailnya:</p>
+                                    <p><strong>Nama:</strong> ' . nl2br(htmlspecialchars($nama)) . '</p>
+                                    <p><strong>NIM/NIP:</strong> ' . nl2br(htmlspecialchars($nim)) . '</p>
+                                    <p><strong>Keluhan:</strong> ' . nl2br(htmlspecialchars($keluhan)) . '</p>
+                                    <p><strong>Status Tiket:</strong> ' . nl2br(htmlspecialchars($status)) . '</p>
+                                    <p>Jika Anda masih memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk mengajukan tiket lain atau dapat dengan menghubungi Unit Sistem Informasi dan Pusat Data.</p>
                                   </div>
                                   <div style="margin-top: 2rem; width: 300px;">
                                     <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
@@ -66,10 +68,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     E-mail   : uptsisteminformasi@machung.ac.id<br>
                                     Address  : Villa Puncak Tidar Blok N No. 01 Malang
                                   </div>';
+                } elseif ($status_tiket == 3) {
+                    $mail->Body = '<div>
+                                    <p>Halo ' . htmlspecialchars($nama) . ',</p>
+                                    <p>Kami ingin memberi tahukan bahwa kami telah menerima dan memproses keluhan Anda. Berikut kami lampirkan detailnya:</p>
+                                    <p><strong>Nama:</strong> ' . nl2br(htmlspecialchars($nama)) . '</p>
+                                    <p><strong>NIM/NIP:</strong> ' . nl2br(htmlspecialchars($nim)) . '</p>
+                                    <p><strong>Keluhan:</strong> ' . nl2br(htmlspecialchars($keluhan)) . '</p>
+                                    <p><strong>Status Tiket:</strong> ' . nl2br(htmlspecialchars($status)) . '</p>
+                                    <p><strong>Respon dari Admin:</strong> ' . nl2br(htmlspecialchars($respon_admin)) . '</p>
+                                    <p>Jika Anda masih memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk mengajukan tiket lain atau dapat dengan menghubungi Unit Sistem Informasi dan Pusat Data.</p>
+                                  </div>
+                                  <div style="margin-top: 2rem; width: 300px;">
+                                    <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
+                                    <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
+                                    E-mail   : uptsisteminformasi@machung.ac.id<br>
+                                    Address  : Villa Puncak Tidar Blok N No. 01 Malang
+                                  </div>';
+                }
 
                 $mail->send();
 
-                header('Location: respon-admin.php?id=' . $id_tiket . '&status=success&message=Sukses%20mengupdate%20status%20dan%20mengirim%20email');
+                header('Location: respon-admin.php?id=' . $id_tiket . '&status=success&message=Sukses%20mengirim%20tiket%20ke%20email');
     exit();
             } catch (Exception $e) {
                 header('Location: respon-admin.php?status=error&message=Error%20mengirim%20tiket');
