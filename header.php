@@ -35,7 +35,7 @@ include "config.php";
                     <div class="d-flex">
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
-                        <a href="faq.php" class="logo logo-ma-light">
+                        <a href="index.php" class="logo logo-ma-light">
                             <span class="logo-sm">
                                 <img src="assets/images/logo-ma-kecil.png" alt="Logo Small Light" height="22">
                             </span>
@@ -86,7 +86,7 @@ include "config.php";
                             <li class="menu-title" key="t-menu"></li>
 
                             <li>
-                                <a href="faq.php" class="waves-effect">
+                                <a href="index.php" class="waves-effect">
                                     <i class="bx bx-file"></i>
                                     <span key="t-dashboards">FAQ</span>
                                 </a>
