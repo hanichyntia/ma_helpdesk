@@ -1,39 +1,95 @@
 <?php
-
 include "config.php";
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Use $_POST instead of $_GET for security
-    $id_tiket = $_POST['id'] ?? ''; // Assuming the ID is being sent via a POST form field
+
+    $id_tiket = $_GET['id'] ?? '';
     $status_tiket = $_POST['id_status_tiket'] ?? '';
     $respon_admin = $_POST['respon_admin'] ?? '';
 
-    // Prepare the SQL statement
     $stmt = $conn->prepare("UPDATE transaksi_tiket SET id_status_tiket = ?, respon_admin = ? WHERE id_transaksi_tiket = ?");
-    
+
     if (!$stmt) {
         echo "Error preparing statement: " . $conn->error;
         exit();
     }
 
-    // Bind parameters: 'i' for integer, 's' for string
     $stmt->bind_param("isi", $status_tiket, $respon_admin, $id_tiket);
 
-    // Execute the statement and check for success
     if ($stmt->execute()) {
-        echo "<script>alert('Status tiket berhasil diperbarui.');location.href='respon-tiket.php';</script>";
-        exit();
+        $email_query = $conn->prepare("SELECT email, keluhan, nama, nim FROM transaksi_tiket WHERE id_transaksi_tiket = ?");
+        $email_query->bind_param("i", $id_tiket);
+        $email_query->execute();
+        $email_result = $email_query->get_result();
+        $data = $email_result->fetch_assoc();
+        $user_email = $data['email'] ?? '';
+        $keluhan = $data['keluhan'] ?? '';
+        $nama = $data['nama'] ?? '';
+        $nim = $data['nim'] ?? '';
+
+        if ($user_email) {
+            $mail = new PHPMailer(true);
+
+            try {
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'kazushi0890@gmail.com';
+                $mail->Password = 'hodr mljy jkyq uqyo';
+                $mail->SMTPSecure = 'tls';
+                $mail->Port = 587;
+
+                $mail->setFrom('admin@gmail.com', 'Admin');
+                $mail->addAddress($user_email);
+
+                $mail->addEmbeddedImage('uploads/logo.png', 'logo_image');
+
+                $mail->isHTML(true);
+                $mail->Subject = 'Respon Tiket';
+                $mail->Body    = '<div>
+                                  <p>Halo ' . htmlspecialchars($nama) . ',</p>
+                                  <p>Kami ingin memberi tahukan bahwa kami telah menerima dan memproses keluhan Anda. Berikut kami lampirkan detailnya:</p>
+                                  <p><strong>Nama:</strong> ' . nl2br(htmlspecialchars($nama)) . '</p>
+                                  <p><strong>NIM/NIP:</strong> ' . nl2br(htmlspecialchars($nim)) . '</p>
+                                  <p><strong>Keluhan:</strong> ' . nl2br(htmlspecialchars($keluhan)) . '</p>
+                                  <p><strong>Respon dari Admin:</strong> ' . nl2br(htmlspecialchars($respon_admin)) . '</p>
+                                  <p>Jika Anda masih memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk mengajukan tiket lain atau dapat dengan menghubungi Unit Sistem Informasi dan Pusat Data.</p>
+                                  </div>
+                                  <div style="margin-top: 2rem; width: 300px;">
+                                    <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
+                                    <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
+                                    E-mail   : uptsisteminformasi@machung.ac.id<br>
+                                    Address  : Villa Puncak Tidar Blok N No. 01 Malang
+                                  </div>';
+
+                $mail->send();
+
+                // Notifikasi sukses email
+                header('Location: respon-tiket.php?status=success&message=Sukses%20menambahkan%20tiket%20dan%20mengirim%20email');
+                exit(); // Tambahkan exit setelah redirect
+            } catch (Exception $e) {
+                // Notifikasi error saat mengirim email
+                header('Location: respon-tiket.php?status=error&message=Error%20mengirim%20email:%20' . urlencode($mail->ErrorInfo));
+                exit(); // Tambahkan exit setelah redirect
+            }
+        } else {
+            // Notifikasi jika email tidak ditemukan
+            header('Location: respon-tiket.php?status=error&message=Email%20tidak%20ditemukan.');
+            exit();
+        }
     } else {
         echo "Terjadi kesalahan: " . $stmt->error;
     }
 
-    // Close statement and connection
     $stmt->close();
+    $conn->close();
 } else {
-    echo "<script>alert('Invalid request.');location.href='respon-tiket.php';</script>";
+    echo "<script>alert('Invalid request.');</script>";
+    header("Location: respon-tiket.php");
     exit();
 }
-
-// Close the database connection
-$conn->close();
-?>
