@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $keluhan = isset($data['keluhan']) ? $data['keluhan'] : '';
         $nama = isset($data['nama']) ? $data['nama'] : '';
         $nim = isset($data['nim']) ? $data['nim'] : '';
-        $status = isset($data['jenis_status_tiket'])? $data['jenis_status_tiket'] : '';
+        $status = isset($data['jenis_status_tiket']) ? $data['jenis_status_tiket'] : '';
 
         if ($user_email) {
             $mail = new PHPMailer(true);
@@ -40,8 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
-                $mail->Username = 'kazushi0890@gmail.com';
-                $mail->Password = 'hodr mljy jkyq uqyo';
+                $mail->Username = 'donotreply.uptsi@gmail.com'; 
+                $mail->Password = 'bvfq vrcb hovo pjdu'; 
                 $mail->SMTPSecure = 'tls';
                 $mail->Port = 587;
 
@@ -90,10 +90,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $mail->send();
 
                 header('Location: respon-admin.php?id=' . $id_tiket . '&status=success&message=Sukses%20mengirim%20tiket%20ke%20email');
-    exit();
+                exit();
             } catch (Exception $e) {
                 header('Location: respon-admin.php?status=error&message=Error%20mengirim%20tiket');
-    exit();
+                exit();
             }
         } else {
             header('Location: respon-admin.php?status=error&message=Email%20tidak%20ditemukan.');

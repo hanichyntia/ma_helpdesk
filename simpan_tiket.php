@@ -86,12 +86,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'kazushi0890@gmail.com';
-            $mail->Password = 'hodr mljy jkyq uqyo';
+            $mail->Username = 'donotreply.uptsi@gmail.com'; 
+            $mail->Password = 'bvfq vrcb hovo pjdu'; 
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
-            $mail->setFrom('admin@gmail.com', 'Admin');
+            $mail->setFrom('donotreply.uptsi@gmail.com', 'UPTSI');
             $mail->addAddress($recipient_email);
 
             $mail->addEmbeddedImage('uploads/logo.png', 'logo_image');
@@ -124,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->clearAddresses();
             $mail->clearAttachments();
 
-            $mail->addAddress('kazushi0890@gmail.com');
+            $mail->addAddress('donotreply.uptsi@gmail.com');
             $mail->Subject = 'Tiket Baru Telah Masuk - [' . $kode_tiket . ']';
             $mail->Body = "<p>Hi Unit Sistem Informasi dan Pusat Data, berikut kami sampaikan detail dari data pengirim tiket:</p>
 <p>Kode tiket: <strong>$kode_tiket</strong></p>
