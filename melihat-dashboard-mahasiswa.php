@@ -100,9 +100,10 @@
                                                                 <p class=" text-muted mb-4 text-center">Tampilan Tampilan log in MAC IS Mahasiswa</p>
 
                                                                 <div class="text-center">
-                                                                    <iframe width="560" height="315" src="https://youtube.com/embed/7uF0f483Y1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                                    <iframe width="560" height="315" src="https://youtube.com/embed/iuUq_7QOIHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
-
+                                                                
+                                                                
                                                         </div>
 
                                                         </div>

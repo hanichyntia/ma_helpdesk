@@ -47,7 +47,8 @@
 
                 <div class="page-content">
                     <div class="container-fluid">
-                   
+
+                        
                         <!-- end page title -->
 
                         <div class="row">
@@ -60,7 +61,7 @@
                                                     <div>
                                                         <div class="text-center">
                                                             
-                                                            <h4>Melihat kalender akademik</h4>
+                                                            <h4>Melihat pendaftaran Ma Chung Merdeka</h4>
                                                             
                                                         </div>
                                                         
@@ -68,23 +69,71 @@
 
                                                         <div class="mt-4">
                                                             <div class="font-size-14">
-                                                                <p>Mahasiswa dapat membuka kalender akademik yang sudah dibuat oleh Bagian Administrasi Akademik dengan membuka menu kalender akademik (menu sebelah kiri). Kalender akademik yang tertampil pada MAC IS mahasiswa akan selalu diperbarui setiap tahun ajaran baru.</p>
-
-                                                                <img src="macismasis/melihat-kalender-akademik.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                                <p>Mahasiswa dapat melihat pendaftaran program Ma Chung Merdeka dengan membuka menu <strong>Ma Chung Merdeka → Lihat Pendaftaran.</strong></p>
+                                                                
+                                                                <img src="macismasis/melihat-pendaftaran-ma-chung-merdeka-satu.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
                                                                 <p class="mb-4 text-center">Tampilan Kalender Akademik</p>
+
+                                                                <p class="mb-4">Mahasiswa dapat melihat informasi singkat tentang profil mahasiswa yang terdiri dari:</p>
+
+                                                                <p class="mb-4">1. Nama</p>
+
+                                                                <p class="mb-4">2. Nama dosen pembimbing</p>
+
+                                                                <p class="mb-4">3. Program studi</p>
+
+                                                                <p class="mb-4">4. Total IPK terakhir</p>
+
+                                                                <p class="mb-4">5. Total SKS</p>
+
+                                                                <img src="macismasis/melihat-pendaftaran-ma-chung-merdeka-dua.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
+                                                                <br>
+
+                                                                <p class="mb-4 text-center">Tampilan informasi singkat mahasiswa</p>
+
+                                                                <p class="mb-4"> Mahasiswa dapat melihat progres pendaftaran Ma Chung Merdeka yang terdiri dari:</p>
+
+                                                                <p class="mb-4">1. Nama program</p>
+
+                                                                <p class="mb-4">2. Nama mitra</p>
+
+                                                                <p class="mb-4">3. Kota mitra</p>
+
+                                                                <p class="mb-4">4. Tahun atau semester</p>
+
+                                                                <p class="mb-4">5. Tenggat waktu pendaftaran</p>
+
+                                                                <p class="mb-4">6. Status pendaftaran</p>
+
+                                                                <p class="mb-4">7. Button edit untuk mengubah data keikutsertaan pendaftaran Ma Chung Merdeka</p>
+
+                                                                <p class="mb-4">8. Berkas SPTJM, rekomendasi, dan kontrak</p>
+
+                                                                <img src="macismasis/melihat-pendaftaran-ma-chung-merdeka-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                                
+                                                                <br>
+
+                                                                <p class="mb-4 text-center">Tampilan lihat pendaftaran dalam Ma Chung Merdeka</p>
+
+                                                                <p class="mb-4">Mahasiswa dapat mengubah data pendaftaran Ma Chung merdeka dengan memilih Edit dan mahasiswa dapat mengubah data keikutsertaan pendaftaran Ma Chung Merdeka. Setelah mengubah data keikutsertaan pendaftaran Ma Chung Merdeka, mahasiswa dapat memilih <strong>Simpan Data</strong>.</p>
+
+                                                                <img src="macismasis/melihat-pendaftaran-ma-chung-merdeka-empat.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                                
+                                                                <br>
+
+                                                                <p class="mb-4 text-center">Tampilan form edit data keikutsertaan pendaftaran Ma Chung Merdeka</p>
+
                                                                 <div class="text-center">
-                                                                    <iframe width="560" height="315" src="https://youtube.com/embed/37Sg9TKi_ro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                                    <iframe width="560" height="315" src="https://youtube.com/embed/BZ6U0lxcbsQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
+                                                            </div>
 
-                                                        </div>
-
-                                                        </div>
-                                                        
                                                     </div>
+                                                        
                                                 </div>
                                             </div>
                                         </div>

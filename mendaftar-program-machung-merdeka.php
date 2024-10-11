@@ -47,7 +47,8 @@
 
                 <div class="page-content">
                     <div class="container-fluid">
-                   
+
+                        
                         <!-- end page title -->
 
                         <div class="row">
@@ -60,7 +61,7 @@
                                                     <div>
                                                         <div class="text-center">
                                                             
-                                                            <h4>Melihat kalender akademik</h4>
+                                                            <h4>Mendaftar program Ma Chung merdeka</h4>
                                                             
                                                         </div>
                                                         
@@ -68,16 +69,76 @@
 
                                                         <div class="mt-4">
                                                             <div class="font-size-14">
-                                                                <p>Mahasiswa dapat membuka kalender akademik yang sudah dibuat oleh Bagian Administrasi Akademik dengan membuka menu kalender akademik (menu sebelah kiri). Kalender akademik yang tertampil pada MAC IS mahasiswa akan selalu diperbarui setiap tahun ajaran baru.</p>
+                                                                <p>Mahasiswa dapat mendaftar program Ma Chung Merdeka dengan membuka menu <strong>Ma Chung Merdeka → Pendaftaran.</strong></p>
 
-                                                                <img src="macismasis/melihat-kalender-akademik.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                                <img src="macismasis/mendaftar-program-ma-chung-merdeka-satu.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan Kalender Akademik</p>
-                                                                
+                                                                <p class="mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+
+                                                                <p class="mb-4">Mahasiswa dapat melihat informasi singkat tentang profil mahasiswa yang terdiri dari:</p>
+
+                                                                <p class="mb-4">1. Nama</p>
+
+                                                                <p class="mb-4">2. Nama dosen pembimbing</p>
+
+                                                                <p class="mb-4">3. Program studi</p>
+
+                                                                <p class="mb-4">4. Total IPK terakhir</p>
+
+                                                                <p class="mb-4">5. Total SKS</p>
+
+                                                                <img src="macismasis/mendaftar-program-ma-chung-merdeka-dua.png" alt="" class="img-thumbnail mx-auto d-block">
+
+                                                                <p class="mb-4 text-center">Tampilan informasi singkat mahasiswa</p>
+
+                                                                <p class="mb-4r">Jika mahasiswa <strong>tidak terdapat nilai D dan E</strong> seperti pada gambar terlampir, maka mahasiswa <strong>dapat</strong> mendaftar program Ma Chung Merdeka dengan memilih <strong>Daftar MBKM</strong></p>
+
+                                                                <img src="macismasis/mendaftar-program-ma-chung-merdeka-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
+
+                                                                <p class="mb-4 text-center">Tampilan daftar nilai mata kuliah yang tidak terdapat nilai D dan E</p>
+
+                                                                <p class="mb-4">Jika mahasiswa <strong>terdapat nilai D dan E</strong> seperti pada gambar terlampir, maka mahasiswa <strong>tidak dapat</strong> mendaftar program Ma Chung Merdeka dan muncul notifikasi bahwa tidak dapat mengikuti program MBKM.</p>
+                                                        
+                                                                <img src="macismasis/mendaftar-program-ma-chung-merdeka-empat.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                        
+                                                                <p class="mb-4 text-center">Tampilan daftar nilai mata kuliah yang terdapat nilai D dan E</p>
+
+                                                                <p class="mb-4">Setelah mahasiswa dapat mendaftar MBKM, maka mahasiswa dapat mendaftar pada form pendaftaran Ma Chung Merdeka yang terdiri dari:</p>
+
+                                                                <p class="mb-4">1. NIM mahasiswa</p>
+
+                                                                <p class="mb-4">2. Nama mahasiswa</p>
+
+                                                                <p class="mb-4">3. Tahun akademik</p>
+
+                                                                <p class="mb-4">4. Semester</p>
+
+                                                                <p class="mb-4">5. Jenis MBKM</p>
+
+                                                                <p class="mb-4">6. Jenis BKP</p>
+
+                                                                <p class="mb-4">7. Nomor handphone aktif yang terhubung dengan Whatsapp</p>
+
+                                                                <p class="mb-4">8. Email aktif</p>
+
+                                                                <p class="mb-4">9. Nama kegiatan</p>
+
+                                                                <p class="mb-4">10. Nama mitra MBKM</p>
+
+                                                                <p class="mb-4">11. Kota mitra MBKM</p>
+
+                                                                <p class="mb-4">12. Tenggat waktu pendaftaran MBKM</p>
+
+                                                                <img src="macismasis/mendaftar-program-ma-chung-merdeka-lima.png" alt="" class="img-thumbnail mx-auto d-block">
+
+                                                                <p class="mb-4 text-center">Tampilan form pendaftaran Ma Chung Merdeka</p>
+
+                                                                <p class="mb-4">Mahasiswa dapat mengisikan sesuai form yang tersedia dan memilih Simpan Data.</p>
+
                                                                 <div class="text-center">
-                                                                    <iframe width="560" height="315" src="https://youtube.com/embed/37Sg9TKi_ro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                                    <iframe width="560" height="315" src="https://youtube.com/embed/iuUq_7QOIHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
 
                                                         </div>
