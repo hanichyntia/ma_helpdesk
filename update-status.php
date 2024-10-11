@@ -43,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $status = isset($data['jenis_status_tiket']) ? $data['jenis_status_tiket'] : '';
         $id_sub_sub_kodefikasi = isset($data['id_sub_sub_kodefikasi']) ? $data['id_sub_sub_kodefikasi'] : '';
 
-        // Tentukan email tujuan
         if ($id_sub_sub_kodefikasi == 2 && !empty($reset_email)) {
             $email_tujuan = $reset_email;
         } else {
@@ -82,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                   <div style="margin-top: 2rem; color: black;">
                                     <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
                                     <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
-                                    <p>Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.</p>
+                                    Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.<br>
                                     E-mail   : uptsisteminformasi@machung.ac.id<br>
                                     Address  : Villa Puncak Tidar Blok N No. 01 Malang
                                   </div>';
@@ -100,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                   <div style="margin-top: 2rem; color: black;">
                                     <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
                                     <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
-                                    <p>Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.</p>
+                                    Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.<br>
                                     E-mail   : uptsisteminformasi@machung.ac.id<br>
                                     Address  : Villa Puncak Tidar Blok N No. 01 Malang
                                   </div>';
