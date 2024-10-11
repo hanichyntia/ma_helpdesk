@@ -1,28 +1,37 @@
 <?php
-$error_message = ''; // Variabel untuk menyimpan pesan error
+$error_message = '';
+include 'config.php';
 
-include 'config.php'; 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = isset($_POST['username']) ? $_POST['username'] : null;
+    $password = isset($_POST['password']) ? $_POST['password'] : null;
 
-    if (empty($username)) {
-        $error_message = 'Username tidak boleh kosong'; // Pesan error jika username kosong
-    } elseif (empty($password)) {
-        $error_message = 'Password tidak boleh kosong'; // Pesan error jika password kosong
+    if (empty($username) || empty($password)) {
+        $error_message = 'Data Tidak Lengkap';
     } else {
-        // Query ke database untuk mencocokkan username dan password
-        $qry_login = mysqli_query($conn, "SELECT * FROM master_user WHERE username = '" . $username . "' AND password = '" . $password . "'");
+        $query = "SELECT * FROM master_user WHERE username = ? ";
 
-        if (mysqli_num_rows($qry_login) > 0) {
-            $dt_login = mysqli_fetch_array($qry_login);
+        if ($stmt = mysqli_prepare($conn, $query)) {
+            mysqli_stmt_bind_param($stmt, "s", $username);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
 
-            session_start();
-            $_SESSION['user_id'] = $dt_login['id'];
-            $_SESSION['status_login'] = true;
-            header("location: index-admin.php");
-        } else {
-            $error_message = 'Username atau password tidak benar'; // Pesan error jika login gagal
+            if (mysqli_num_rows($result) > 0) {
+                $user = mysqli_fetch_array($result);
+
+                if (password_verify($password, $user['password'])) {
+                    session_start();
+                    $_SESSION['id_user'] = $user['id_user'];
+                    $_SESSION['status_login'] = true;
+                    header('Location: index-admin.php');
+                    exit();
+                } else {
+                    $error_message = 'Password salah.';
+                    exit();
+                }
+            } else {
+                $error_message = 'Username tidak ditemukan.';
+            }
         }
     }
 }

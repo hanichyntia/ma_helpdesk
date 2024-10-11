@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt = $conn->prepare("UPDATE transaksi_tiket SET id_status_tiket = ?, respon_admin = ? WHERE id_transaksi_tiket = ?");
 
     if (!$stmt) {
+        header('Location: respon-admin.php?id=' . $id_tiket . '&status=error&message=Error%20preparing%20statement:%20' . $conn->error);
         echo "Error preparing statement: " . $conn->error;
         exit();
     }
@@ -22,38 +23,54 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("isi", $status_tiket, $respon_admin, $id_tiket);
 
     if ($stmt->execute()) {
-        $email_query = $conn->prepare("SELECT email, keluhan, nama, nim, master_status_tiket.jenis_status_tiket FROM transaksi_tiket JOIN master_status_tiket ON master_status_tiket.id = transaksi_tiket.id_status_tiket WHERE id_transaksi_tiket = ?");
+        // Ambil data terkait tiket dan email
+        $email_query = $conn->prepare("SELECT email, reset_email, keluhan, nama, nim, master_status_tiket.jenis_status_tiket, id_sub_sub_kodefikasi FROM transaksi_tiket JOIN master_status_tiket ON master_status_tiket.id = transaksi_tiket.id_status_tiket WHERE id_transaksi_tiket = ?");
+
+        // Cek apakah prepare berhasil
+        if (!$email_query) {
+            die("Error preparing email query: " . $conn->error);
+        }
+
         $email_query->bind_param("i", $id_tiket);
         $email_query->execute();
         $email_result = $email_query->get_result();
         $data = $email_result->fetch_assoc();
         $user_email = isset($data['email']) ? $data['email'] : '';
+        $reset_email = isset($data['reset_email']) ? $data['reset_email'] : '';
         $keluhan = isset($data['keluhan']) ? $data['keluhan'] : '';
         $nama = isset($data['nama']) ? $data['nama'] : '';
         $nim = isset($data['nim']) ? $data['nim'] : '';
-        $status = isset($data['jenis_status_tiket'])? $data['jenis_status_tiket'] : '';
+        $status = isset($data['jenis_status_tiket']) ? $data['jenis_status_tiket'] : '';
+        $id_sub_sub_kodefikasi = isset($data['id_sub_sub_kodefikasi']) ? $data['id_sub_sub_kodefikasi'] : '';
 
-        if ($user_email) {
+        // Tentukan email tujuan
+        if ($id_sub_sub_kodefikasi == 2 && !empty($reset_email)) {
+            $email_tujuan = $reset_email;
+        } else {
+            $email_tujuan = $user_email;
+        }
+
+        if ($email_tujuan) {
             $mail = new PHPMailer(true);
 
             try {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
-                $mail->Username = 'kazushi0890@gmail.com';
-                $mail->Password = 'hodr mljy jkyq uqyo';
+                $mail->Username = 'donotreply.uptsi@gmail.com';
+                $mail->Password = 'bvfq vrcb hovo pjdu';
                 $mail->SMTPSecure = 'tls';
                 $mail->Port = 587;
 
-                $mail->setFrom('donotreply.uptsi@gmail.com', 'UPTSI');
-                $mail->addAddress($user_email);
+                $mail->setFrom('donotreply.uptsi@gmail.com', 'Unit Sistem Informasi dan Pusat Data');
+                $mail->addAddress($email_tujuan);
 
                 $mail->addEmbeddedImage('uploads/logo.png', 'logo_image');
 
                 $mail->isHTML(true);
                 $mail->Subject = 'Respon Tiket';
                 if ($status_tiket == 2) {
-                    $mail->Body = '<div>
+                    $mail->Body = '<div style="color: black;">
                                     <p>Halo ' . htmlspecialchars($nama) . ',</p>
                                     <p>Kami ingin memberi tahukan bahwa kami telah menerima dan memproses keluhan Anda. Berikut kami lampirkan detailnya:</p>
                                     <p><strong>Nama:</strong> ' . nl2br(htmlspecialchars($nama)) . '</p>
@@ -62,14 +79,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <p><strong>Status Tiket:</strong> ' . nl2br(htmlspecialchars($status)) . '</p>
                                     <p>Jika Anda masih memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk mengajukan tiket lain atau dapat dengan menghubungi Unit Sistem Informasi dan Pusat Data.</p>
                                   </div>
-                                  <div style="margin-top: 2rem; width: 300px;">
+                                  <div style="margin-top: 2rem; color: black;">
                                     <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
                                     <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
+                                    <p>Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.</p>
                                     E-mail   : uptsisteminformasi@machung.ac.id<br>
                                     Address  : Villa Puncak Tidar Blok N No. 01 Malang
                                   </div>';
                 } elseif ($status_tiket == 3) {
-                    $mail->Body = '<div>
+                    $mail->Body = '<div style="color: black;">
                                     <p>Halo ' . htmlspecialchars($nama) . ',</p>
                                     <p>Kami ingin memberi tahukan bahwa kami telah menerima dan memproses keluhan Anda. Berikut kami lampirkan detailnya:</p>
                                     <p><strong>Nama:</strong> ' . nl2br(htmlspecialchars($nama)) . '</p>
@@ -79,9 +97,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <p><strong>Respon dari Admin:</strong> ' . nl2br(htmlspecialchars($respon_admin)) . '</p>
                                     <p>Jika Anda masih memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk mengajukan tiket lain atau dapat dengan menghubungi Unit Sistem Informasi dan Pusat Data.</p>
                                   </div>
-                                  <div style="margin-top: 2rem; width: 300px;">
+                                  <div style="margin-top: 2rem; color: black;">
                                     <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
                                     <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
+                                    <p>Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.</p>
                                     E-mail   : uptsisteminformasi@machung.ac.id<br>
                                     Address  : Villa Puncak Tidar Blok N No. 01 Malang
                                   </div>';
@@ -90,10 +109,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $mail->send();
 
                 header('Location: respon-admin.php?id=' . $id_tiket . '&status=success&message=Sukses%20mengirim%20tiket%20ke%20email');
-    exit();
+                exit();
             } catch (Exception $e) {
                 header('Location: respon-admin.php?status=error&message=Error%20mengirim%20tiket');
-    exit();
+                exit();
             }
         } else {
             header('Location: respon-admin.php?status=error&message=Email%20tidak%20ditemukan.');

@@ -31,26 +31,19 @@
                             </div>
                         </div>
                         <div class="card-body pt-0">
-                            <div>
-                                <a>
-                                    <div class="avatar-md profile-user-wid mb-4">
-                                        <span class="avatar-title rounded-circle bg-light">
-                                            <img src="assets/images/logo.svg" alt="" class="rounded-circle" height="34">
-                                        </span>
-                                    </div>
-                                </a>
-                            </div>
+                            
                             <div class="p-2">
                                 <?php
                                 include "config.php";
 
                                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                    $nama_user = $_POST['nama_user'] ?? null;
-                                    $username = $_POST['username'] ?? null;
-                                    $password = $_POST['password'] ?? null;
-                                    $hak_akses_user = $_POST['hak_akses_user'] ?? null;
+                                    $nama_user = isset($_POST['nama_user']) ? $_POST['nama_user'] : null;
+                                    $username = isset($_POST['username']) ? $_POST['username'] : null;
+                                    $password = isset($_POST['password']) ? $_POST['password'] : null;
+                        
+                                    
 
-                                    if (empty($nama_user) || empty($username) || empty($hak_akses_user) || empty($password)) {
+                                    if (empty($nama_user) || empty($username) || empty($password)) {
                                         $error_message = 'Data Tidak Lengkap';
                                     } else {
                                         $check = "SELECT * FROM master_user WHERE username = '$username'";
@@ -60,7 +53,7 @@
                                             $error_message = 'Username sudah ada, silakan pilih username lain.';
                                         } else {
                                             $hashed_password = password_hash($password, PASSWORD_BCRYPT);
-                                            $query = "INSERT INTO master_user (nama_user, username, hak_akses_user, password) VALUES ('$nama_user', '$username', '$hak_akses_user', '$hashed_password')";
+                                            $query = "INSERT INTO master_user (nama_user, username, password) VALUES ('$nama_user', '$username', '$hashed_password')";
 
                                             if (mysqli_query($conn, $query)) {
                                                 echo "<script>alert('Pendaftaran berhasil!'); location.href='register-hlp.php';</script>";
@@ -72,7 +65,7 @@
                                     }
                                 }
                                 ?>
-                                <form class="needs-validation" novalidate method="POST" action="">
+                                <form class="needs-validation mt-4" novalidate method="POST" action="">
                                     <div class="mb-3">
                                         <label for="nama_user" class="form-label">Nama User</label>
                                         <input type="text" class="form-control" id="nama_user" name="nama_user" placeholder="Masukkan nama" required>
@@ -88,16 +81,7 @@
                                         <input type="password" class="form-control" id="userpassword" name="password" placeholder="Masukkan password" required>
                                         <div class="invalid-feedback">Tolong Masukkan Password</div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="hak_akses_user" class="form-label">Hak Akses User</label>
-                                        <select id="hak_akses_user" name="hak_akses_user" class="form-select" required>
-                                            <option value="" selected disabled>Pilih...</option>
-                                            <option value="Mahasiswa">Mahasiswa</option>
-                                            <option value="Dosen">Dosen</option>
-                                            <option value="Staff">Staff</option>
-                                        </select>
-                                        <div class="invalid-feedback">Tolong Pilih Hak Akses User</div>
-                                    </div>
+                                    
                                     <div class="mt-4 d-grid">
                                         <button class="btn btn-primary waves-effect waves-light" type="submit">Daftar</button>
                                     </div>
