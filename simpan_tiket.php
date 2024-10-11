@@ -114,6 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div style="margin-top: 2rem; width: 300px;">
     <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
     <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
+    <p>Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.</p>
     E-mail   : uptsisteminformasi@machung.ac.id<br>
     Address  : Villa Puncak Tidar Blok N No. 01 Malang
 </div>
