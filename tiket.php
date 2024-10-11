@@ -118,7 +118,7 @@
                                 </div>
 
                                 <div class="mb-3" id="email-container" style="display:none;">
-                                    <label for="reset_email" class="form-label">Email untuk Reset Password:</label>
+                                    <label for="reset_email" class="form-label">Email Untuk Menerima Tiket:</label>
                                     <input type="email" class="form-control" id="reset_email" name="reset_email"
                                         placeholder="Masukkan email untuk reset password" required>
                                     <div class="invalid-feedback">Tolong Masukkan Email</div>
@@ -129,7 +129,7 @@
                                     <textarea id="keluhan" name="keluhan" class="form-control" rows="3"
                                         placeholder="Masukkan Keluhan Anda" required></textarea>
                                     <div class="invalid-feedback">Tolong Masukkan Keluhan</div>
-                                </div>
+                                </div> 
 
                                 <div class="mt-3 d-grid" id="submit-button-container">
                                     <button class="btn btn-primary waves-effect waves-light" type="submit"

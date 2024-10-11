@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
-            $mail->setFrom('donotreply.uptsi@gmail.com', 'UPTSI');
+            $mail->setFrom('donotreply.uptsi@gmail.com', 'Unit Sistem Informasi dan Pusat Data');
             $mail->addAddress($recipient_email);
 
             $mail->addEmbeddedImage('uploads/logo.png', 'logo_image');
@@ -111,10 +111,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Jika belum ada respon balasan dari Unit Sistem Informasi dan Pusat Data, silakan kunjungi ruangan Unit Sistem Informasi dan Pusat Data di Gedung Rektorat lantai 1.
     </p>
 </div>
-<div style="margin-top: 2rem; width: 300px;">
+<div style="margin-top: 2rem;">
     <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
     <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
-    <p>Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.</p>
+    Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.<br>
     E-mail   : uptsisteminformasi@machung.ac.id<br>
     Address  : Villa Puncak Tidar Blok N No. 01 Malang
 </div>
@@ -135,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <p>Nama: <strong>$nama</strong></p>
 <p>NIM/NIP: <strong>$nim</strong></p>
 <p>Keluhan: <strong>$keluhan</strong></p>
-<p>Email Machung: <strong>$email</strong></p>
+<p>Email Utama: <strong>$email</strong></p>
 <p>Email Alternatif: <strong>$reset_email</strong></p>
 <p>Tanggal Transaksi: <strong>$tanggal_transaksi</strong></p>";
 

@@ -65,17 +65,17 @@
                                     <ul class="nav nav-tabs nav-tabs-custom justify-content-center pt-2" role="tablist">
                                         <li class="nav-item">
                                             <a class="nav-link active" data-bs-toggle="tab" href="#all-post" role="tab">
-                                               All Post
+                                               Semua FAQ
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" data-bs-toggle="tab" href="#mahasiswa" role="tab">
-                                               Mahasiswa
+                                               MAC IS Mahasiswa
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" data-bs-toggle="tab" href="#dosen" role="tab">
-                                               Dosen  
+                                               MAC IS Dosen  
                                             </a>
                                         </li>
                                     </ul>
@@ -96,14 +96,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-satu.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat mengakses MAC IS mahasiswa atau sistem informasi akademik untuk mahasiswa</p>
             
                                                                             <div>
-                                                                                <a href="mengakses-macis-mahasiswa.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="mengakses-macis-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -116,14 +116,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-dua.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat log in terlebih dahulu dengan menggunakan NIM sebagai username</p>
             
                                                                             <div>
-                                                                                <a href="melihat-dashboard-mahasiswa.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-dashboard-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -136,14 +136,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-6.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-tiga.png" alt="" class="img-thumbnail">
                                                                         </div>
 
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat membuka kalender akademik yang sudah dibuat oleh Bagian Administrasi Akademik</p>
             
                                                                             <div>
-                                                                                <a href="melihat-kalender-akademik.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-kalender-akademik.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -156,14 +156,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-empat.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melihat KRS mata kuliah dengan membuka menu </p>
             
                                                                             <div>
-                                                                                <a href="melihat-krs-mata-kuliah.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-krs-mata-kuliah.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -176,14 +176,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-lima.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Pengguna dapat melihat presensi kehadiran dari setiap mata kuliah dengan memilih menu</p>
             
                                                                             <div>
-                                                                                <a href="melihat-presensi-kehadiran.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-presensi-kehadiran.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -196,14 +196,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-enam.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melihat nilai dari mata kuliah dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="melihat-nilai-mata-kuliah.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-nilai-mata-kuliah.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -216,14 +216,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-tujuh.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat menambahkan poin keaktifan dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="menambahkan-poin-keaktifan.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="menambahkan-poin-keaktifan.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -236,14 +236,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-delapan.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Pengguna dapat melihat detail rekapitulasi poin keaktifan yang telah dilakukan penambahan sebelumnya</p>
             
                                                                             <div>
-                                                                                <a href="melihat-detail-rekapitulasi-poin-keaktifan.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-detail-rekapitulasi-poin-keaktifan.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -256,14 +256,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-sembilan.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melihat log aktivitas dari kegiatan praktik kerja lapangan (PKL) dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="melihat-log-aktivitas-pkl.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-log-aktivitas-pkl.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -276,14 +276,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-sepuluh.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Pengguna dapat melihat log aktivitas tugas akhir (skripsi atau thesis) dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="melihat-log-aktivitas-tugas-akhir.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-log-aktivitas-tugas-akhir.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -296,14 +296,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-sebelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat mengubah atau memperbarui biodata yang tertera pada MAC IS mahasiswa dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="memperbarui-biodata-mahasiswa.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="memperbarui-biodata-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -316,14 +316,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-duabelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat mengubah password akun MAC IS mahasiswa dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="mengubah-password-akun.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="mengubah-password-akun.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -336,14 +336,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-tigabelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat mengisikan angket perkuliahan yang terdiri dari beberapa angket</p>
             
                                                                             <div>
-                                                                                <a href="mengisikan-angket-perkuliahan.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="mengisikan-angket-perkuliahan.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -356,14 +356,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-empatbelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat mendaftar program Ma Chung Merdeka dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="mendaftar-program-machung-merdeka.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="mendaftar-program-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -376,14 +376,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-limabelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melihat pendaftaran program Ma Chung Merdeka dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="melihat-pendaftaran-machung-merdeka.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-pendaftaran-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -396,14 +396,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-enambelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melakukan beberapa kegiatan pada Ma Chung Merdeka</p>
             
                                                                             <div>
-                                                                                <a href="pengelolaan-log-kegiatan-machung-merdeka.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="pengelolaan-log-kegiatan-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -416,14 +416,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-tujuhbelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
             
                                                                             <div>
-                                                                                <a href="pelaporan-kegiatan-machung-merdeka.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="pelaporan-kegiatan-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -432,18 +432,18 @@
                                                                 <div class="col-sm-6">
                                                                     <div class="card p-1 border shadow-none">
                                                                         <div class="p-3">
-                                                                            <h5><a href="landing-dosen.php" class="text-dark">dosen</h5>
+                                                                            <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-6.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macisdosen/mengakses-macis-dosen-satu.png" alt="" class="img-thumbnail">
                                                                         </div>
 
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
             
                                                                             <div>
-                                                                                <a href="landing-dosen.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>`
                                                                     </div>
@@ -463,8 +463,8 @@
                                                     
                                                     <div class="col-xl-8">
                                                     <div>
-                                                            <hr class="mb-4">
-                                                            <div class="row">
+                                                        <hr class="mb-4">
+                                                        <div class="row">
                                                                 <div class="col-sm-6">
                                                                     <div class="card p-1 border shadow-none">
                                                                         <div class="p-3">
@@ -472,14 +472,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-satu.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat mengakses MAC IS mahasiswa atau sistem informasi akademik untuk mahasiswa</p>
             
                                                                             <div>
-                                                                                <a href="mengakses-macis-mahasiswa.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="mengakses-macis-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -492,14 +492,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-dua.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat log in terlebih dahulu dengan menggunakan NIM sebagai username</p>
             
                                                                             <div>
-                                                                                <a href="melihat-dashboard-mahasiswa.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-dashboard-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -512,14 +512,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-6.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-tiga.png" alt="" class="img-thumbnail">
                                                                         </div>
 
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat membuka kalender akademik yang sudah dibuat oleh Bagian Administrasi Akademik</p>
             
                                                                             <div>
-                                                                                <a href="melihat-kalender-akademik.php" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-kalender-akademik.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -532,14 +532,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-empat.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melihat KRS mata kuliah dengan membuka menu </p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-krs-mata-kuliah.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -552,14 +552,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-lima.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Pengguna dapat melihat presensi kehadiran dari setiap mata kuliah dengan memilih menu</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-presensi-kehadiran.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -572,14 +572,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-enam.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melihat nilai dari mata kuliah dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-nilai-mata-kuliah.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -592,14 +592,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-tujuh.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat menambahkan poin keaktifan dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="menambahkan-poin-keaktifan.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -612,14 +612,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-delapan.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Pengguna dapat melihat detail rekapitulasi poin keaktifan yang telah dilakukan penambahan sebelumnya</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-detail-rekapitulasi-poin-keaktifan.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -632,14 +632,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-sembilan.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melihat log aktivitas dari kegiatan praktik kerja lapangan (PKL) dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-log-aktivitas-pkl.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -652,14 +652,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-sepuluh.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Pengguna dapat melihat log aktivitas tugas akhir (skripsi atau thesis) dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-log-aktivitas-tugas-akhir.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -672,14 +672,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-sebelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat mengubah atau memperbarui biodata yang tertera pada MAC IS mahasiswa dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="memperbarui-biodata-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -692,14 +692,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-duabelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat mengubah password akun MAC IS mahasiswa dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="mengubah-password-akun.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -712,14 +712,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-tigabelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat mengisikan angket perkuliahan yang terdiri dari beberapa angket</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="mengisikan-angket-perkuliahan.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -732,14 +732,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-empatbelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat mendaftar program Ma Chung Merdeka dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="mendaftar-program-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -752,14 +752,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-limabelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melihat pendaftaran program Ma Chung Merdeka dengan membuka menu</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="melihat-pendaftaran-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -772,14 +772,14 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-enambelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melakukan beberapa kegiatan pada Ma Chung Merdeka</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="pengelolaan-log-kegiatan-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -792,22 +792,20 @@
                                                                         </div>
                                                                         
                                                                         <div class="position-relative">
-                                                                            <img src="assets/images/small/img-2.jpg" alt="" class="img-thumbnail">
+                                                                            <img src="macismasis/thumbnail-tujuhbelas.png" alt="" class="img-thumbnail">
                                                                         </div>
         
                                                                         <div class="p-3">
                                                                             <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
             
                                                                             <div>
-                                                                                <a href="javascript: void(0);" class="text-primary">Read more <i class="mdi mdi-arrow-right"></i></a>
+                                                                                <a href="pelaporan-kegiatan-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-
                                                             </div>
                                                         </div>
-                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -819,27 +817,587 @@
                                                     <div class="col-xl-8">
                                                         <div>
                                                             <hr class="mb-4">
-
                                                             <div class="row">
 
-                                                                <div class="col-sm-6">
-                                                                    <div class="card p-1 border shadow-none">
-                                                                        <div class="p-3">
-                                                                            <h5><a href="landing-dosen.php" class="text-dark">dosen</a></h5>
-                                                                        </div>
-                                                                        
-                                                                        <div class="position-relative">
-                                                                            <img src="assets/images/small/img-6.jpg" alt="" class="img-thumbnail">
-                                                                            
-                                                                            <div class="blog-play-icon">
-                                                                                <a href="javascript: void(0);" class="avatar-sm d-block mx-auto">
-                                                                                    <span class="avatar-title rounded-circle font-size-18"><i class="mdi mdi-play"></i></span>
-                                                                                </a>
-                                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">Mengakses MAC IS dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-satu.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat mengakses MAC IS dosen atau sistem informasi akademik untuk dosen dengan</p>
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="melihat-dashboard-dosen.php" class="text-dark">Melihat dashboard dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-dua.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat log in terlebih dahulu dengan menggunakan </p>
+        
+                                                                        <div>
+                                                                            <a href="melihat-dashboard-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="melihat-kalender-akademik-dosen.php" class="text-dark">Melihat kalender akademik</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-tiga.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat membuka kalender akademik yang sudah dibuat oleh Bagian Administrasi Akademik dengan membuka</p>
+        
+                                                                        <div>
+                                                                            <a href="melihat-kalender-akademik-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="menambah-data-presensi-mahasiswa.php" class="text-dark">Menambah data presensi mahasiswa</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-empat.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat menambahkan data presensi mahasiswa dengan membuka menu</p>
+        
+                                                                        <div>
+                                                                            <a href="menambah-data-presensi-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-lima.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-enam.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat melihat hasil penambahan presensi mahasiswa dengan membuka menu</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-tujuh.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat mengunduh presensi mahasiswa dengan membuka menu</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-delapan.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat melihat rekapitulasi presensi mahasiswa dengan membuka menu</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-sembilan.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-sepuluh.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-sebelas.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-duabelas.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-tigabelasu.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-empatbelas.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-limabelas.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-enambelas.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-tujuhbelas.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-delapanbelas.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-sembilanbelas.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-duapuluh.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-duasatu.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-duadua.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-duatiga.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-duaempat.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-dualima.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-duaenam.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-duatujuh.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                        
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-duadelapan.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+            
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-duasembilan.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+        
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
