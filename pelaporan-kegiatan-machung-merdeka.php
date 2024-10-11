@@ -47,7 +47,8 @@
 
                 <div class="page-content">
                     <div class="container-fluid">
-                   
+
+                        
                         <!-- end page title -->
 
                         <div class="row">
@@ -60,7 +61,7 @@
                                                     <div>
                                                         <div class="text-center">
                                                             
-                                                            <h4>Melihat kalender akademik</h4>
+                                                            <h4>Pelaporan kegiatan Ma Chung Merdeka (MBKM)</h4>
                                                             
                                                         </div>
                                                         
@@ -68,20 +69,52 @@
 
                                                         <div class="mt-4">
                                                             <div class="font-size-14">
-                                                                <p>Mahasiswa dapat membuka kalender akademik yang sudah dibuat oleh Bagian Administrasi Akademik dengan membuka menu kalender akademik (menu sebelah kiri). Kalender akademik yang tertampil pada MAC IS mahasiswa akan selalu diperbarui setiap tahun ajaran baru.</p>
+                                                                <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka yang terdiri dari:</p>
 
-                                                                <img src="macismasis/melihat-kalender-akademik.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                                <p class="mb-4">Melihat nilai dari keikutsertaan mahasiswa dalam program Ma Chung Merdeka</p>
+
+                                                                <p class="mb-4">Melihat berkas bukti pendukung mahasiswa dalam program Ma Chung Merdeka</p>
+
+                                                                <p class="mb-4">Mengajukan tanggal ujian mahasiswa dalam program Ma Chung Merdeka</p>
+
+                                                                <p class="mb-4">Mengunduh template laporan Ma Chung Merdeka (MBKM)</p>
+
+                                                                <p class="mb-4">Seluruh aktivitas tersebut dapat dilakukan dengan membuka <strong>menu Ma Chung Merdeka → Pelaporan.</strong></p>
+
+                                                                <img src="macismasis/pelaporan-kegiatan-machung-merdeka-satu.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
+                                                                <p class="mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan Kalender Akademik</p>
-                                                                
+                                                                <p class="mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+
+                                                                <p class="mb-4">Mahasiswa dapat melihat informasi akademik mahasiswa dan mengunduh template laporan MBKM yang telah tersedia dengan terdiri dari:</p>
+
+                                                                <p class="mb-4">1. Template laporan kemajuan MBKM mandiri</p>
+
+                                                                <p class="mb-4">2. Template laporan akhir MBKM mandiri</p>
+
+                                                                <p class="mb-4">3. Template laporan kemajuan MBKM mandiri flagship</p>
+
+                                                                <p class="mb-4">4. Template laporan akhir MBKM mandiri flagship</p>
+
+                                                                <img src="macismasis/pelaporan-kegiatan-machung-merdeka-dua.png" alt="" class="img-thumbnail mx-auto d-block">
+
+                                                                <p class="mb-4 text-center">Tampilan informasi singkat mahasiswa dan pilihan template laporan MBKM</p>
+
+                                                                <p class="mb-4">Mahasiswa dapat <strong>melihat nilai dan berkas bukti pendukung</strong>` dengan membuka Nilai dan Bukti Pendukung pada kolom Lihat File.</p>
+                                                            
+                                                                <img src="macismasis/pelaporan-kegiatan-machung-merdeka-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                            
+                                                                <p class="mb-4 text-center">Tampilan untuk melihat nilai dan berkas bukti pendukung pada daftar MBKM yang diterima</p>
+                                                            
+                                                                <p class="mb-4">Mahasiswa dapat mengajukan tanggal ujian dari keikutsertaan program Ma Chung Merdeka dengan membuka Ajukan Tanggal Ujian dan mengunggah pelaporan kegiatan Ma Chung Merdeka dengan membuka Unggah Laporan.</p>
+
                                                                 <div class="text-center">
-                                                                    <iframe width="560" height="315" src="https://youtube.com/embed/37Sg9TKi_ro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/moKkpFwq7Pg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
-
-                                                        </div>
-
+                                                            </div>
                                                         </div>
                                                         
                                                     </div>

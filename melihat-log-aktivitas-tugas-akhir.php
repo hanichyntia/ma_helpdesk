@@ -71,7 +71,7 @@
                                                             <div class="font-size-14">
                                                                 <p>Pengguna dapat melihat log aktivitas tugas akhir (skripsi atau thesis) dengan membuka menu <strong>Tugas Mandiri → Skripsi.</strong></p>
 
-                                                                <img src="macismasis/melihat-log-aktivitas-tugas-akhir-satu.php" alt="" class="img-thumbnail mx-auto d-block">
+                                                                <img src="macismasis/melihat-log-aktivitas-tugas-akhir-satu.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
@@ -89,7 +89,7 @@
 
                                                                 <p class="mb-4">5. Jumlah total SKS yang telah diambil</p>
                                                                 
-                                                                <img src="macismasis/melihat-log-aktivitas-tugas-akhir-dua.php" alt="" class="img-thumbnail mx-auto d-block">
+                                                                <img src="macismasis/melihat-log-aktivitas-tugas-akhir-dua.png" alt="" class="img-thumbnail mx-auto d-block">
 
                                                                 <p class="mb-4 text-center">Tampilan informasi data diri mahasiswa</p>
 
@@ -109,7 +109,7 @@
 
                                                                 <p class="mb-4">7. Search bar untuk mencari data tugas akhir</P>
                                                                 
-                                                                <img src="macismasis/melihat-log-aktivitas-tugas-akhir-dua.php" alt="" class="img-thumbnail mx-auto d-block">
+                                                                <img src="macismasis/melihat-log-aktivitas-tugas-akhir-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
 
                                                                 <p class="mb-4 text-center">Tampilan Kalender Akademik</p>
 

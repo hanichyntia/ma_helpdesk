@@ -65,7 +65,7 @@
                                                             <div class="font-size-14">
                                                                 <p>Mahasiswa dapat melihat nilai dari mata kuliah dengan membuka menu <strong>Perkuliahan → Lihat Nilai</strong></p>
 
-                                                                <img src="macismasis/melihat-presensi-kehadiran-satu.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                                <img src="macismasis/melihat-nilai-mata-kuliah-satu.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
@@ -79,7 +79,7 @@
                                                                 <p class="mb-4">7. Tahun akademik dan semester</p>
                                                                 <p class="mb-4">8. Status validasi KRS</p>
                                                                 <br>
-                                                                <img src="macismasis/melihat-presensi-kehadiran-dua.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                                <img src="macismasis/melihat-nilai-mata-kuliah-dua.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 <br>
                                                                 <p class="mb-4 text-center">Tampilan informasi data diri mahasiswa</p>
                                                                 <br>
@@ -107,11 +107,11 @@
                                                                 <p class="mb-4">10. Search bar untuk mencari data mata kuliah</p>
 
                                                                 <br>
-                                                                <img src="macismasis/melihat-presensi-kehadiran-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                                <img src="macismasis/melihat-nilai-mata-kuliah-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 <br>
                                                                 <p class="mb-4 text-center">Tampilan daftar mata kuliah yang sedang diambil saat ini</p>
                                                                 <br>
-                                                                <img src="macismasis/melihat-presensi-kehadiran-empat.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                                <img src="macismasis/melihat-nilai-mata-kuliah-empat.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 <br>
                                                                 <p class="mb-4 text-center">Tampilan detail nilai mata kuliah</p>
                                                                 <br>
