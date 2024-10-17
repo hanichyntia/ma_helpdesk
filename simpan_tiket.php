@@ -19,8 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tanggal_transaksi = isset($_POST['tanggal_transaksi']) ? $_POST['tanggal_transaksi'] : date('Y-m-d H:i:s');
 
 
-    if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan) || empty($nim) || empty($nama)|| preg_match('/^[a-zA-Z]+$/', $nim)) {
+    if (empty($email) || empty($kategori) || empty($subkategori) || empty($subsubkategori) || empty($keluhan) || empty($nim) || empty($nama)) {
         header('Location: tiket.php?status=error&message=Harap%20isi%20semua%20data%20yang%20diperlukan');
+        exit();
+    }
+    if ( preg_match('/^[a-zA-Z]+$/', $nim)) {
+        header('Location: tiket.php?status=error&message=NIM/NIP%20harus%20berupa%20angka');
         exit();
     }
 
