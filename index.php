@@ -38,7 +38,7 @@
                     </div>
 
                     <div class="" >
-                        <a href="tiket.php" class="fw-medium text-primary">Butuh bantuan?</a>
+                        <a href="login-hlp.php" class="fw-medium text-primary">Butuh bantuan?</a>
                     </div>
 
                 </div>
@@ -290,164 +290,203 @@
                                                                 </div>
 
                                                                 <div class="col-sm-6">
-                                                                    <div class="card p-1 border shadow-none">
-                                                                        <div class="p-3">
-                                                                            <h5><a href="memperbarui-biodata-mahasiswa.php" class="text-dark">Memperbarui biodata mahasiswa</a></h5>
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">Mengakses MAC IS dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-satu.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat mengakses MAC IS dosen atau sistem informasi akademik untuk dosen dengan</p>
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
-                                                                        
-                                                                        <div class="position-relative">
-                                                                            <img src="macismasis/thumbnail-sebelas.png" alt="" class="img-thumbnail">
-                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="melihat-dashboard-dosen.php" class="text-dark">Melihat dashboard dosen</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-dua.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat log in terlebih dahulu dengan menggunakan </p>
         
-                                                                        <div class="p-3">
-                                                                            <p>Mahasiswa dapat mengubah atau memperbarui biodata yang tertera pada MAC IS mahasiswa dengan membuka menu</p>
-            
-                                                                            <div>
-                                                                                <a href="memperbarui-biodata-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
-                                                                            </div>
+                                                                        <div>
+                                                                            <a href="melihat-dashboard-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
 
-                                                                <div class="col-sm-6">
-                                                                    <div class="card p-1 border shadow-none">
-                                                                        <div class="p-3">
-                                                                            <h5><a href="mengubah-password-akun.php" class="text-dark">Mengubah password akun</a></h5>
-                                                                        </div>
-                                                                        
-                                                                        <div class="position-relative">
-                                                                            <img src="macismasis/thumbnail-duabelas.png" alt="" class="img-thumbnail">
-                                                                        </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="melihat-kalender-akademik-dosen.php" class="text-dark">Melihat kalender akademik</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-tiga.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat membuka kalender akademik yang sudah dibuat oleh Bagian Administrasi Akademik dengan membuka</p>
         
-                                                                        <div class="p-3">
-                                                                            <p>Mahasiswa dapat mengubah password akun MAC IS mahasiswa dengan membuka menu</p>
-            
-                                                                            <div>
-                                                                                <a href="mengubah-password-akun.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
-                                                                            </div>
+                                                                        <div>
+                                                                            <a href="melihat-kalender-akademik-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
 
-                                                                <div class="col-sm-6">
-                                                                    <div class="card p-1 border shadow-none">
-                                                                        <div class="p-3">
-                                                                            <h5><a href="mengisikan-angket-perkuliahan.php" class="text-dark">Mengisikan angket perkuliahan</a></h5>
-                                                                        </div>
-                                                                        
-                                                                        <div class="position-relative">
-                                                                            <img src="macismasis/thumbnail-tigabelas.png" alt="" class="img-thumbnail">
-                                                                        </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="menambah-data-presensi-mahasiswa.php" class="text-dark">Menambah data presensi mahasiswa</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-empat.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat menambahkan data presensi mahasiswa dengan membuka menu</p>
         
-                                                                        <div class="p-3">
-                                                                            <p>Mahasiswa dapat mengisikan angket perkuliahan yang terdiri dari beberapa angket</p>
-            
-                                                                            <div>
-                                                                                <a href="mengisikan-angket-perkuliahan.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
-                                                                            </div>
+                                                                        <div>
+                                                                            <a href="menambah-data-presensi-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
 
-                                                                <div class="col-sm-6">
-                                                                    <div class="card p-1 border shadow-none">
-                                                                        <div class="p-3">
-                                                                            <h5><a href="mendaftar-program-machung-merdeka.php" class="text-dark">Mendaftar program Ma Chung Merdeka (MBKM)</a></h5>
-                                                                        </div>
-                                                                        
-                                                                        <div class="position-relative">
-                                                                            <img src="macismasis/thumbnail-empatbelas.png" alt="" class="img-thumbnail">
-                                                                        </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="melihat-hasil-penambahan-presensi-mahasiswa.php" class="text-dark">Melihat hasil penambahan presensi mahasiswa</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-lima.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat melihat hasil penambahan presensi mahasiswa dengan membuka menu</p>
         
-                                                                        <div class="p-3">
-                                                                            <p>Mahasiswa dapat mendaftar program Ma Chung Merdeka dengan membuka menu</p>
-            
-                                                                            <div>
-                                                                                <a href="mendaftar-program-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
-                                                                            </div>
+                                                                        <div>
+                                                                            <a href="melihat-hasil-penambahan-presensi-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
 
-                                                                <div class="col-sm-6">
-                                                                    <div class="card p-1 border shadow-none">
-                                                                        <div class="p-3">
-                                                                            <h5><a href="melihat-pendaftaran-machung-merdeka.php" class="text-dark">Melihat pendaftaran Ma Chung Merdeka (MBKM)</a></h5>
-                                                                        </div>
-                                                                        
-                                                                        <div class="position-relative">
-                                                                            <img src="macismasis/thumbnail-limabelas.png" alt="" class="img-thumbnail">
-                                                                        </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengunduh-presensi-mahasiswa.php" class="text-dark">Mengunduh presensi mahasiswa</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-enam.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat mengunduh presensi mahasiswa dengan membuka menu</p>
         
-                                                                        <div class="p-3">
-                                                                            <p>Mahasiswa dapat melihat pendaftaran program Ma Chung Merdeka dengan membuka menu</p>
-            
-                                                                            <div>
-                                                                                <a href="melihat-pendaftaran-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
-                                                                            </div>
+                                                                        <div>
+                                                                            <a href="mengunduh-presensi-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
 
-                                                                <div class="col-sm-6">
-                                                                    <div class="card p-1 border shadow-none">
-                                                                        <div class="p-3">
-                                                                            <h5><a href="pengelolaan-log-kegiatan-machung-merdeka.php" class="text-dark">Pengelolaan log kegiatan Ma Chung Merdeka (MBKM)</a></h5>
-                                                                        </div>
-                                                                        
-                                                                        <div class="position-relative">
-                                                                            <img src="macismasis/thumbnail-enambelas.png" alt="" class="img-thumbnail">
-                                                                        </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="melihat-rekapitulasi-presensi-mahasiswa.php" class="text-dark">Melihat rekapitulasi presensi mahasiswa</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-tujuh.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat melihat rekapitulasi presensi mahasiswa dengan membuka menu</p>
         
-                                                                        <div class="p-3">
-                                                                            <p>Mahasiswa dapat melakukan beberapa kegiatan pada Ma Chung Merdeka</p>
-            
-                                                                            <div>
-                                                                                <a href="pengelolaan-log-kegiatan-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
-                                                                            </div>
+                                                                        <div>
+                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
 
-                                                                <div class="col-sm-6">
-                                                                    <div class="card p-1 border shadow-none">
-                                                                        <div class="p-3">
-                                                                            <h5><a href="pelaporan-kegiatan-machung-merdeka.php" class="text-dark">Pelaporan kegiatan Ma Chung Merdeka (MBKM)</a></h5>
-                                                                        </div>
-                                                                        
-                                                                        <div class="position-relative">
-                                                                            <img src="macismasis/thumbnail-tujuhbelas.png" alt="" class="img-thumbnail">
-                                                                        </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="mengubah-nilai-mahasiswa.php" class="text-dark">Mengubah nilai mahasiswa</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-delapan.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat mengubah nilai mahasiswa yang telah ditambahkan sebelumnya dengan membuka menu</p>
         
-                                                                        <div class="p-3">
-                                                                            <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
-            
-                                                                            <div>
-                                                                                <a href="pelaporan-kegiatan-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
-                                                                            </div>
+                                                                        <div>
+                                                                            <a href="mengubah-nilai-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
 
-                                                                <div class="col-sm-6">
-                                                                    <div class="card p-1 border shadow-none">
-                                                                        <div class="p-3">
-                                                                            <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
-                                                                        </div>
-                                                                        
-                                                                        <div class="position-relative">
-                                                                            <img src="macisdosen/mengakses-macis-dosen-satu.png" alt="" class="img-thumbnail">
-                                                                        </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="melihat-jurnal-perkuliahan.php" class="text-dark">Melihat jurnal perkuliahan</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-sembilan.png" alt="" class="img-thumbnail">
+                                                                    </div>
 
-                                                                        <div class="p-3">
-                                                                            <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
-            
-                                                                            <div>
-                                                                                <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
-                                                                            </div>
-                                                                        </div>`
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat melihat jurnal perkuliahan dengan membuka menu</p>
+        
+                                                                        <div>
+                                                                            <a href="melihat-jurnal-perkuliahan.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="melakukan-sinkronisasi-presensi-mahasiswa.php" class="text-dark">Melakukan sinkronisasi presensi mahasiswa</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-sepuluh.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat melakukan sinkronisasi presensi mahasiswa dengan membuka menu</p>
+        
+                                                                        <div>
+                                                                            <a href="melakukan-sinkronisasi-presensi-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 
                                                             </div>
                                                         </div>
@@ -901,7 +940,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melihat-hasil-penambahan-presensi-mahasiswa.php" class="text-dark">Melihat hasil penambahan presensi mahasiswa</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -909,10 +948,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melihat hasil penambahan presensi mahasiswa dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-hasil-penambahan-presensi-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -921,7 +960,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="mengunduh-presensi-mahasiswa.php" class="text-dark">Mengunduh presensi mahasiswa</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -929,10 +968,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Dosen dapat melihat hasil penambahan presensi mahasiswa dengan membuka menu</p>
+                                                                        <p>Dosen dapat mengunduh presensi mahasiswa dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="mengunduh-presensi-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -941,31 +980,11 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melihat-rekapitulasi-presensi-mahasiswa.php" class="text-dark">Melihat rekapitulasi presensi mahasiswa</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
                                                                         <img src="macisdosen/thumbnail-dosen-tujuh.png" alt="" class="img-thumbnail">
-                                                                    </div>
-
-                                                                    <div class="p-3">
-                                                                        <p>Dosen dapat mengunduh presensi mahasiswa dengan membuka menu</p>
-        
-                                                                        <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-sm-6">
-                                                                <div class="card p-1 border shadow-none">
-                                                                    <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
-                                                                    </div>
-                                                                    
-                                                                    <div class="position-relative">
-                                                                        <img src="macisdosen/thumbnail-dosen-delapan.png" alt="" class="img-thumbnail">
                                                                     </div>
 
                                                                     <div class="p-3">
@@ -981,7 +1000,27 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="mengubah-nilai-mahasiswa.php" class="text-dark">Mengubah nilai mahasiswa</h5>
+                                                                    </div>
+                                                                    
+                                                                    <div class="position-relative">
+                                                                        <img src="macisdosen/thumbnail-dosen-delapan.png" alt="" class="img-thumbnail">
+                                                                    </div>
+
+                                                                    <div class="p-3">
+                                                                        <p>Dosen dapat mengubah nilai mahasiswa yang telah ditambahkan sebelumnya dengan membuka menu</p>
+        
+                                                                        <div>
+                                                                            <a href="mengubah-nilai-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <div class="card p-1 border shadow-none">
+                                                                    <div class="p-3">
+                                                                        <h5><a href="melihat-jurnal-perkuliahan.php" class="text-dark">Melihat jurnal perkuliahan</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -989,10 +1028,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melihat jurnal perkuliahan dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-jurnal-perkuliahan.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1001,7 +1040,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melakukan-sinkronisasi-presensi-mahasiswa.php" class="text-dark">Melakukan sinkronisasi presensi mahasiswa</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1009,10 +1048,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melakukan sinkronisasi presensi mahasiswa dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melakukan-sinkronisasi-presensi-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1021,7 +1060,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="menambahkan-nilai-mahasiswa.php" class="text-dark">Menambahkan nilai mahasiswa</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1029,10 +1068,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat menambahkan nilai mahasiswa pada mata kuliah yang diampu dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="menambahkan-nilai-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1041,7 +1080,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="menghapus-nilai-mahasiswa.php" class="text-dark">Menghapus nilai mahasiswa</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1049,10 +1088,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat menghapus nilai mahasiswa pada mata kuliah yang diampu dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="menghapus-nilai-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1061,18 +1100,18 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melakukan-kalkulasi-nilai.php" class="text-dark">Melakukan kalkulasi nilai</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
-                                                                        <img src="macisdosen/thumbnail-dosen-tigabelasu.png" alt="" class="img-thumbnail">
+                                                                        <img src="macisdosen/thumbnail-dosen-tigabelas.png" alt="" class="img-thumbnail">
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melakukan kalkulasi nilai mahasiswa sesuai mata kuliah yang diampu dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melakukan-kalkulasi-nilai.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1081,7 +1120,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melihat-hasil-kalkulasi-nilai-mahasiswa.php" class="text-dark">Melihat hasil kalkulasi nilai mahasiswa</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1089,10 +1128,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melihat hasil kalkulasi nilai mahasiswa dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-hasil-kalkulasi-nilai-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1101,7 +1140,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melakukan-sinkronisasi-nilai-mahasiswa.php" class="text-dark">Melakukan sinkronisasi nilai mahasiswa</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1109,10 +1148,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melakukan sinkronisasi nilai mahasiswa dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melakukan-sinkronisasi-nilai-mahasiswa.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1121,7 +1160,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="menambahkan-log-bimbingan-akademik.php" class="text-dark">Menambahkan log bimbingan akademik</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1129,10 +1168,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat menambahkan log bimbingan akademik dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="menambahkan-log-bimbingan-akademik.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1141,7 +1180,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melihat-nilai-mahasiswa-peserta-akademik.php" class="text-dark">Melihat nilai mahasiswa peserta akademik</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1149,10 +1188,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melihat nilai mahasiswa peserta akademik dengan membuka menu </p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-nilai-mahasiswa-peserta-akademik.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1161,7 +1200,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melihat-presensi-mahasiswa-peserta-akademik.php" class="text-dark">Melihat presensi mahasiswa peserta akademik</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1169,10 +1208,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melihat presensi mahasiswa peserta akademik dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-presensi-mahasiswa-peserta-akademik.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1181,7 +1220,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melihat-daftar-nilai-mahasiswa-peserta-akademik.php" class="text-dark">Melihat daftar nilai mahasiswa peserta akademik</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1189,10 +1228,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melihat daftar nilai mahasiswa peserta akademik dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-daftar-nilai-mahasiswa-peserta-akademik.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1201,7 +1240,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melihat-status-validasi-krs-mahasiswa-peserta-akademik.php" class="text-dark">Melihat status validasi KRS mahasiswa peserta akademik</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1209,10 +1248,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melihat status validasi KRS mahasiswa peserta akademik dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-status-validasi-krs-mahasiswa-peserta-akademik.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1221,7 +1260,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melihat-daftar-poin-keaktifan-mahasiswa-peserta-akademik.php" class="text-dark">Melihat daftar poin keaktifan mahasiswa peserta akademik</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1229,10 +1268,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melihat daftar poin keaktifan mahasiswa peserta akademik dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-daftar-poin-keaktifan-mahasiswa-peserta-akademik.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1241,7 +1280,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melihat-hasil-angket-perkuliahan.php" class="text-dark">Melihat hasil angket perkuliahan</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1249,10 +1288,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melihat hasil angket perkuliahan yang diisi oleh mahasiswa di MAC IS mahasiswa dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-hasil-angket-perkuliahan.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1261,7 +1300,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="mengubah-password-akun-dosen.php" class="text-dark">Mengubah password akun</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1269,10 +1308,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat mengubah password akun MAC IS dosen dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="mengubah-password-akun.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1281,7 +1320,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="memperbarui-nidn-dosen.php" class="text-dark">Memperbarui NIDN dosen</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1289,10 +1328,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat memperbarui NIDN dosen dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="memperbarui-nidn-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1301,7 +1340,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melakukan-persetujuan-keikutsertaan-program-machung-merdeka.php" class="text-dark">Melakukan persetujuan keikutsertaan program Ma Chung Merdeka</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1309,10 +1348,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat menyetujui keikutsertaan mahasiswa dalam mengikuti program Ma Chung Merdeka dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melakukan-persetujuan-keikutsertaan-program-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1321,7 +1360,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="persetujuan-bimbingan-dari-program-machung-merdeka.php" class="text-dark">Persetujuan bimbingan dari program Ma Chung Merdeka</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1329,10 +1368,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat melakukan persetujuan bimbingan mahasiswa dalam keikutsertaan dari program Ma Chung Merdeka dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="persetujuan-bimbingan-dari-program-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1341,7 +1380,7 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melihat-hasil-pelaporan-mahasiswa-dari-program-machung-merdeka.php" class="text-dark">Melihat hasil pelaporan mahasiswa dari program Ma Chung Merdeka</h5>
                                                                     </div>
                                                                     
                                                                     <div class="position-relative">
@@ -1349,10 +1388,10 @@
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
+                                                                        <p>Dosen dapat menyetujui keikutsertaan mahasiswa dalam mengikuti program Ma Chung Merdeka dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-hasil-pelaporan-mahasiswa-dari-program-ma-chung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1361,18 +1400,18 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="melihat-konversi-nilai-mahasiswa-dari-program-machung-merdeka.php" class="text-dark">Melihat konversi nilai mahasiswa dari program Ma Chung Merdeka</h5>
                                                                     </div>
-                                                                        
+                                                                    
                                                                     <div class="position-relative">
                                                                         <img src="macisdosen/thumbnail-dosen-duadelapan.png" alt="" class="img-thumbnail">
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
-            
+                                                                        <p>Dosen dapat menyetujui keikutsertaan mahasiswa dalam mengikuti program Ma Chung Merdeka dengan membuka menu</p>
+        
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-konversi-nilai-mahasiswa-dari-program-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1381,18 +1420,18 @@
                                                             <div class="col-sm-6">
                                                                 <div class="card p-1 border shadow-none">
                                                                     <div class="p-3">
-                                                                        <h5><a href="mengakses-macis-dosen.php" class="text-dark">dosen</h5>
+                                                                        <h5><a href="mengisikan-angket.php" class="text-dark">Mengisikan angket</h5>
                                                                     </div>
-                                                                    
+                                                                        
                                                                     <div class="position-relative">
                                                                         <img src="macisdosen/thumbnail-dosen-duasembilan.png" alt="" class="img-thumbnail">
                                                                     </div>
 
                                                                     <div class="p-3">
-                                                                        <p>Mahasiswa dapat melakukan beberapa aktivitas yang berhubungan dengan pelaporan kegiatan Ma Chung Merdeka</p>
-        
+                                                                        <p>Dosen dapat mengisikan survei angket kepuasan penelitian dosen dengan membuka menu</p>
+            
                                                                         <div>
-                                                                            <a href="mengakses-macis-dosen.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="mengisikan-angket.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
