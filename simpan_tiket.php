@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location: tiket.php?status=error&message=Harap%20isi%20semua%20data%20yang%20diperlukan');
         exit();
     }
-    if ( preg_match('/^[a-zA-Z]+$/', $nim)) {
+    if (!preg_match('/^[0-9]+$/', $nim)) {
         header('Location: tiket.php?status=error&message=NIM/NIP%20harus%20berupa%20angka');
         exit();
     }
