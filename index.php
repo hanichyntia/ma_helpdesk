@@ -1391,7 +1391,7 @@
                                                                         <p>Dosen dapat menyetujui keikutsertaan mahasiswa dalam mengikuti program Ma Chung Merdeka dengan membuka menu</p>
         
                                                                         <div>
-                                                                            <a href="melihat-hasil-pelaporan-mahasiswa-dari-program-ma-chung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
+                                                                            <a href="melihat-hasil-pelaporan-mahasiswa-dari-program-machung-merdeka.php" class="text-primary">Lebih lanjut <i class="mdi mdi-arrow-right"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
