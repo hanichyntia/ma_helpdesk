@@ -65,12 +65,16 @@
                                                         <div class="mt-4">
                                                             <div class="font-size-14">
                                                                 <p>Pengguna dapat melihat presensi kehadiran dari setiap mata kuliah dengan memilih menu <strong>Perkuliahan → Kehadiran.</strong></p>
-
+                                                                
+                                                                <br>
+                                                                
                                                                 <img src="macismasis/melihat-presensi-kehadiran-satu.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+
+                                                                <br>
 
                                                                 <p class="mb-4">Mahasiswa dapat melihat informasi data diri yang terdiri:</p>
                                                                 <p class="mb-4">1. Nama</p>
@@ -84,15 +88,15 @@
                                                                 <br>
                                                                 <img src="macismasis/melihat-presensi-kehadiran-dua.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 <br>
-                                                                <p class="mb-4 text-center">Tampilan informasi data diri mahasiswa</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan informasi data diri mahasiswa</p>
                                                                 <br>
                                                                 <img src="macismasis/melihat-presensi-kehadiran-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 <br>
-                                                                <p class="mb-4 text-center">Tampilan daftar mata kuliah mahasiswa</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan daftar mata kuliah mahasiswa</p>
                                                                 <br>
                                                                 <img src="macismasis/melihat-presensi-kehadiran-empat.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 <br>
-                                                                <p class="mb-4 text-center">Tampilan detail presensi setiap mata kuliah</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan detail presensi setiap mata kuliah</p>
                                                                 <br>
                                                                 <div class="text-center">
                                                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/K6IMNzEF27k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -101,7 +105,7 @@
 
                                                         </div>
 
-                                                        </div>
+                                                        <hr>
                                                         
                                                     </div>
                                                 </div>

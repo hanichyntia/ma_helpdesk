@@ -70,12 +70,12 @@
                                                         <div class="mt-4">
                                                             <div class="font-size-14">
                                                                 <p>Pengguna dapat melihat detail rekapitulasi poin keaktifan yang telah dilakukan penambahan sebelumnya dengan membuka menu <strong>Poin Keaktifan → Rekap Poin Mahasiswa.</strong></p>
-
+                                                                <br>
                                                                 <img src="macismasis/melihat-detail-rekapitulasi-poin-keaktifan-satu.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
 
                                                                 <p class="mb-4">Mahasiswa dapat melihat informasi data diri mahasiswa dan rekapitulasi poin keaktifan dari semua rumpun yang terdiri dari poin keaktifan yang telah divalidasi oleh Bagian Kemahasiswaan dan Alumni serta besaran standar poin keaktifan yang harus dipenuhi.</p>
                                                                 
@@ -83,10 +83,10 @@
 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan data diri mahasiswa dan rekapitulasi poin keaktifan</p>
-
+                                                                <p class="text-muted mb-4 text-center">Tampilan data diri mahasiswa dan rekapitulasi poin keaktifan</p>
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat melihat daftar poin keaktifan yang sudah disetujui atau belum disetujui oleh Bagian Kemahasiswaan dan Alumni yang terdiri dari:</p>
-
+                                                                
                                                                 <p class="mb-4">1. Nama kegiatan</p>
                                                                 <p class="mb-4">2. Waktu kegiatan</p>
                                                                 <p class="mb-4">3. Rumpun poin keaktifan</p>
@@ -98,13 +98,18 @@
                                                                 <p class="mb-4">9. Search bar untuk mencari data poin keaktifan</p>
 
                                                                 <img src="macismasis/melihat-detail-rekapitulasi-poin-keaktifan-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
-                                                                <p class="mb-4 text-center">Tampilan detail persetujuan poin keaktifan mahasiswa</p>
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan detail persetujuan poin keaktifan mahasiswa</p>
+                                                                <br>
                                                                 <div class="text-center">
                                                                     <iframe width="560" height="315" src="https://youtube.com/embed/6oZa3QH9Tfk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
+
+                                                                <br>
+                                                                
                                                         </div>
 
-                                                        </div>
+                                                        <hr>
                                                         
                                                     </div>
                                                 </div>

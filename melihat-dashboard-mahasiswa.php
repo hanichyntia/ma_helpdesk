@@ -73,6 +73,8 @@
 
                                                                 <p class=" text-muted mb-4 text-center">Tampilan Tampilan log in MAC IS Mahasiswa</p>
 
+                                                                <br>
+
                                                                 <p class="mb-4">Ketika sudah berhasil log in akan muncul tampilan dashboard sistem yang terdiri dari:
 
                                                                 <p class="mb-4">1. Jumlah nilai mata kuliah dengan nilai E</p>
@@ -98,14 +100,19 @@
                                                                 <br>
                                                                 
                                                                 <p class=" text-muted mb-4 text-center">Tampilan Tampilan log in MAC IS Mahasiswa</p>
+                                                                
+                                                                <br>
 
                                                                 <div class="text-center">
                                                                     <iframe width="560" height="315" src="https://youtube.com/embed/iuUq_7QOIHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
                                                                 
+                                                                <br>
                                                                 
                                                         </div>
 
+                                                        <hr>
+                                                        
                                                         </div>
                                                         
                                                     </div>

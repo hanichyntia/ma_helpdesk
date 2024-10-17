@@ -78,12 +78,12 @@
                                                                 <p class="mb-4">3. Mengunduh log kegiatan Ma Chung Merdeka</p>
 
                                                                 <p class="mb-4">Seluruh kegiatan dapat dilakukan dengan membuka menu <strong>Ma Chung Merdeka → Log Kegiatan.</strong></p>
-
+                                                                <br>
                                                                 <img src="macismasis/pengelolaan-log-kegiatan-machung-merdeka-satu.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
 
                                                                 <p class="mb-4">Mahasiswa dapat melihat informasi singkat tentang profil mahasiswa yang terdiri dari:</p>
 
@@ -96,11 +96,11 @@
                                                                 <p class="mb-4">4. Total IPK terakhir</p>
 
                                                                 <p class="mb-4">5. Total SKS</p>
-
+                                                                <br>
                                                                 <img src="macismasis/pengelolaan-log-kegiatan-machung-merdeka-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan informasi singkat mahasiswa</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan informasi singkat mahasiswa</p>
+                                                                <br>
                                                                 <p class="mb-4">Pada daftar program MBKM yang telah diterima pendaftarannya, mahasiswa dapat melihat informasi daftar progres keikutsertaan kegiatan Ma Chung Merdeka yang terdiri dari:</p>
 
                                                                 <p class="mb-4">1. Nama program</p>
@@ -124,11 +124,11 @@
                                                                 <p class="mb-4">10. Button untuk melihat log kegiatan</p>
 
                                                                 <p class="mb-4">11. Button untuk mengunduh log kegiatan</p>
-
+                                                                <br>
                                                                 <img src="macismasis/pengelolaan-log-kegiatan-machung-merdeka-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan daftar program MBKM mahasiswa yang telah diterima pendaftarannya</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan daftar program MBKM mahasiswa yang telah diterima pendaftarannya</p>
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat <strong>menambah log kegiatan</strong> pada kegiatan Ma Chung Merdeka dengan mengisikan form yang terdiri dari:</p>
 
                                                                 <p class="mb-4">1. Tanggal kegiatan</p>
@@ -140,50 +140,57 @@
                                                                 <p class="mb-4">4. Keterangan</p>
 
                                                                 <p class="mb-4">5. Button untuk unggah berkas dengan format <strong>(.pdf)</strong> dan <strong>maksimum 5MB</strong></p>
-
+                                                                <br>
                                                                 <img src="macismasis/pengelolaan-log-kegiatan-machung-merdeka-empat.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan form penambahan log aktivitas Ma Chung Merdeka</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan form penambahan log aktivitas Ma Chung Merdeka</p>
+                                                                <br>
                                                                 <p class="mb-4">Setelah mahasiswa mengisikan pada form yang tersedia, mahasiswa dapat memilih <strong>Simpan Log.</strong></p>
-
+                                                                <br>
                                                                 <div class="text-center">
                                                                     <iframe width="560" height="315" src="https://youtube.com/embed/4GlFDNS_e6I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
-
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat <strong>melihat log kegiatan</strong> pada kegiatan Ma Chung Merdeka yang terdiri dari:</p>
                                                                 
-                                                                <p class="mb-4">Tanggal kegiatan</p>
+                                                                <div style="margin-left: 20px;">
 
-                                                                <p class="mb-4">Deskripsi kegiatan</p>
+                                                                <p class="mb-4">1. Tanggal kegiatan</p>
 
-                                                                <p class="mb-4">Hambatan</p>
+                                                                <p class="mb-4">2. Deskripsi kegiatan</p>
 
-                                                                <p class="mb-4">Keterangan</p>
+                                                                <p class="mb-4">3. Hambatan</p>
 
-                                                                <p class="mb-4">Status</p>
+                                                                <p class="mb-4">4. Keterangan</p>
 
-                                                                <p class="mb-4">Bukti</p>
+                                                                <p class="mb-4">5. Status</p>
 
-                                                                <p class="mb-4">Search bar untuk mencari data kegiatan Ma Chung Merdeka</p>
+                                                                <p class="mb-4">6. Bukti</p>
+
+                                                                <p class="mb-4">7. Search bar untuk mencari data kegiatan Ma Chung Merdeka</p>
+
+                                                                </div>
+
+                                                                <br>
 
                                                                 <img src="macismasis/pengelolaan-log-kegiatan-machung-merdeka-lima.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan melihat log aktivitas Ma Chung Merdeka</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan melihat log aktivitas Ma Chung Merdeka</p>
+                                                                <br>
                                                                 <div class="text-center">
                                                                     <iframe width="560" height="315" src="https://youtube.com/embed/CCAOtkZFnoU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
-
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat <strong>mengunduh log kegiatan</strong> pada kegiatan Ma Chung Merdeka yang akan menampilkan preview log aktivitas yang telah ditambahkan seperti gambar berikut dan mahasiswa dapat unduh.</p>
-
+                                                                <br>
                                                                 <img src="macismasis/pengelolaan-log-kegiatan-machung-merdeka-enam.png" alt="" class="img-thumbnail mx-auto d-block">
-                                                                
-                                                                <p class="mb-4 text-center">Tampilan preview sebelum unduh log kegiatan Ma Chung Merdeka</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan preview sebelum unduh log kegiatan Ma Chung Merdeka</p>
+                                                                <br>
                                                                 <div class="text-center">
                                                                     <iframe width="560" height="315" src="https://youtube.com/embed/D6Ou-EonEeo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
+                                                                <br>
                                                         </div>
 
                                                         </div>

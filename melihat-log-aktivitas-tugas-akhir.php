@@ -70,13 +70,13 @@
                                                         <div class="mt-4">
                                                             <div class="font-size-14">
                                                                 <p>Pengguna dapat melihat log aktivitas tugas akhir (skripsi atau thesis) dengan membuka menu <strong>Tugas Mandiri → Skripsi.</strong></p>
-
+                                                                <br>
                                                                 <img src="macismasis/melihat-log-aktivitas-tugas-akhir-satu.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan Kalender Akademik</p>
-
+                                                                <p class="text-muted mb-4 text-center">Tampilan Kalender Akademik</p>
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat melihat informasi data diri yang terdiri dari:</p>
 
                                                                 <p class="mb-4">1. Nama</p>
@@ -88,11 +88,11 @@
                                                                 <p class="mb-4">4. Jumlah IPK terakhir</p>
 
                                                                 <p class="mb-4">5. Jumlah total SKS yang telah diambil</p>
-                                                                
+                                                                <br>
                                                                 <img src="macismasis/melihat-log-aktivitas-tugas-akhir-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan informasi data diri mahasiswa</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan informasi data diri mahasiswa</p>
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat melihat log aktivitas skripsi yang telah ditambahkan oleh dosen pembimbing terdiri dari:</p>
 
                                                                 <p class="mb-4">1. Judul laporan tugas akhir</P>
@@ -108,14 +108,17 @@
                                                                 <p class="mb-4">6. Status tugas akhir</P>
 
                                                                 <p class="mb-4">7. Search bar untuk mencari data tugas akhir</P>
-                                                                
+                                                                <br>
                                                                 <img src="macismasis/melihat-log-aktivitas-tugas-akhir-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan Kalender Akademik</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan Kalender Akademik</p>
+                                                                <br>
                                                                 <div class="text-center">
                                                                     <iframe width="560" height="315" src="https://youtube.com/embed/t42NSrkU-h8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
+
+                                                                <br>
+
                                                         </div>
 
                                                         </div>

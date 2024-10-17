@@ -81,7 +81,7 @@
                                                                 <br>
                                                                 <img src="macismasis/melihat-nilai-mata-kuliah-dua.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 <br>
-                                                                <p class="mb-4 text-center">Tampilan informasi data diri mahasiswa</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan informasi data diri mahasiswa</p>
                                                                 <br>
 
                                                                 <p class="mb-4">Mahasiswa dapat melihat daftar mata kuliah yang sedang diambil saat ini terdiri dari:
@@ -109,18 +109,17 @@
                                                                 <br>
                                                                 <img src="macismasis/melihat-nilai-mata-kuliah-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 <br>
-                                                                <p class="mb-4 text-center">Tampilan daftar mata kuliah yang sedang diambil saat ini</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan daftar mata kuliah yang sedang diambil saat ini</p>
                                                                 <br>
                                                                 <img src="macismasis/melihat-nilai-mata-kuliah-empat.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 <br>
-                                                                <p class="mb-4 text-center">Tampilan detail nilai mata kuliah</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan detail nilai mata kuliah</p>
                                                                 <br>
 
                                                         </div>
 
-                                                        </div>
+                                                        <hr>
                                                         
-                                                   
                                                 </div>
                                             </div>
                                         </div>

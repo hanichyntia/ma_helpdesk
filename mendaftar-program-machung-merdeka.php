@@ -75,8 +75,8 @@
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
-
+                                                                <p class="text-muted mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat melihat informasi singkat tentang profil mahasiswa yang terdiri dari:</p>
 
                                                                 <p class="mb-4">1. Nama</p>
@@ -88,25 +88,25 @@
                                                                 <p class="mb-4">4. Total IPK terakhir</p>
 
                                                                 <p class="mb-4">5. Total SKS</p>
-
+                                                                <br>
                                                                 <img src="macismasis/mendaftar-program-ma-chung-merdeka-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan informasi singkat mahasiswa</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan informasi singkat mahasiswa</p>
+                                                                <br>
                                                                 <p class="mb-4r">Jika mahasiswa <strong>tidak terdapat nilai D dan E</strong> seperti pada gambar terlampir, maka mahasiswa <strong>dapat</strong> mendaftar program Ma Chung Merdeka dengan memilih <strong>Daftar MBKM</strong></p>
-
+                                                                <br>
                                                                 <img src="macismasis/mendaftar-program-ma-chung-merdeka-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan daftar nilai mata kuliah yang tidak terdapat nilai D dan E</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan daftar nilai mata kuliah yang tidak terdapat nilai D dan E</p>
+                                                                <br>
                                                                 <p class="mb-4">Jika mahasiswa <strong>terdapat nilai D dan E</strong> seperti pada gambar terlampir, maka mahasiswa <strong>tidak dapat</strong> mendaftar program Ma Chung Merdeka dan muncul notifikasi bahwa tidak dapat mengikuti program MBKM.</p>
-                                                        
+                                                                <br>
                                                                 <img src="macismasis/mendaftar-program-ma-chung-merdeka-empat.png" alt="" class="img-thumbnail mx-auto d-block">
-                                                        
-                                                                <p class="mb-4 text-center">Tampilan daftar nilai mata kuliah yang terdapat nilai D dan E</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan daftar nilai mata kuliah yang terdapat nilai D dan E</p>
+                                                                <br>
                                                                 <p class="mb-4">Setelah mahasiswa dapat mendaftar MBKM, maka mahasiswa dapat mendaftar pada form pendaftaran Ma Chung Merdeka yang terdiri dari:</p>
-
+                                                                
                                                                 <p class="mb-4">1. NIM mahasiswa</p>
 
                                                                 <p class="mb-4">2. Nama mahasiswa</p>
@@ -130,20 +130,22 @@
                                                                 <p class="mb-4">11. Kota mitra MBKM</p>
 
                                                                 <p class="mb-4">12. Tenggat waktu pendaftaran MBKM</p>
-
+                                                                <br>
                                                                 <img src="macismasis/mendaftar-program-ma-chung-merdeka-lima.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan form pendaftaran Ma Chung Merdeka</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan form pendaftaran Ma Chung Merdeka</p>
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat mengisikan sesuai form yang tersedia dan memilih Simpan Data.</p>
-
+                                                                <br>
                                                                 <div class="text-center">
                                                                     <iframe width="560" height="315" src="https://youtube.com/embed/iuUq_7QOIHU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
 
-                                                        </div>
+                                                                <br>
 
                                                         </div>
+
+                                                        <hr>
                                                         
                                                     </div>
                                                 </div>

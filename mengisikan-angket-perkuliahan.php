@@ -71,8 +71,6 @@
                                                             <div class="font-size-14">
                                                                 <p>Mahasiswa dapat mengisikan angket perkuliahan yang terdiri dari beberapa angket yaitu:</p>
 
-                                                                <p class="mb-4">Mahasiswa dapat mengisikan angket perkuliahan yang terdiri dari beberapa angket yaitu:</p>
-
                                                                 <p class="mb-4">1. Kepuasan mahasiswa</P>
 
                                                                 <p class="mb-4">2. Evaluasi perkuliahan</p>
@@ -86,41 +84,41 @@
                                                                 <p class="mb-4">2. <strong>Angket → Evaluasi Perkuliahan</strong></p>
 
                                                                 <p class="mb-4">3. <strong>Angket → Kepenasihatan dan Sarana Prasarana</strong></p>
-
+                                                                <br>
                                                                 <img src="macismasis/mengisikan-angket-perkuliahan-satu.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
-
+                                                                <p class="text-muted mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat mengisikan angket kepuasan mahasiswa terlebih dahulu pada <strong>submenu Kepuasan Mahasiswa.</strong></p>
-
+                                                                <br>
                                                                 <img src="macismasis/mengisikan-angket-perkuliahan-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan pengisian angket kepuasan mahasiswa</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan pengisian angket kepuasan mahasiswa</p>
+                                                                <br>
                                                                 <p class="mb-4"><strong>*Note:</strong> Jika sudah selesai mengisi angket kepuasan mahasiswa, mahasiswa wajib pilih <strong>Simpan</strong>. Hal ini disebabkan banyak mahasiswa yang tidak dapat mengakses MAC IS mahasiswa karena belum pilih Simpan setelah mengisi angket kepuasan mahasiswa.</p>
                                                                 
                                                                 <p class="mb-4">Berikutnya, mahasiswa dapat mengisikan angket evaluasi perkuliahan pada <strong>submenu Evaluasi Perkuliahan.</strong></p>
-                                                                
+                                                                <br>
                                                                 <img src="macismasis/mengisikan-angket-perkuliahan-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan daftar mata kuliah</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan daftar mata kuliah</p>
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat memilih terlebih dahulu pada mata kuliah yang sudah dilakukan validasi KRS. Setelah itu, mahasiswa dapat mengisikan angket Evaluasi Perkuliahan.</p>
-                                                                
+                                                                <br>
                                                                 <img src="macismasis/mengisikan-angket-perkuliahan-empat.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan pengisian angket Evaluasi Perkuliahan.</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan pengisian angket Evaluasi Perkuliahan.</p>
+                                                                <br>
                                                                 <p class="mb-4"><strong>*Note:</strong> Jika sudah selesai mengisi angket kepuasan mahasiswa, mahasiswa wajib pilih <strong>Simpan</strong>. Hal ini disebabkan banyak mahasiswa yang tidak dapat mengakses MAC IS mahasiswa karena belum pilih Simpan setelah mengisi angket kepuasan mahasiswa.</p>
                                                                 
                                                                 <p class="mb-4">Selanjutnya, mahasiswa dapat mengisikan angket evaluasi perkuliahan pada <strong>submenu Kepenasihatan dan Sarana Prasarana.</strong></p>
-
+                                                                <br>
                                                                 <img src="macismasis/mengisikan-angket-perkuliahan-lima.png" alt="" class="img-thumbnail mx-auto d-block">
-
+                                                                <br>
                                                                 <p class="mb-4 text-center">Tampilan informasi pengisian angket Kepenasihatan dan Sarana Prasarana</p>
-                                                                
+                                                                <br>
                                                                 <p class="mb-4 ">Pada pengisian angket Kepenasihatan dan Sarana Prasarana terdapat beberapa angket yang <strong>WAJIB</strong> dilengkapi yang terdiri dari:</p>
 
                                                                 <p class="mb-4 ">1. Angket kepenasihatan</p>
@@ -140,13 +138,16 @@
                                                                 <br>
 
                                                                 <p class="mb-4 "><strong>*Note:</strong> Jika sudah selesai mengisi angket kepenasihatan dan sarana prasarana, mahasiswa wajib pilih <strong>Simpan</strong>. Hal ini disebabkan banyak mahasiswa yang tidak dapat mengakses MAC IS mahasiswa karena belum pilih Simpan setelah mengisi angket kepenasihatan dan sarana prasarana.</p>
-
+                                                                <br>
                                                                 <div class="text-center">
                                                                     <iframe width="560" height="315" src="https://youtube.com/embed/EeDDHsaO7NI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
-                                                        </div>
+                                                                
+                                                                <br>
 
                                                         </div>
+
+                                                        <hr>
                                                         
                                                     </div>
                                                 </div>

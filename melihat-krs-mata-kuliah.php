@@ -75,7 +75,7 @@
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
 
                                                                 <p class="mb-4">Kemudian mahasiswa dapat melihat informasi mahasiswa yang terdiri dari:</p>
 
@@ -98,7 +98,9 @@
                                                                 <p class="mb-4">Beserta mahasiswa juga dapat melihat informasi rekapitulasi poin keaktifan yang telah diperoleh yang terdiri dari:</p>
 
                                                                 <p class="mb-4">1. Kategori penilaian atau rumpun poin keaktifan</p>
-
+                                                                
+                                                                <div style="margin-left: 20px;">
+                                                                
                                                                 <p class="mb-4">    a. Pengembangan diri</p>
 
                                                                 <p class="mb-4">    b. Kepedulian sosial</p>
@@ -110,14 +112,20 @@
                                                                 <p class="mb-4">    e. Kepempimpinan</p>
 
                                                                 <p class="mb-4">    f. Wawasan almamater</p>
+                                                                
+                                                                </div>
 
                                                                 <p class="mb-4">2. Besaran poin keaktifan yang telah diperoleh setiap rumpun</p>
 
                                                                 <p class="mb-4">3. Besaran standar minimum poin keaktifan yang harus dicukupkan</p>
 
                                                                 <img src="macismasis/melihat-krs-mata-kuliah-dua.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                                
+                                                                <br>
 
-                                                                <p class="mb-4 text-center">Tampilan menu lihat KRS pada bagian informasi mahasiswa dan rekapitulasi poin keaktifan</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan menu lihat KRS pada bagian informasi mahasiswa dan rekapitulasi poin keaktifan</p>
+
+                                                                <br>
 
                                                                 <p class="mb-4">Mahasiswa juga dapat melihat informasi KRS mata kuliah yang telah diambil dengan terdiri dari:</p>
 
@@ -149,14 +157,21 @@
 
                                                                 <img src="macismasis/melihat-krs-mata-kuliah-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
 
-                                                                <p class="mb-4 text-center">Tampilan daftar KRS mata kuliah yang diambil</p>
+                                                                <br>
+
+                                                                <p class="text-muted mb-4 text-center">Tampilan daftar KRS mata kuliah yang diambil</p>
+
+                                                                <br>
 
                                                                 <div class="text-center">
                                                                     <iframe width="560" height="315" src="https://youtube.com/embed/pZSGhdnjXtM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
-                                                        </div>
+
+                                                                <br>
 
                                                         </div>
+
+                                                        <hr>
                                                         
                                                     </div>
                                                 </div>

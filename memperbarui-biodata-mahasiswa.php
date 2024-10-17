@@ -75,11 +75,13 @@
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
 
                                                                 <p class="mb-4">Mahasiswa perlu menyesuaikan informasi biodata diri sendiri, karena untuk keperluan sinkronisasi data dengan PDDikti. Oleh karena itu, seluruh mahasiswa Universitas Ma Chung perlu menyesuaikan biodata pada MAC IS mahasiswa sesuai form yang sudah tersedia terdiri dari:</p>
 
                                                                 <p class="mb-4">1. Informasi mahasiswa</p>
+
+                                                                <div style="margin-left: 20px;">
 
                                                                 <p class="mb-4">a. NIM</p>
 
@@ -123,7 +125,11 @@
 
                                                                 <p class="mb-4">u. Penerima KPS (Keluarga Pra Sejahtera)</p>
 
+                                                                </div>
+
                                                                 <p class="mb-4">2. Informasi mahasiswa</p>
+
+                                                                <div style="margin-left: 20px;">
 
                                                                 <p class="mb-4">a. Nama ayah</P>
 
@@ -147,7 +153,11 @@
 
                                                                 <p class="mb-4">k. Pekerjaan ibu</p>
 
+                                                                </div>
+
                                                                 <p class="mb-4">3. Upload berkas pendukung mahasiswa</p>
+
+                                                                <div style="margin-left: 20px;">
 
                                                                 <p class="mb-4">a. Berkas ijazah</p>
 
@@ -161,11 +171,19 @@
 
                                                                 <p class="mb-4">f. Berkas foto</p>
 
+                                                                </div>
+
+                                                                <br>
+
                                                                 <img src="macismasis/memperbarui-biodata-mahasiswa-dua.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 <br>
                                                                 <p class="mb-4">Jika terdapat nama mahasiswa tidak sesuai, maka bisa menghubungi Bagian Administrasi Akademik. Apabila mahasiswa sudah selesai memperbarui informasi biodata, maka mahasiswa dapat klik <strong>Update Mahasiswa.</strong></p>
+                                                                
+                                                                <br>
                                                         </div>
                                                         
+                                                        <hr>
+
                                                     </div>
                                                 </div>
                                             </div>

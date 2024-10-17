@@ -54,31 +54,30 @@
                                             <div class="col-xl-8">
 
                                                 <div class="text-center">
-                                                    <h4>Mengakses MAC IS mahasiswa</h4>
+                                                    <h4>Mengakses MAC IS dosen</h4>
                                                 </div>
 
                                                 <hr>
 
                                                 <div class="mt-4">
                                                     <div class="font-size-14">
-                                                        <p>Dosen dapat mengakses MAC IS dosen atau sistem informasi akademik untuk dosen dengan link http://dosen.machung.ac.id/. MAC IS dosen hanya dapat diakses oleh dosen tetap, dosen luar biasa (DLB), dan asisten dosen.</p>
-
-                                                        <img src="macismasis/mengakses-macis-dosen-satu.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                        <p>Dosen dapat mengakses MAC IS dosen atau sistem informasi akademik untuk dosen dengan link <a href="http://dosen.machung.ac.id/" target="_blank">http://dosen.machung.ac.id/</a>. MAC IS dosen hanya dapat diakses oleh dosen tetap, dosen luar biasa (DLB), dan asisten dosen.</p>
+                                                        <br>
+                                                        <img src="macisdosen/mengakses-macis-dosen-satu.png" alt="" class="img-thumbnail mx-auto d-block">
 
                                                         <br>
 
-                                                        <p class="mb-4 text-center">Tampilan MAC IS Dosen</p>
-
-                                                        <p class="mb-4">Berikut adalah tampilan awal ketika mengakses MAC IS dosen. Dosen dapat mengakses dengan menggunakan <string>namadepan.namatengah sebagai username</string> (contoh : <string>farhan.adriansyah</string>) dan password defaultnya adalah 123456789 (password dapat diganti oleh dosen).</p>
+                                                        <p class="text-muted mb-4 text-center">Tampilan MAC IS Dosen</p>
+                                                        <br>
+                                                        <p class="mb-4">Berikut adalah tampilan awal ketika mengakses MAC IS dosen. Dosen dapat mengakses dengan menggunakan <strong>namadepan.namatengah sebagai username</strong> (contoh : <strong>farhan.adriansyah</strong>) dan password defaultnya adalah <strong>123456789</strong> (password dapat diganti oleh dosen).</p>
                                                         
-                                                        <div class="text-center">
-                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/B1ZYuO604oc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                                        </div>
                                                     </div>
-
-                                                    <hr>
+                                                    
+                                                    <br>
 
                                                 </div>
+
+                                                <hr>
 
                                             </div>
                                         </div>

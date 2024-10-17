@@ -68,22 +68,24 @@
                                                         <div class="mt-4">
                                                             <div class="font-size-14">
                                                                 <p>Mahasiswa dapat mengubah password akun MAC IS mahasiswa dengan membuka menu <strong>Setting → Ganti Password.</strong></p>
-
+                                                                <br>
                                                                 <img src="macismasis/mengubah-password-akun-satu.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan Kalender Akademik</p>
-                                                                
+                                                                <p class="text-muted mb-4 text-center">Tampilan Kalender Akademik</p>
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat melihat password akun saat ini dan mengisikan password baru pada form yang tersedia. Jika sudah selesai mengisikan password baru, maka mahasiswa dapat klik Ganti Password.</p>
-
+                                                                <br>
                                                                 <img src="macismasis/mengubah-password-akun-dua.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan untuk mengganti password akun MACIS mahasiswa</p>
-                                                        </div>
+                                                                <p class="text-muted mb-4 text-center">Tampilan untuk mengganti password akun MACIS mahasiswa</p>
 
+                                                                <br>
+                                                        </div>
+                                                        <hr>
                                                         </div>
                                                         
                                                     </div>

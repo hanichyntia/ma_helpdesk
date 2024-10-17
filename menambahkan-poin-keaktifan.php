@@ -71,46 +71,58 @@
                                                             <div class="font-size-14">
                                                                 <p>Mahasiswa dapat menambahkan poin keaktifan dengan membuka menu <strong>Poin Keaktifan → Poin Mahasiswa</strong></p>
 
+                                                                <br>
+
                                                                 <img src="macismasis/menambahkan-poin-keaktifan-satu.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
-
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan menu MAC IS mahasiswa</p>
+                                                                <br>
                                                                 <p class="mb-4">Mahasiswa dapat melihat rekapitulasi poin keaktifan dengan semua rumpun, besaran poin yang telah diperoleh, dan besaran standar poin keaktifan.</p>
-                                                                
+                                                                <br>
                                                                 <img src="macismasis/menambahkan-poin-keaktifan-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4 text-center">Tampilan rekapitulasi poin keaktifan mahasiswa</p>
-                                                                
+                                                                <br>
+                                                                <p class="text-muted mb-4 text-center">Tampilan rekapitulasi poin keaktifan mahasiswa</p>
+                                                                <br>
                                                                 <p class="mb-4">Sebelum mahasiswa menambahkan data pengajuan poin keaktifan, mahasiswa dapat membuka berkas lampiran ketentuan poin keaktifan dan sebaran poin keaktifan yang sudah tersedia pada MAC IS mahasiswa dan pada panduan ini.</p>
-
-                                                                <p class="mb-4">Setelah mahasiswa melihat berkas lampiran ketentuan poin keaktifan dan sebaran poin keaktifan, mahasiswa dapat menambahkan poin keaktifan dengan memilih <strong>Tambah Data.</strong></p>
-
-                                                                <img src="macismasis/menambahkan-poin-keaktifan-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                                <p class="mb-4">Mahasiswa dapat mengisikan pada form yang sudah tersedia dan sesuai ketentuan pada lampiran poin keaktifan.</p>
                                                                 
+                                                                <p class="mb-4">Setelah mahasiswa melihat berkas lampiran ketentuan poin keaktifan dan sebaran poin keaktifan, mahasiswa dapat menambahkan poin keaktifan dengan memilih <strong>Tambah Data.</strong></p>
+                                                                <br>
+                                                                <img src="macismasis/menambahkan-poin-keaktifan-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                                <br>
+                                                                <p class="mb-4">Mahasiswa dapat mengisikan pada form yang sudah tersedia dan sesuai ketentuan pada lampiran poin keaktifan.</p>
+                                                                <br>
                                                                 <img src="macismasis/menambahkan-poin-keaktifan-empat.png" alt="" class="img-thumbnail mx-auto d-block">
-
+                                                                <br>
                                                                 <p class="mb-4">Sebelum menyimpan penambahan data, mohon perhatikan ketentuan form pada link dan unggah berkas/file upload.</p>
+                                                                
+                                                                <p style="text-indent: -8em; margin-left: 8em;">
+                                                                    <strong>·</strong> Ketentuan link                    : mahasiswa dapat menaruh link hasil unggah berkas pada akun Google Drive 
+                                                                    milik mahasiswa pribadi atau akun Microsoft OneDrive milik email mahasiswa 
+                                                                    Universitas Ma Chung (nim@student.machung.ac.id) dan berikan akses 
+                                                                    untuk publik. Jika sudah diunggah dan tidak diberikan akses, maka Bagian 
+                                                                    Kemahasiswaan dan Alumni akan kesulitan melihat lampiran berkas 
+                                                                    pendukung poin keaktifan mahasiswa.
+                                                                </p>
 
-                                                                <p class="mb-4">· Ketentuan link : mahasiswa dapat menaruh link hasil unggah berkas pada akun Google Drive 
-                                                            milik mahasiswa pribadi atau akun Microsoft OneDrive milik email mahasiswa 
-                                                            Universitas Ma Chung (nim@student.machung.ac.id) dan berikan akses 
-                                                            untuk publik. Jika sudah diunggah dan tidak diberikan akses, maka Bagian 
-                                                            Kemahasiswaan dan Alumni akan kesulitan melihat lampiran berkas 
-                                                            pendukung poin keaktifan mahasiswa.</p>
-
-                                                            <p class="mb-4">·Ketentuan unggah berkas  : mahasiswa dapat mengunggah berkas pendukung poin keaktifan dengan 
-                                                                        contoh format nama berkas sebagai berikut. <strong>skp_lomba_pembuatan_sisteminformasi_2020</strong> beserta pastikan format berkas adalah <strong>PDF</strong> dan ukuran <strong>maksimal</strong> berkas adalah 5MB.</p>
+                                                                
+                                                                <br>
                                                             
-                                                            <p class="mb-4">Setelah semua data sudah lengkap dan sesuai ketentuan, maka mahasiswa dapat pilih Simpan Data.</p>
+                                                                <p style="text-indent: -14em; margin-left: 14em;"><strong>·</strong> Ketentuan unggah berkas  : mahasiswa dapat mengunggah berkas pendukung poin keaktifan dengan 
+                                                                            contoh format nama berkas sebagai berikut. <strong>skp_lomba_pembuatan_sisteminformasi_2020</strong> beserta pastikan format berkas adalah <strong>PDF</strong> dan ukuran <strong>maksimal</strong> berkas adalah 5MB.</p>
+                                                            
+                                                                <br>
 
+                                                            <p class="mb-4">Setelah semua data sudah lengkap dan sesuai ketentuan, maka mahasiswa dapat pilih Simpan Data.</p>
+                                                            <br>
                                                             <div class="text-center">
                                                                 <iframe width="560" height="315" src="https://youtube.com/embed/ZBY_kKZmzBk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                             </div>
-                                                        </div>
+
+                                                            <br>
 
                                                         </div>
+
+                                                        <hr>
                                                         
                                                     </div>
                                                 </div>

@@ -47,7 +47,8 @@
 
                 <div class="page-content">
                     <div class="container-fluid">
-                   
+
+                        
                         <!-- end page title -->
 
                         <div class="row">
@@ -70,19 +71,25 @@
                                                             <div class="font-size-14">
                                                                 <p>Mahasiswa dapat membuka kalender akademik yang sudah dibuat oleh Bagian Administrasi Akademik dengan membuka menu kalender akademik (menu sebelah kiri). Kalender akademik yang tertampil pada MAC IS mahasiswa akan selalu diperbarui setiap tahun ajaran baru.</p>
 
+                                                                <br>
+
                                                                 <img src="macismasis/melihat-kalender-akademik.png" alt="" class="img-thumbnail mx-auto d-block">
                                                                 
                                                                 <br>
 
-                                                                <p class="mb-4 text-center">Tampilan Kalender Akademik</p>
+                                                                <p class="text-muted mb-4 text-center">Tampilan Kalender Akademik</p>
+                                                                
+                                                                <br>
                                                                 
                                                                 <div class="text-center">
                                                                     <iframe width="560" height="315" src="https://youtube.com/embed/37Sg9TKi_ro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
+                                                                
+                                                                <br>
 
                                                         </div>
 
-                                                        </div>
+                                                        <hr>
                                                         
                                                     </div>
                                                 </div>

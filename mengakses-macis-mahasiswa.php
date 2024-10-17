@@ -62,17 +62,29 @@
                                                 <div class="mt-4">
                                                     <div class="font-size-14">
                                                         <p>Mahasiswa dapat mengakses MAC IS mahasiswa atau sistem informasi akademik untuk mahasiswa dengan link <a href="http://mahasiswa.machung.ac.id/" target="_blank">http://mahasiswa.machung.ac.id/</a>. MAC IS mahasiswa hanya dapat diakses ketika mahasiswa tersebut sudah resmi menjadi mahasiswa Universitas Ma Chung dan memiliki NIM yang sudah dilakukan generate oleh Bagian Administrasi Akademik Universitas Ma Chung.</p>
+                                                        
+                                                        <br>
 
                                                         <img src="macismasis/mengakses-macis-mahasiswa.png" alt="" class="img-thumbnail mx-auto d-block">
+                                                        
+                                                        <br>
 
+                                                        <p class="text-muted mb-4 text-center">Tampilan MAC IS Dosen</p>
+                                                        
                                                         <br>
 
                                                         <p class="mb-4">Berikut adalah tampilan awal ketika mengakses MAC IS mahasiswa. Mahasiswa dapat mengakses dengan menggunakan <strong>NIM sebagai username</strong> dan password defaultnya adalah <strong>123456789</strong> (password dapat diganti oleh mahasiswa).</p>
 
                                                         <p class="mb-4">Untuk dokumentasi atau cara penggunaan MAC IS mahasiswa secara keseluruhan dapat dilihat pada video di bawah ini:</p>
+                                                        
+                                                        <br>
+                                                        
                                                         <div class="text-center">
                                                             <iframe width="560" height="315" src="https://www.youtube.com/embed/B1ZYuO604oc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                         </div>
+
+                                                        <br>
+
                                                     </div>
 
                                                     <hr>
