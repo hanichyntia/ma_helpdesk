@@ -23,10 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location: tiket.php?status=error&message=Harap%20isi%20semua%20data%20yang%20diperlukan');
         exit();
     }
+    if (preg_match('/[!@#$%^&*(),.?":{}|<>]/', $nim) || preg_match('/[!@#$%^&*(),.?":{}|<>]/', $keluhan) || preg_match('/[!@#$%^&*(),.?":{}|<>]/', $nama)) {
+        header('Location: tiket.php?status=error&message=Harap%20tidak%20menggunakan%20karakter%20spesial');
+        exit();
+    }
+
     if (!preg_match('/^[0-9]+$/', $nim)) {
         header('Location: tiket.php?status=error&message=NIM/NIP%20harus%20berupa%20angka');
         exit();
-    }
+    } 
 
     $id_status_tiket = 1;
     $id_rating = 0;
@@ -110,15 +115,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div style="text-align: center; width: 400px; margin: 0 auto;">
     <b style="font-size: 18px;">Tiket Anda Telah Terkirim!</b>
     <p style="text-align: justify;">
-        Terima kasih telah mengirimkan tiket. Kode tiket Anda adalah <strong>' . $kode_tiket . '</strong>.<br>
-        Tiket Anda sedang diproses. Harap menunggu balasan dari Unit Sistem Informasi dan Pusat Data.<br><br>
+        Terima kasih telah mengirimkan tiket. Kode tiket anda adalah <strong>' . $kode_tiket . '</strong>.<br>
+        Tiket anda sedang diproses. Harap menunggu balasan dari Unit Sistem Informasi dan Pusat Data.<br><br>
         Jika belum ada respon balasan dari Unit Sistem Informasi dan Pusat Data, silakan kunjungi ruangan Unit Sistem Informasi dan Pusat Data di Gedung Rektorat lantai 1.
     </p>
 </div>
 <div style="margin-top: 2rem;">
     <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
     <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
-    Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.<br>
+    Jika anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.<br>
     E-mail   : uptsisteminformasi@machung.ac.id<br>
     Address  : Villa Puncak Tidar Blok N No. 01 Malang
 </div>

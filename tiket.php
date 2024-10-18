@@ -159,19 +159,7 @@
     <script src="assets/libs/node-waves/waves.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
-        function checkSpecialCharsOnSubmit(event) {
-            var keluhan = document.getElementById("keluhan").value;
-            var nama = document.getElementById("nama").value;
-            var nim = document.getElementById("nim").value;
-
-            var specialChars = /[!@#$%^&*(),.?'":{}|<>]/g;
-
-            if (specialChars.test(keluhan) || specialChars.test(nama) || specialChars.test(nim)) {
-                event.preventDefault();
-                var specialCharAlertModal = new bootstrap.Modal(document.getElementById('specialCharAlertModal'));
-                specialCharAlertModal.show();
-            }
-        }
+       
 
         document.getElementById('kategori').addEventListener('change', function () {
             var kategori = this.value;

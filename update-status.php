@@ -71,35 +71,35 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if ($status_tiket == 2) {
                     $mail->Body = '<div style="color: black;">
                                     <p>Halo ' . htmlspecialchars($nama) . ',</p>
-                                    <p>Kami ingin memberi tahukan bahwa kami telah menerima dan memproses keluhan Anda. Berikut kami lampirkan detailnya:</p>
+                                    <p>Kami ingin memberi tahukan bahwa kami telah menerima dan memproses keluhan anda. Berikut kami lampirkan detailnya:</p>
                                     <p><strong>Nama:</strong> ' . nl2br(htmlspecialchars($nama)) . '</p>
                                     <p><strong>NIM/NIP:</strong> ' . nl2br(htmlspecialchars($nim)) . '</p>
                                     <p><strong>Keluhan:</strong> ' . nl2br(htmlspecialchars($keluhan)) . '</p>
                                     <p><strong>Status Tiket:</strong> ' . nl2br(htmlspecialchars($status)) . '</p>
-                                    <p>Jika Anda masih memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk mengajukan tiket lain atau dapat dengan menghubungi Unit Sistem Informasi dan Pusat Data.</p>
+                                    <p>Jika anda masih memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk mengajukan tiket lain atau dapat dengan menghubungi Unit Sistem Informasi dan Pusat Data.</p>
                                   </div>
                                   <div style="margin-top: 2rem; color: black;">
                                     <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
                                     <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
-                                    Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.<br>
+                                    Jika anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.<br>
                                     E-mail   : uptsisteminformasi@machung.ac.id<br>
                                     Address  : Villa Puncak Tidar Blok N No. 01 Malang
                                   </div>';
                 } elseif ($status_tiket == 3) {
                     $mail->Body = '<div style="color: black;">
                                     <p>Halo ' . htmlspecialchars($nama) . ',</p>
-                                    <p>Kami ingin memberi tahukan bahwa kami telah menerima dan memproses keluhan Anda. Berikut kami lampirkan detailnya:</p>
+                                    <p>Kami ingin memberi tahukan bahwa kami telah menerima dan memproses keluhan anda. Berikut kami lampirkan detailnya:</p>
                                     <p><strong>Nama:</strong> ' . nl2br(htmlspecialchars($nama)) . '</p>
                                     <p><strong>NIM/NIP:</strong> ' . nl2br(htmlspecialchars($nim)) . '</p>
                                     <p><strong>Keluhan:</strong> ' . nl2br(htmlspecialchars($keluhan)) . '</p>
                                     <p><strong>Status Tiket:</strong> ' . nl2br(htmlspecialchars($status)) . '</p>
                                     <p><strong>Respon dari Admin:</strong> ' . nl2br(htmlspecialchars($respon_admin)) . '</p>
-                                    <p>Jika Anda masih memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk mengajukan tiket lain atau dapat dengan menghubungi Unit Sistem Informasi dan Pusat Data.</p>
+                                    <p>Jika anda masih memiliki pertanyaan atau memerlukan bantuan lebih lanjut, jangan ragu untuk mengajukan tiket lain atau dapat dengan menghubungi Unit Sistem Informasi dan Pusat Data.</p>
                                   </div>
                                   <div style="margin-top: 2rem; color: black;">
                                     <img src="cid:logo_image" alt="logo" style="width:150px; height:auto;"><br>
                                     <b>Unit Sistem Informasi dan Pusat Data Universitas Ma Chung</b><br>
-                                    Jika Anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.<br>
+                                    Jika anda memerlukan informasi lebih lanjut, silakan hubungi kontak di bawah ini.<br>
                                     E-mail   : uptsisteminformasi@machung.ac.id<br>
                                     Address  : Villa Puncak Tidar Blok N No. 01 Malang
                                   </div>';
