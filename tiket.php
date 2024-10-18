@@ -118,7 +118,7 @@
                                 </div>
 
                                 <div class="mb-3" id="email-container" style="display:none;">
-                                    <label for="reset_email" class="form-label">Email Untuk Menerima Tiket:</label>
+                                    <label for="reset_email" class="form-label">Email Untuk Reset Password:</label>
                                     <input type="email" class="form-control" id="reset_email" name="reset_email"
                                         placeholder="Masukkan email untuk reset password" required>
                                     <div class="invalid-feedback">Tolong Masukkan Email</div>
