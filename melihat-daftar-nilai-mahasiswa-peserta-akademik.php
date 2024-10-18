@@ -67,29 +67,31 @@
 
                                                         <br>
 
-                                                        <p class="mb-4 text-center">Tampilan menu MAC IS dosen</p>
-
+                                                        <p class="text-muted mb-4 text-center">Tampilan menu MAC IS dosen</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat memilih mahasiswa terlebih dahulu, kemudian dosen dapat memilih yaitu melihat daftar nilai dengan <strong>format per semester</strong> atau <strong>format transkrip</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-daftar-nilai-mahasiswa-peserta-akademik-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan daftar mahasiswa peserta akademik</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar mahasiswa peserta akademik</p>
+                                                        <br>
                                                         <p class="mb-4">Berikut adalah tampilan <strong>daftar nilai per semester:</strong></p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-daftar-nilai-mahasiswa-peserta-akademik-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan daftar nilai mahasiswa peserta akademik per semester</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar nilai mahasiswa peserta akademik per semester</p>
+                                                        <br>
                                                         <p class="mb-4">Berikut adalah tampilan daftar nilai dengan format transkrip:</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-daftar-nilai-mahasiswa-peserta-akademik-empat.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan daftar nilai mahasiswa peserta akademik dengan format transkrip</p>
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar nilai mahasiswa peserta akademik dengan format transkrip</p>
                                                         <br>
                                                         <div class="text-center">
                                                             <iframe width="560" height="315" src="https://youtube.com/embed/NH1qpbhNZ_Y" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                         </div>
+
+                                                        <br>
                                                     </div>
 
                                                     <hr>
@@ -116,11 +118,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Skote.
+                            <script>document.write(new Date().getFullYear())</script> © Helpdesk.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Ma Chung
                             </div>
                         </div>
                     </div>

@@ -62,28 +62,29 @@
                                                 <div class="mt-4">
                                                     <div class="font-size-14">
                                                         <p>Dosen dapat menyetujui keikutsertaan mahasiswa dalam mengikuti program Ma Chung Merdeka dengan membuka menu <strong>Ma Chung Merdeka → Konversi SKS/Nilai</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-konversi-nilai-mahasiswa-dari-program-machung-merdeka-satu.png" alt="" class="img-thumbnail mx-auto d-block">
 
                                                         <br>
 
-                                                        <p class="mb-4 text-center">Tampilan menu MAC IS dosen</p>
-
+                                                        <p class="text-muted mb-4 text-center">Tampilan menu MAC IS dosen</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat melihat daftar pelaporan mahasiswa yang mengikuti program Ma Chung Merdeka, serta dosen dapat melihat detail pelaporan dengan memilih bagian <strong>“+”</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-konversi-nilai-mahasiswa-dari-program-machung-merdeka-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-                                                        
-                                                        <p class="mb-4 text-center">Tampilan daftar pelaporan mahasiswa dari program Ma Chung Merdeka</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar pelaporan mahasiswa dari program Ma Chung Merdeka</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat mengunduh nilai dari mitra dan berkas laporan mahasiswa dari program Ma Chung Merdeka dengan memilih bagian <strong>Download.</strong></p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-konversi-nilai-mahasiswa-dari-program-machung-merdeka-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan detail pelaporan mahasiswa dari program Ma Chung Merdeka</p>
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan detail pelaporan mahasiswa dari program Ma Chung Merdeka</p>
                                                         <br>
                                                         <div class="text-center">
                                                             <iframe width="560" height="315" src="https://www.youtube.com/embed/608v6s5rQy4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                         </div>
+                                                        <br>
                                                     </div>
 
                                                     <hr>
@@ -110,11 +111,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Skote.
+                            <script>document.write(new Date().getFullYear())</script> © Helpdesk.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Ma Chung
                             </div>
                         </div>
                     </div>

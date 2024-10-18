@@ -62,26 +62,27 @@
                                                 <div class="mt-4">
                                                     <div class="font-size-14">
                                                         <p>Dosen dapat memperbarui NIDN dosen dengan membuka menu <strong>Setting → Update NIDN</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/memperbarui-nidn-dosen-satu.png" alt="" class="img-thumbnail mx-auto d-block">
 
                                                         <br>
 
-                                                        <p class="mb-4 text-center">Tampilan menu MAC IS dosen</p>
+                                                        <p class="text-muted mb-4 text-center">Tampilan menu MAC IS dosen</p>
 
                                                         <br>
 
                                                         <p class="mb-4">Dosen dapat memperbarui NIDN dosen pada form yang tersedia bagian <strong>Masukkan NIDN</strong> dan jika sudah mengisikan NIDN, maka dapat memilih bagian <strong>Simpan</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/memperbarui-nidn-dosen-satu.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan form memperbarui NIDN</p>
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan form memperbarui NIDN</p>
 
                                                         <br>
                                                         
                                                         <div class="text-center">
                                                             <iframe width="560" height="315" src="https://youtube.com/embed/shofMjig7l0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                         </div>
+                                                        <br>
                                                     </div>
 
                                                     <hr>
@@ -108,11 +109,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Skote.
+                            <script>document.write(new Date().getFullYear())</script> © Helpdesk.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Ma Chung
                             </div>
                         </div>
                     </div>

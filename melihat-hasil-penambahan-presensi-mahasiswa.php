@@ -67,19 +67,19 @@
 
                                                         <br>
 
-                                                        <p class="mb-4 text-center">Tampilan menu MAC IS dosen</p>
+                                                        <p class="text-muted mb-4 text-center">Tampilan menu MAC IS dosen</p>
                                                         <br>
                                                         <p class="mb-4">Dosen dapat membuka bagian <strong>Lihat</strong> pada bagian mata kuliah yang sedang diampu.</p>
                                                         <br>
                                                         <img src="macisdosen/melihat-hasil-penambahan-presensi-mahasiswa-dua.png" alt="" class="img-thumbnail mx-auto d-block">
                                                         <br>
-                                                        <p class="mb-4 text-center">Tampilan daftar mata kuliah yang sedang diampu oleh dosen</p>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar mata kuliah yang sedang diampu oleh dosen</p>
                                                         <br>
                                                         <p class="mb-4">Dosen dapat melihat data presensi mahasiswa berdasarkan tanggal absensi atau topik yang telah dilakukan penambahan data presensi mahasiswa sebelumnya.</p>
                                                         <br>
                                                         <img src="macisdosen/melihat-hasil-penambahan-presensi-mahasiswa-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
                                                         <br>
-                                                        <p class="mb-4 text-center">Tampilan daftar hasil penambahan data presensi mahasiswa</p>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar hasil penambahan data presensi mahasiswa</p>
                                                         <br>
                                                         <p class="mb-4">Dosen dapat mengubah data presensi mahasiswa dengan memilih <strong>Edit</strong> dan dapat menghapus data presensi mahasiswa dengan memilih <strong>Hapus</strong>. Jika dosen memilih <strong>Edit,</strong> maka dosen dapat memilih <strong>Simpan Data</strong>.</p>
                                                         <br>
@@ -111,11 +111,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Skote.
+                            <script>document.write(new Date().getFullYear())</script> © Helpdesk.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Ma Chung
                             </div>
                         </div>
                     </div>

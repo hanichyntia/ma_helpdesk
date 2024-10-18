@@ -62,38 +62,39 @@
                                                 <div class="mt-4">
                                                     <div class="font-size-14">
                                                         <p>Dosen dapat melihat presensi mahasiswa peserta akademik dengan membuka menu <strong>>Dosen PA → Lihat Absen</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-presensi-mahasiswa-peserta-akademik-satu.png" alt="" class="img-thumbnail mx-auto d-block">
 
                                                         <br>
 
-                                                        <p class="mb-4 text-center">Tampilan MAC IS Dosen</p>
-
+                                                        <p class="text-muted mb-4 text-center">Tampilan MAC IS Dosen</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat memilih filter tahun akademik dan semester untuk melihat daftar peserta bimbingan akademik dan dosen dapat memilih bagian <strong>Tampilkan</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-presensi-mahasiswa-peserta-akademik-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat memilih mahasiswa pada daftar peserta bimbingan akademik dan memilih bagian <strong>Matakuliah Diambil</strong> untuk melihat detail presensi peserta bimbingan akademik.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-presensi-mahasiswa-peserta-akademik-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan daftar peserta bimbingan akademik</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar peserta bimbingan akademik</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat melihat detail presensi per mahasiswa peserta bimbingan akademik dari setiap mata kuliah yang diambil oleh mahasiswa dengan memilih bagian <strong>Detail Presensi</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-presensi-mahasiswa-peserta-akademik-empat.png" alt="" class="img-thumbnail mx-auto d-block">
-
+                                                        <br>
                                                         <p class="mb-4 text-center">Tampilan daftar presensi mata kuliah peserta bimbingan akademik</p>
-
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat melihat detail presensi dari mahasiswa peserta bimbingan akademik.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-presensi-mahasiswa-peserta-akademik-lima.png" alt="" class="img-thumbnail mx-auto d-block">
-
+                                                        <br>
                                                         <p class="mb-4 text-center">Tampilan detail presensi dari setiap mata kuliah</p>
-
+                                                        <br>
                                                         <div class="text-center">
                                                             <iframe width="560" height="315" src="https://youtube.com/embed/uEcm6GDYcX4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                         </div>
+                                                        <br>
                                                     </div>
 
                                                     <hr>
@@ -120,11 +121,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Skote.
+                            <script>document.write(new Date().getFullYear())</script> © Helpdesk.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Ma Chung
                             </div>
                         </div>
                     </div>

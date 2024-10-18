@@ -62,20 +62,20 @@
                                                 <div class="mt-4">
                                                     <div class="font-size-14">
                                                         <p>Dosen dapat menyetujui keikutsertaan mahasiswa dalam mengikuti program Ma Chung Merdeka dengan membuka menu <strong>Ma Chung Merdeka → Persetujuan</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melakukan-persetujuan-keikutsertaan-program-machung-merdeka-satu.png" alt="" class="img-thumbnail mx-auto d-block">
 
                                                         <br>
 
-                                                        <p class="mb-4 text-center">Tampilan menu MAC IS dosen</p>
+                                                        <p class="text-muted mb-4 text-center">Tampilan menu MAC IS dosen</p>
 
                                                         <br>
 
                                                         <p class="mb-4">Dosen dapat mencari nama mahasiswa pada search bar yang telah tersedia di bagian pojok kanan dan memilih mahasiswa untuk mengikuti program Ma Chung Merdeka</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melakukan-persetujuan-keikutsertaan-program-machung-merdeka-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan daftar persetujuan program Ma Chung Merdeka</p>
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar persetujuan program Ma Chung Merdeka</p>
 
                                                         <br>
                                                     </div>
@@ -104,11 +104,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Skote.
+                            <script>document.write(new Date().getFullYear())</script> © Helpdesk.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Ma Chung
                             </div>
                         </div>
                     </div>

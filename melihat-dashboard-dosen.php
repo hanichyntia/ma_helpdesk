@@ -67,7 +67,7 @@
 
                                                         <br>
 
-                                                        <p class="mb-4 text-center">Tampilan MAC IS Dosen</p>
+                                                        <p class="text-muted mb-4 text-center">Tampilan MAC IS Dosen</p>
                                                         <br>
                                                         <p class="mb-4">Ketika sudah berhasil log in akan muncul tampilan dashboard sistem yang terdiri dari:</p>
 
@@ -87,7 +87,7 @@
                                                         <br>
                                                         <img src="macisdosen/melihat-dashboard-dosen-dua.png" alt="" class="img-thumbnail mx-auto d-block">
                                                         <br>
-                                                        <p class="mb-4 text-center">Tampilan dashboard MAC IS dosen</p>
+                                                        <p class="text-muted mb-4 text-center">Tampilan dashboard MAC IS dosen</p>
                                                         <br>
                                                         <div class="text-center">
                                                             <iframe width="560" height="315" src="https://www.youtube.com/embed/_3GdN6eIA_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -120,11 +120,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Skote.
+                            <script>document.write(new Date().getFullYear())</script> © Helpdesk.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Ma Chung
                             </div>
                         </div>
                     </div>

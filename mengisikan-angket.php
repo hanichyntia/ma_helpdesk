@@ -62,45 +62,45 @@
                                                 <div class="mt-4">
                                                     <div class="font-size-14">
                                                         <p>Dosen dapat mengisikan survei angket kepuasan penelitian dosen dengan membuka menu <strong>Survey → Angket Penelitian Dosen</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/mengisikan-angket-satu.png" alt="" class="img-thumbnail mx-auto d-block">
 
                                                         <br>
 
-                                                        <p class="mb-4 text-center">Tampilan menu MAC IS dosen</p>
-
+                                                        <p class="text-muted mb-4 text-center">Tampilan menu MAC IS dosen</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat mengisikan angket kepuasan penelitian sesuai form yang telah tersedia dan dosen dapat menambahkan catatan pada bagian bawah angket. Jika dosen sudah mengisikan angket kepuasan penelitian, maka dapat memilih bagian <strong>Simpan</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/mengisikan-angket-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan form isian survei angket kepuasan penelitian dosen</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan form isian survei angket kepuasan penelitian dosen</p>
+                                                        <br>
                                                         <img src="macisdosen/mengisikan-angket-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan form catatan survei angket kepuasan penelitian dosen</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan form catatan survei angket kepuasan penelitian dosen</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat mengisikan survei angket pengabdian dosen dengan membuka menu <strong>Survey → Angket Pengabdian Dosen</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/mengisikan-angket-empat.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan menu MAC IS dosen</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan menu MAC IS dosen</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat mengisikan angket pengabdian dosen sesuai form yang telah tersedia dan dosen dapat menambahkan catatan pada bagian bawah angket. Jika dosen sudah mengisikan angket pengabdian dosen, maka dapat memilih bagian <strong>Simpan</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/mengisikan-angket-lima.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan form isian survei angket pengabdian dosen</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan form isian survei angket pengabdian dosen</p>
+                                                        <br>
                                                         <img src="macisdosen/mengisikan-angket-lima.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan form catatan survei angket kepuasan penelitian dosen</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan form catatan survei angket kepuasan penelitian dosen</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat mengisikan survei angket kepuasan dosen dengan membuka menu <strong>Survey → Angket Kepuasan Dosen</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/mengisikan-angket-enam.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan menu MAC IS dosen</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan menu MAC IS dosen</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat mengisikan angket kepuasan dosen sesuai form yang telah tersedia dan dosen dapat menambahkan catatan pada bagian bawah setiap angket. Angket kepuasan dosen berisikan beberapa angket yang terdiri dari:</p>
 
                                                         <p class="mb-4">1. Data diri</p>
@@ -128,18 +128,19 @@
                                                         <p class="mb-4">12. Citra institusi</p>
 
                                                         <p class="mb-4">Jika dosen sudah mengisikan angket kepuasan dosen, maka dapat memilih bagian <strong>Simpan</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/mengisikan-angket-tujuh.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan angket kepuasan karyawan</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan angket kepuasan karyawan</p>
+                                                        <br>
                                                         <img src="macisdosen/mengisikan-angket-delapan.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan form catatan survei angket kepuasan dosen</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan form catatan survei angket kepuasan dosen</p>
+                                                        <br>
                                                         <div class="text-center">
                                                             <iframe width="560" height="315" src="https://youtube.com/embed/uEfqgpY0uvY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                         </div>
+                                                        <br>
                                                     </div>
 
                                                     <hr>
@@ -166,11 +167,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Skote.
+                            <script>document.write(new Date().getFullYear())</script> © Helpdesk.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Ma Chung
                             </div>
                         </div>
                     </div>

@@ -62,24 +62,25 @@
                                                 <div class="mt-4">
                                                     <div class="font-size-14">
                                                         <p>Dosen dapat melihat status validasi KRS mahasiswa peserta akademik dengan membuka menu <Strong>Dosen PA → Status Validasi</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-status-validasi-krs-mahasiswa-peserta-akademik-satu.png" alt="" class="img-thumbnail mx-auto d-block">
 
                                                         <br>
 
-                                                        <p class="mb-4 text-center">Tampilan menu MAC IS dosen</p>
-
+                                                        <p class="text-muted mb-4 text-center">Tampilan menu MAC IS dosen</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat melihat status validasi KRS mahasiswa peserta akademik yang <strong>belum tervalidasi KRS</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/melihat-status-validasi-krs-mahasiswa-peserta-akademik-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan daftar status validasi KRS mahasiswa peserta akademik</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar status validasi KRS mahasiswa peserta akademik</p>
+                                                        <br>
                                                         <p class="mb-4">Jika terdapat mahasiswa peserta akademik yang belum tervalidasi KRS, maka dosen dapat memilih bagian <strong>Validasi KRS</strong> mahasiswa.</p>
-
+                                                        <br>
                                                         <div class="text-center">
                                                             <iframe width="560" height="315" src="https://youtube.com/embed/KNJbakH0mII" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                         </div>
+                                                        <br>
                                                     </div>
 
                                                     <hr>
@@ -106,11 +107,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Skote.
+                            <script>document.write(new Date().getFullYear())</script> © Helpdesk.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Ma Chung
                             </div>
                         </div>
                     </div>

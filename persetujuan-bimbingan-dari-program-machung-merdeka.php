@@ -62,19 +62,19 @@
                                                 <div class="mt-4">
                                                     <div class="font-size-14">
                                                         <p>Dosen dapat melakukan persetujuan bimbingan mahasiswa dalam keikutsertaan dari program Ma Chung Merdeka dengan membuka menu <strong>Ma Chung Merdeka → Pembimbingan</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/persetujuan-bimbingan-dari-program-machung-merdeka-satu.png" alt="" class="img-thumbnail mx-auto d-block">
 
                                                         <br>
 
-                                                        <p class="mb-4 text-center">Tampilan menu MAC IS dosen</p>
-
+                                                        <p class="text-muted mb-4 text-center">Tampilan menu MAC IS dosen</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat melihat daftar pembimbing mahasiswa yang mengikuti program Ma Chung Merdeka, serta dosen dapat melihat detail bimbingan dengan memilih bagian <strong>“+”</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/persetujuan-bimbingan-dari-program-machung-merdeka-dua.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan daftar bimbingan mahasiswa dari program Ma Chung Merdeka</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar bimbingan mahasiswa dari program Ma Chung Merdeka</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat melihat informasi singkat mahasiswa yang terdiri dari:</p>
 
                                                         <p class="mb-4">1. Nama</p>
@@ -100,30 +100,31 @@
                                                         <p class="mb-4">11. Tanggal diterima</p>
 
                                                         <p class="mb-4">12. Riwayat persetujuan yang dapat dilihat</p>
-
+                                                        <br>
                                                         <img src="macisdosen/persetujuan-bimbingan-dari-program-machung-merdeka-tiga.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan informasi singkat mahasiswa yang mengikuti program Ma Chung Merdeka</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan informasi singkat mahasiswa yang mengikuti program Ma Chung Merdeka</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat melihat daftar riwayat persetujuan dari selama bimbingan mahasiswa dalam mengikuti program Ma Chung Merdeka. Dosen juga dapat melihat bukti aktivitas dari kegiatan mahasiswa dengan memilih bagian <strong>Bukti</strong> dan dapat mengubah status persetujuan dari setuju ke tidak setuju dengan memilih bagian <strong>Tidak Setuju</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/persetujuan-bimbingan-dari-program-machung-merdeka-empat.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan daftar riwayat pembimbingan dari mahasiswa program Ma Chung Merdeka</p>
-                                                        
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar riwayat pembimbingan dari mahasiswa program Ma Chung Merdeka</p>
+                                                        <br>
                                                         <img src="macisdosen/persetujuan-bimbingan-dari-program-machung-merdeka-lima.png" alt="" class="img-thumbnail mx-auto d-block">
-                                                        
-                                                        <p class="mb-4 text-center">Tampilan bukti dokumentasi dari kegiatan mahasiswa dalam keikutsertaan Ma Chung Merdeka</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan bukti dokumentasi dari kegiatan mahasiswa dalam keikutsertaan Ma Chung Merdeka</p>
+                                                        <br>
                                                         <p class="mb-4">Dosen dapat melihat bukti aktivitas terlebih dahulu sebelum menyetujui bimbingan kegiatan mahasiswa yang mengikuti kegiatan Ma Chung Merdeka dengan memilih bagian <strong>Bukti</strong> dan dapat melakukan persetujuan (menyetujui atau tidak menyetujui) dengan memilih bagian <strong>Setuju</strong> dan <strong>Tidak Setuju</strong>.</p>
-
+                                                        <br>
                                                         <img src="macisdosen/persetujuan-bimbingan-dari-program-machung-merdeka-enam.png" alt="" class="img-thumbnail mx-auto d-block">
-
-                                                        <p class="mb-4 text-center">Tampilan daftar pembimbingan mahasiswa dari keikutsertaan program Ma Chung Merdeka</p>
-
+                                                        <br>
+                                                        <p class="text-muted mb-4 text-center">Tampilan daftar pembimbingan mahasiswa dari keikutsertaan program Ma Chung Merdeka</p>
+                                                        <br>
                                                         <div class="text-center">
                                                             <iframe width="560" height="315" src="https://youtube.com/embed/fw37Sign0z4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                         </div>
+                                                        <br>
                                                     </div>
 
                                                     <hr>
@@ -150,11 +151,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Skote.
+                            <script>document.write(new Date().getFullYear())</script> © Helpdesk.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+                                Design & Develop by Ma Chung
                             </div>
                         </div>
                     </div>
