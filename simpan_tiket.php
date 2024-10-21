@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = 'donotreply.uptsi@gmail.com'; 
-            $mail->Password = 'bvfq vrcb hovo pjdu'; 
+            $mail->Password = 'kpie uefk siii sumg'; 
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
